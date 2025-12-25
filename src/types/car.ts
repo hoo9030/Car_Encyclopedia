@@ -85,6 +85,68 @@ export interface CarSpecs {
   comfort?: ComfortSpecs;
 }
 
+// 세대별 상세 정보
+export interface GenerationInfo {
+  generation: number;         // 세대 번호
+  codeName: string;           // 코드명 (예: "GN7")
+  productionYears: string;    // 생산 기간 (예: "2022~현재")
+  description: string;        // 해당 세대 설명
+  keyChanges?: string[];      // 주요 변화점
+  salesVolume?: string;       // 판매량 (선택)
+}
+
+// 트림/옵션 정보
+export interface TrimInfo {
+  name: string;               // 트림명
+  price: string;              // 가격
+  keyFeatures: string[];      // 주요 특징
+}
+
+// 색상 옵션
+export interface ColorOption {
+  name: string;               // 색상명
+  code?: string;              // 색상 코드
+  type: 'exterior' | 'interior';  // 외장/내장
+  isPopular?: boolean;        // 인기 색상 여부
+}
+
+// 기술/편의사양 상세
+export interface TechnologyInfo {
+  infotainment?: {
+    screenSize?: string;      // 화면 크기
+    system?: string;          // 시스템명
+    features?: string[];      // 기능 목록
+  };
+  connectivity?: string[];    // 커넥티드 기능
+  soundSystem?: {
+    brand?: string;           // 오디오 브랜드
+    speakers?: number;        // 스피커 수
+    power?: string;           // 출력
+  };
+  drivingModes?: string[];    // 주행 모드
+  convenience?: string[];     // 편의 기능 목록
+}
+
+// 유지비 정보
+export interface OwnershipCost {
+  annualTax?: string;         // 자동차세
+  insuranceEstimate?: string; // 보험료 예상
+  maintenanceCycle?: {        // 소모품 교체 주기
+    engineOil?: string;
+    brakeFluid?: string;
+    tires?: string;
+    battery?: string;
+  };
+  fuelCostEstimate?: string;  // 월 예상 연료비
+}
+
+// 글로벌 정보
+export interface GlobalInfo {
+  exportName?: string;        // 수출명
+  salesCountries?: string[];  // 판매 국가
+  productionPlant?: string;   // 생산 공장
+}
+
 export interface ModelIntroduction {
   overview: string;           // 모델 개요 (간단한 소개)
   history: string;            // 개발 역사 및 세대 변화
@@ -94,6 +156,14 @@ export interface ModelIntroduction {
   highlights?: string[];      // 주요 특징/하이라이트
   awards?: string[];          // 수상 이력
   trivia?: string[];          // 알고 계셨나요? (흥미로운 사실)
+
+  // 확장 정보
+  generations?: GenerationInfo[];  // 세대별 상세 정보
+  trims?: TrimInfo[];              // 트림/옵션 정보
+  colors?: ColorOption[];          // 색상 옵션
+  technology?: TechnologyInfo;     // 기술/편의사양 상세
+  ownership?: OwnershipCost;       // 유지비 정보
+  global?: GlobalInfo;             // 글로벌 정보
 }
 
 export interface Car {

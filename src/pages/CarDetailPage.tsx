@@ -504,6 +504,237 @@ export default function CarDetailPage() {
                 </ul>
               </div>
             )}
+
+            {/* 세대별 역사 */}
+            {car.introduction.generations && car.introduction.generations.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>세대별 역사</h3>
+                <div className={styles.generationList}>
+                  {car.introduction.generations.map((gen, index) => (
+                    <div key={index} className={styles.generationItem}>
+                      <div className={styles.genHeader}>
+                        <span className={styles.genNumber}>{gen.generation}세대</span>
+                        <span className={styles.genCode}>{gen.codeName}</span>
+                        <span className={styles.genYears}>{gen.productionYears}</span>
+                      </div>
+                      <p className={styles.genDesc}>{gen.description}</p>
+                      {gen.keyChanges && gen.keyChanges.length > 0 && (
+                        <ul className={styles.genChanges}>
+                          {gen.keyChanges.map((change, idx) => (
+                            <li key={idx}>{change}</li>
+                          ))}
+                        </ul>
+                      )}
+                      {gen.salesVolume && (
+                        <span className={styles.genSales}>판매량: {gen.salesVolume}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 트림 라인업 */}
+            {car.introduction.trims && car.introduction.trims.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>트림 라인업</h3>
+                <div className={styles.trimList}>
+                  {car.introduction.trims.map((trim, index) => (
+                    <div key={index} className={styles.trimItem}>
+                      <div className={styles.trimHeader}>
+                        <span className={styles.trimName}>{trim.name}</span>
+                        <span className={styles.trimPrice}>{trim.price}</span>
+                      </div>
+                      <ul className={styles.trimFeatures}>
+                        {trim.keyFeatures.map((feature, idx) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 색상 옵션 */}
+            {car.introduction.colors && car.introduction.colors.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>색상 옵션</h3>
+                <div className={styles.colorSection}>
+                  <div className={styles.colorGroup}>
+                    <span className={styles.colorGroupLabel}>외장</span>
+                    <div className={styles.colorList}>
+                      {car.introduction.colors
+                        .filter(c => c.type === 'exterior')
+                        .map((color, index) => (
+                          <span key={index} className={`${styles.colorTag} ${color.isPopular ? styles.popularColor : ''}`}>
+                            {color.name}
+                            {color.isPopular && <span className={styles.popularBadge}>인기</span>}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
+                  <div className={styles.colorGroup}>
+                    <span className={styles.colorGroupLabel}>내장</span>
+                    <div className={styles.colorList}>
+                      {car.introduction.colors
+                        .filter(c => c.type === 'interior')
+                        .map((color, index) => (
+                          <span key={index} className={`${styles.colorTag} ${color.isPopular ? styles.popularColor : ''}`}>
+                            {color.name}
+                            {color.isPopular && <span className={styles.popularBadge}>인기</span>}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 기술 및 편의사양 */}
+            {car.introduction.technology && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>기술 및 편의사양</h3>
+
+                {car.introduction.technology.infotainment && (
+                  <div className={styles.techGroup}>
+                    <h4 className={styles.techGroupTitle}>인포테인먼트</h4>
+                    {car.introduction.technology.infotainment.screenSize && (
+                      <p className={styles.techItem}>화면: {car.introduction.technology.infotainment.screenSize}</p>
+                    )}
+                    {car.introduction.technology.infotainment.system && (
+                      <p className={styles.techItem}>시스템: {car.introduction.technology.infotainment.system}</p>
+                    )}
+                    {car.introduction.technology.infotainment.features && (
+                      <div className={styles.techTags}>
+                        {car.introduction.technology.infotainment.features.map((f, i) => (
+                          <span key={i} className={styles.techTag}>{f}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {car.introduction.technology.soundSystem && (
+                  <div className={styles.techGroup}>
+                    <h4 className={styles.techGroupTitle}>사운드 시스템</h4>
+                    <p className={styles.techItem}>
+                      {car.introduction.technology.soundSystem.brand} {car.introduction.technology.soundSystem.speakers}스피커 ({car.introduction.technology.soundSystem.power})
+                    </p>
+                  </div>
+                )}
+
+                {car.introduction.technology.drivingModes && (
+                  <div className={styles.techGroup}>
+                    <h4 className={styles.techGroupTitle}>주행 모드</h4>
+                    <div className={styles.techTags}>
+                      {car.introduction.technology.drivingModes.map((mode, i) => (
+                        <span key={i} className={styles.techTag}>{mode}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {car.introduction.technology.connectivity && (
+                  <div className={styles.techGroup}>
+                    <h4 className={styles.techGroupTitle}>커넥티비티</h4>
+                    <ul className={styles.techList}>
+                      {car.introduction.technology.connectivity.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {car.introduction.technology.convenience && (
+                  <div className={styles.techGroup}>
+                    <h4 className={styles.techGroupTitle}>편의 기능</h4>
+                    <div className={styles.techTags}>
+                      {car.introduction.technology.convenience.map((item, i) => (
+                        <span key={i} className={styles.techTag}>{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* 유지비 정보 */}
+            {car.introduction.ownership && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>유지비 정보</h3>
+                <table className={styles.ownershipTable}>
+                  <tbody>
+                    {car.introduction.ownership.annualTax && (
+                      <tr>
+                        <th>자동차세</th>
+                        <td>{car.introduction.ownership.annualTax}</td>
+                      </tr>
+                    )}
+                    {car.introduction.ownership.insuranceEstimate && (
+                      <tr>
+                        <th>보험료 (예상)</th>
+                        <td>{car.introduction.ownership.insuranceEstimate}</td>
+                      </tr>
+                    )}
+                    {car.introduction.ownership.fuelCostEstimate && (
+                      <tr>
+                        <th>연료비 (예상)</th>
+                        <td>{car.introduction.ownership.fuelCostEstimate}</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+                {car.introduction.ownership.maintenanceCycle && (
+                  <div className={styles.maintenanceInfo}>
+                    <h4 className={styles.techGroupTitle}>소모품 교체 주기</h4>
+                    <table className={styles.ownershipTable}>
+                      <tbody>
+                        {car.introduction.ownership.maintenanceCycle.engineOil && (
+                          <tr><th>엔진오일</th><td>{car.introduction.ownership.maintenanceCycle.engineOil}</td></tr>
+                        )}
+                        {car.introduction.ownership.maintenanceCycle.brakeFluid && (
+                          <tr><th>브레이크 오일</th><td>{car.introduction.ownership.maintenanceCycle.brakeFluid}</td></tr>
+                        )}
+                        {car.introduction.ownership.maintenanceCycle.tires && (
+                          <tr><th>타이어</th><td>{car.introduction.ownership.maintenanceCycle.tires}</td></tr>
+                        )}
+                        {car.introduction.ownership.maintenanceCycle.battery && (
+                          <tr><th>배터리</th><td>{car.introduction.ownership.maintenanceCycle.battery}</td></tr>
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* 글로벌 정보 */}
+            {car.introduction.global && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>글로벌 정보</h3>
+                {car.introduction.global.exportName && (
+                  <p className={styles.globalInfo}>
+                    <strong>수출명:</strong> {car.introduction.global.exportName}
+                  </p>
+                )}
+                {car.introduction.global.productionPlant && (
+                  <p className={styles.globalInfo}>
+                    <strong>생산 공장:</strong> {car.introduction.global.productionPlant}
+                  </p>
+                )}
+                {car.introduction.global.salesCountries && (
+                  <div className={styles.globalCountries}>
+                    <strong>판매 국가:</strong>
+                    <div className={styles.countryTags}>
+                      {car.introduction.global.salesCountries.map((country, i) => (
+                        <span key={i} className={styles.countryTag}>{country}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </section>
         </div>
       </div>

@@ -103,7 +103,228 @@
         "7세대 히든 라이트 기술은 세계 최초 양산차 적용 사례이며, LED 222개가 순차 점등됩니다",
         "2023년 기준 누적 판매량 약 240만 대로, 국내 준대형 세단 최다 판매 기록을 보유하고 있습니다",
         "페이스리프트 모델인 '더 뉴 그랜저'가 2024년 11월 출시되어 외관과 실내 디자인이 소폭 변경되었습니다"
-      ]
+      ],
+      "generations": [
+        {
+          "generation": 1,
+          "codeName": "L",
+          "productionYears": "1986~1992",
+          "description": "미쓰비시 데보네어를 기반으로 한 최초의 국산 고급 승용차. V6 3.0L 엔진을 탑재하여 당시 최고급 사양을 자랑했습니다.",
+          "keyChanges": [
+            "국내 최초 V6 엔진 탑재",
+            "전자제어 서스펜션 적용",
+            "파워 시트, 자동 에어컨 등 고급 편의사양"
+          ],
+          "salesVolume": "약 12만 대"
+        },
+        {
+          "generation": 2,
+          "codeName": "LX",
+          "productionYears": "1992~1998",
+          "description": "뉴그랜저로 명명되었으며, 자체 개발 비중을 높이고 품질을 대폭 향상시켰습니다. 국산 고급차의 기준을 정립한 모델입니다.",
+          "keyChanges": [
+            "자체 설계 비중 확대",
+            "V6 3.0L/3.5L 엔진 라인업",
+            "품질 및 내구성 대폭 향상",
+            "운전석 에어백 최초 적용"
+          ],
+          "salesVolume": "약 28만 대"
+        },
+        {
+          "generation": 3,
+          "codeName": "XG",
+          "productionYears": "1998~2005",
+          "description": "그랜저 XG는 본격적인 수출을 시작하며 글로벌 모델로 도약했습니다. 세련된 디자인과 향상된 정숙성이 특징입니다.",
+          "keyChanges": [
+            "미국, 중동 등 해외 수출 본격화",
+            "세타 V6 엔진 탑재",
+            "고급스러운 곡선형 디자인",
+            "사이드 에어백 추가"
+          ],
+          "salesVolume": "약 45만 대"
+        },
+        {
+          "generation": 4,
+          "codeName": "TG",
+          "productionYears": "2005~2011",
+          "description": "'고급의 기준'을 슬로건으로 내세우며 프리미엄 세단으로서의 입지를 공고히 했습니다. 람다 V6 엔진이 최초 적용되었습니다.",
+          "keyChanges": [
+            "람다 V6 3.3L/3.8L 엔진 최초 적용",
+            "렉시콘 프리미엄 사운드 시스템",
+            "전자식 파킹 브레이크",
+            "후석 VIP 시트 옵션"
+          ],
+          "salesVolume": "약 52만 대"
+        },
+        {
+          "generation": 5,
+          "codeName": "HG",
+          "productionYears": "2011~2016",
+          "description": "'플루이딕 스컬프처' 디자인 언어를 최초 적용하며 역동적이고 현대적인 이미지로 변신했습니다.",
+          "keyChanges": [
+            "플루이딕 스컬프처 디자인 언어 적용",
+            "하이브리드 모델 최초 추가",
+            "8단 자동변속기 적용",
+            "스마트 트렁크, 통합 스위치 도입"
+          ],
+          "salesVolume": "약 48만 대"
+        },
+        {
+          "generation": 6,
+          "codeName": "IG",
+          "productionYears": "2016~2022",
+          "description": "'다이내믹 그랜저'를 표방하며 젊고 스포티한 이미지를 추구했습니다. 터보 엔진과 다양한 첨단 기술이 적용되었습니다.",
+          "keyChanges": [
+            "캐스케이딩 그릴 디자인",
+            "1.6 터보, 3.3 터보 엔진 추가",
+            "12.3인치 클러스터 적용",
+            "스마트 센스 ADAS 탑재"
+          ],
+          "salesVolume": "약 55만 대"
+        },
+        {
+          "generation": 7,
+          "codeName": "GN7",
+          "productionYears": "2022~현재",
+          "description": "'감각적 스포티니스' 디자인으로 역대 가장 파격적인 변화를 선보였습니다. 히든 라이트 헤드램프가 세계 최초로 적용되었습니다.",
+          "keyChanges": [
+            "히든 라이트 헤드램프 세계 최초 적용",
+            "파라메트릭 다이내믹스 그릴",
+            "12.3인치 파노라믹 커브드 디스플레이",
+            "플로팅 센터 콘솔",
+            "고속도로 주행 보조 2 (HDA 2)"
+          ],
+          "salesVolume": "출시 2년간 약 18만 대 (2024년 기준)"
+        }
+      ],
+      "trims": [
+        {
+          "name": "프리미엄",
+          "price": "3,768만원",
+          "keyFeatures": [
+            "18인치 알로이 휠",
+            "LED 헤드램프",
+            "패브릭 시트",
+            "8인치 내비게이션",
+            "후방 주차 보조 시스템"
+          ]
+        },
+        {
+          "name": "익스클루시브",
+          "price": "4,068만원",
+          "keyFeatures": [
+            "19인치 알로이 휠",
+            "가죽 시트",
+            "12.3인치 클러스터",
+            "빌트인 캠 (2채널)",
+            "스마트 전동 트렁크"
+          ]
+        },
+        {
+          "name": "프레스티지",
+          "price": "4,369만원",
+          "keyFeatures": [
+            "파노라믹 썬루프",
+            "BOSE 프리미엄 사운드",
+            "헤드업 디스플레이",
+            "서라운드 뷰 모니터",
+            "어댑티브 크루즈 컨트롤"
+          ]
+        },
+        {
+          "name": "캘리그라피",
+          "price": "4,769만원",
+          "keyFeatures": [
+            "20인치 알로이 휠",
+            "나파 가죽 시트",
+            "후석 VIP 릴렉션 시트",
+            "디지털 사이드 미러",
+            "에르메스 에디션 전용 컬러"
+          ]
+        }
+      ],
+      "colors": [
+        { "name": "아비스 블랙펄", "code": "A2B", "type": "exterior", "isPopular": true },
+        { "name": "세라믹 실버 메탈릭", "code": "R2T", "type": "exterior" },
+        { "name": "시에나 브라운 메탈릭", "code": "N4N", "type": "exterior" },
+        { "name": "옥사이드 레드 메탈릭", "code": "VR7", "type": "exterior" },
+        { "name": "크리미 화이트 펄", "code": "YAC", "type": "exterior", "isPopular": true },
+        { "name": "그라파이트 그레이 메탈릭", "code": "P7V", "type": "exterior", "isPopular": true },
+        { "name": "에메랄드 그린 펄", "code": "PE2", "type": "exterior" },
+        { "name": "일루전 블루 펄", "code": "UYH", "type": "exterior" },
+        { "name": "블랙 원톤", "type": "interior" },
+        { "name": "블랙/베이지 투톤", "type": "interior", "isPopular": true },
+        { "name": "버건디 브라운", "type": "interior" },
+        { "name": "다크 카키 그린", "type": "interior" }
+      ],
+      "technology": {
+        "infotainment": {
+          "screenSize": "12.3인치 × 2 (클러스터 + AVN)",
+          "system": "ccNC (현대 커넥티드카 내비게이션 콕핏)",
+          "features": [
+            "음성인식 내비게이션",
+            "실시간 교통정보 (TPEG)",
+            "무선 Apple CarPlay / Android Auto",
+            "OTA (Over-The-Air) 업데이트",
+            "Bluelink 커넥티드카 서비스",
+            "디지털 키 2 (NFC/UWB)"
+          ]
+        },
+        "connectivity": [
+          "Bluelink 원격 제어 (시동, 공조, 도어락)",
+          "카투홈 / 홈투카 연동",
+          "차량 상태 진단 및 알림",
+          "발렛 모드",
+          "원격 주차 보조",
+          "분실 차량 위치 확인"
+        ],
+        "soundSystem": {
+          "brand": "BOSE",
+          "speakers": 12,
+          "power": "640W"
+        },
+        "drivingModes": [
+          "에코 (Eco)",
+          "컴포트 (Comfort)",
+          "스포츠 (Sport)",
+          "스마트 (Smart)",
+          "커스텀 (Custom)"
+        ],
+        "convenience": [
+          "전동식 스티어링 컬럼",
+          "통풍/열선 시트 (앞/뒤)",
+          "2열 수동 커튼",
+          "뒷좌석 승객 알림",
+          "무선 스마트폰 충전",
+          "64컬러 앰비언트 라이팅",
+          "전자식 컬럼 변속기",
+          "이중접합 차음 유리"
+        ]
+      },
+      "ownership": {
+        "annualTax": "약 52만원 (2,497cc 기준)",
+        "insuranceEstimate": "월 약 15~20만원 (30대 기준)",
+        "maintenanceCycle": {
+          "engineOil": "10,000km 또는 1년",
+          "brakeFluid": "40,000km 또는 2년",
+          "tires": "40,000~50,000km",
+          "battery": "약 5년"
+        },
+        "fuelCostEstimate": "월 약 20만원 (월 1,500km 주행 기준)"
+      },
+      "global": {
+        "exportName": "Azera (미국, 캐나다) / Grandeur (중동, 호주)",
+        "salesCountries": [
+          "대한민국",
+          "미국",
+          "캐나다",
+          "호주",
+          "중동 (UAE, 사우디아라비아 등)",
+          "러시아",
+          "대만"
+        ],
+        "productionPlant": "현대자동차 울산공장 제2공장"
+      }
     },
     "image": "/images/grandeur.jpg",
     "price": "3,768만원 ~ 4,769만원"

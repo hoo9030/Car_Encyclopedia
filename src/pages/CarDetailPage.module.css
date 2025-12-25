@@ -409,6 +409,319 @@
   border-radius: 2px;
 }
 
+/* 세대별 역사 */
+.generationList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.generationItem {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.genHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.genNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.genCode {
+  font-size: 12px;
+  color: #888;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.genYears {
+  font-size: 12px;
+  color: #666;
+  margin-left: auto;
+}
+
+.genDesc {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.7;
+  margin: 0 0 10px 0;
+}
+
+.genChanges {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.genChanges li {
+  font-size: 12px;
+  color: #777;
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+
+.genChanges li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+}
+
+.genSales {
+  font-size: 11px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+/* 트림 라인업 */
+.trimList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trimItem {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.trimHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.trimName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.trimPrice {
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.trimFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trimFeatures li {
+  font-size: 12px;
+  color: #888;
+  padding: 3px 0;
+  padding-left: 14px;
+  position: relative;
+}
+
+.trimFeatures li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-size: 10px;
+}
+
+/* 색상 옵션 */
+.colorSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.colorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.colorGroupLabel {
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.colorList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.colorTag {
+  font-size: 11px;
+  color: #999;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colorTag.popularColor {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.popularBadge {
+  font-size: 9px;
+  background: #f59e0b;
+  color: #000;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* 기술 및 편의사양 */
+.techGroup {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.techGroup:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.techGroupTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #aaa;
+  margin: 0 0 10px 0;
+}
+
+.techItem {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 6px 0;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.techTag {
+  font-size: 11px;
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.techList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.techList li {
+  font-size: 12px;
+  color: #888;
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+}
+
+.techList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+}
+
+/* 유지비 정보 */
+.ownershipTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.ownershipTable th,
+.ownershipTable td {
+  padding: 8px 0;
+  border-bottom: 1px solid #1a1a1a;
+  text-align: left;
+  font-size: 12px;
+}
+
+.ownershipTable th {
+  color: #666;
+  width: 100px;
+}
+
+.ownershipTable td {
+  color: #aaa;
+}
+
+.ownershipTable tr:last-child th,
+.ownershipTable tr:last-child td {
+  border-bottom: none;
+}
+
+.maintenanceInfo {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #222;
+}
+
+/* 글로벌 정보 */
+.globalInfo {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 8px 0;
+}
+
+.globalInfo strong {
+  color: #aaa;
+}
+
+.globalCountries {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+.countryTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.countryTag {
+  font-size: 11px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
 /* 반응형 */
 @media (max-width: 1024px) {
   .threeColumn {
