@@ -231,6 +231,12 @@
   color: #1e40af;
 }
 
+.carManufacturer {
+  color: #64748b;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
 .noResults {
   text-align: center;
   color: #64748b;

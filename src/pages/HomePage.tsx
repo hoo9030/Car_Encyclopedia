@@ -135,6 +135,7 @@ export default function HomePage() {
             {filteredCars.map(car => (
               <li key={car.id}>
                 <Link to={`/car/${car.id}`} className={styles.carModelLink}>
+                  {!selectedManufacturer && <span className={styles.carManufacturer}>{car.manufacturer}</span>}
                   {car.model}
                 </Link>
               </li>
