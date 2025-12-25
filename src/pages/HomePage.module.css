@@ -192,7 +192,7 @@
 
 .tableHeader {
   display: grid;
-  grid-template-columns: 2fr 1fr 80px 100px 1.5fr;
+  grid-template-columns: 2fr 1fr 80px 1.5fr 80px;
   gap: 16px;
   padding: 12px 16px;
   background: #f8fafc;
@@ -206,7 +206,7 @@
 
 .tableRow {
   display: grid;
-  grid-template-columns: 2fr 1fr 80px 100px 1.5fr;
+  grid-template-columns: 2fr 1fr 80px 1.5fr 80px;
   gap: 16px;
   padding: 14px 16px;
   border-bottom: 1px solid #e2e8f0;
@@ -243,7 +243,7 @@
   font-size: 13px;
 }
 
-.colPrice {
+.colPower {
   color: #1e40af;
   font-weight: 500;
   font-size: 13px;

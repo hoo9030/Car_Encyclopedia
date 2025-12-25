@@ -116,7 +116,7 @@ export default function HomePage() {
               <span className={styles.colCategory}>차종</span>
               <span className={styles.colYear}>연식</span>
               <span className={styles.colEngine}>엔진</span>
-              <span className={styles.colPrice}>가격</span>
+              <span className={styles.colPower}>출력</span>
             </div>
             {filteredCars.map(car => (
               <Link key={car.id} to={`/car/${car.id}`} className={styles.tableRow}>
@@ -126,8 +126,8 @@ export default function HomePage() {
                 </span>
                 <span className={styles.colCategory}>{car.category}</span>
                 <span className={styles.colYear}>{car.year}</span>
-                <span className={styles.colEngine}>{car.specs.horsepower}hp</span>
-                <span className={styles.colPrice}>{car.price}</span>
+                <span className={styles.colEngine}>{car.specs.engine}</span>
+                <span className={styles.colPower}>{car.specs.horsepower}hp</span>
               </Link>
             ))}
           </div>
