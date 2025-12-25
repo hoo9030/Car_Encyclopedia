@@ -1,0 +1,553 @@
+[
+  {
+    "id": "hyundai-grandeur-2024",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 304,
+      "torque": 422,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "10.2 km/L",
+      "dimensions": {
+        "length": 4990,
+        "width": 1880,
+        "height": 1470,
+        "wheelbase": 2895
+      }
+    },
+    "history": "그랜저는 1986년 첫 출시 이후 현대자동차의 대표적인 대형 세단으로 자리잡았습니다. 7세대에 이르는 현재 모델은 혁신적인 디자인과 첨단 기술을 결합하여 국내 세단 시장을 선도하고 있습니다.",
+    "trivia": [
+      "1986년 첫 출시 당시 국내 최초의 고급 승용차로 주목받음",
+      "7세대 모델은 대시보드에 12.3인치 듀얼 커브드 디스플레이 탑재",
+      "국내 누적 판매 200만대 돌파"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "3,980만원 ~ 5,230만원"
+  },
+  {
+    "id": "hyundai-sonata-2024",
+    "manufacturer": "현대",
+    "model": "쏘나타",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "1.6L 가솔린 터보",
+      "horsepower": 180,
+      "torque": 265,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "12.8 km/L",
+      "dimensions": {
+        "length": 4900,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2840
+      }
+    },
+    "history": "쏘나타는 1985년 첫 출시 이후 현대자동차를 대표하는 중형 세단입니다. 전 세계 누적 판매 1,000만 대를 돌파한 글로벌 베스트셀러로, 세대를 거듭하며 혁신적인 디자인과 기술을 선보이고 있습니다.",
+    "trivia": [
+      "1985년 첫 출시, 현재 8세대 모델",
+      "전 세계 180여 개국에 수출",
+      "2020년 북미 올해의 차 수상"
+    ],
+    "image": "/images/sonata.jpg",
+    "price": "2,831만원 ~ 3,789만원"
+  },
+  {
+    "id": "hyundai-ioniq6-2024",
+    "manufacturer": "현대",
+    "model": "아이오닉 6",
+    "year": 2024,
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 325,
+      "torque": 605,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "5.1 km/kWh",
+      "dimensions": {
+        "length": 4855,
+        "width": 1880,
+        "height": 1495,
+        "wheelbase": 2950
+      }
+    },
+    "history": "아이오닉 6는 현대자동차의 전용 전기차 브랜드 아이오닉 라인업의 두 번째 모델입니다. '전기화된 스트림라이너'를 컨셉으로 한 공기역학적 디자인이 특징이며, 0.21Cd의 초저공력계수를 자랑합니다.",
+    "trivia": [
+      "2023 세계 올해의 차(World Car of the Year) 수상",
+      "0.21Cd 공력계수는 양산차 중 최고 수준",
+      "800V 초급속 충전 지원으로 18분 만에 10%→80% 충전 가능"
+    ],
+    "image": "/images/ioniq6.jpg",
+    "price": "5,495만원 ~ 6,695만원"
+  },
+  {
+    "id": "kia-k9-2024",
+    "manufacturer": "기아",
+    "model": "K9",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "3.8L V6 가솔린",
+      "horsepower": 315,
+      "torque": 395,
+      "transmission": "8단 자동",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "8.5 km/L",
+      "dimensions": {
+        "length": 5095,
+        "width": 1900,
+        "height": 1505,
+        "wheelbase": 3010
+      }
+    },
+    "history": "K9은 기아의 플래그십 대형 세단으로, 2012년 첫 출시되었습니다. 후륜구동 기반의 고급 세단으로서 수입 럭셔리 브랜드와 경쟁하며, 국산 대형 세단의 새로운 기준을 제시하고 있습니다.",
+    "trivia": [
+      "기아 최초의 후륜구동 대형 세단",
+      "해외에서는 'K900' 또는 'Quoris'라는 이름으로 판매",
+      "빌트인 공기청정기와 후석 VIP 시트 옵션 제공"
+    ],
+    "image": "/images/k9.jpg",
+    "price": "5,535만원 ~ 8,025만원"
+  },
+  {
+    "id": "kia-k5-2024",
+    "manufacturer": "기아",
+    "model": "K5",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "1.6L 가솔린 터보",
+      "horsepower": 180,
+      "torque": 265,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "12.3 km/L",
+      "dimensions": {
+        "length": 4880,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2850
+      }
+    },
+    "history": "K5는 기아의 중형 세단으로, 2010년 첫 출시되었습니다. 스포티한 디자인과 역동적인 주행 성능으로 젊은 세대에게 인기가 높으며, 3세대 모델은 패스트백 스타일의 혁신적인 디자인으로 주목받고 있습니다.",
+    "trivia": [
+      "해외에서는 'Optima'라는 이름으로 판매되다가 2020년부터 K5로 통일",
+      "3세대 모델의 타이거 노즈 그릴은 차량 전체 폭을 차지하는 과감한 디자인",
+      "GT 모델은 290마력의 고성능 엔진 탑재"
+    ],
+    "image": "/images/k5.jpg",
+    "price": "2,780만원 ~ 3,550만원"
+  },
+  {
+    "id": "kia-ev6-2024",
+    "manufacturer": "기아",
+    "model": "EV6",
+    "year": 2024,
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 325,
+      "torque": 605,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "5.0 km/kWh",
+      "dimensions": {
+        "length": 4695,
+        "width": 1890,
+        "height": 1550,
+        "wheelbase": 2900
+      }
+    },
+    "history": "EV6는 기아 최초의 전용 전기차로, E-GMP 플랫폼을 기반으로 2021년 출시되었습니다. 크로스오버 스타일의 디자인과 뛰어난 성능으로 2022년 유럽 올해의 차로 선정되었습니다.",
+    "trivia": [
+      "2022 유럽 올해의 차 수상",
+      "EV6 GT는 0-100km/h 3.5초의 슈퍼카급 가속 성능",
+      "V2L(Vehicle to Load) 기능으로 외부 기기에 전력 공급 가능"
+    ],
+    "image": "/images/ev6.jpg",
+    "price": "5,230만원 ~ 7,480만원"
+  },
+  {
+    "id": "bmw-5series-2024",
+    "manufacturer": "BMW",
+    "model": "5시리즈",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.0L 가솔린 터보",
+      "horsepower": 258,
+      "torque": 400,
+      "transmission": "8단 자동",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "11.5 km/L",
+      "dimensions": {
+        "length": 5060,
+        "width": 1900,
+        "height": 1505,
+        "wheelbase": 2995
+      }
+    },
+    "history": "BMW 5시리즈는 1972년 첫 출시 이후 프리미엄 비즈니스 세단의 대명사로 자리잡았습니다. 8세대 모델은 완전히 새로워진 디자인과 함께 순수 전기 모델 i5도 함께 출시되었습니다.",
+    "trivia": [
+      "1972년 E12를 시작으로 현재 G60까지 8세대 진화",
+      "BMW의 베스트셀러 모델 중 하나로 전 세계 누적 1,000만 대 이상 판매",
+      "8세대는 BMW 최초로 AR 헤드업 디스플레이 적용"
+    ],
+    "image": "/images/bmw5.jpg",
+    "price": "7,150만원 ~ 1억 2,700만원"
+  },
+  {
+    "id": "bmw-x5-2024",
+    "manufacturer": "BMW",
+    "model": "X5",
+    "year": 2024,
+    "category": "SUV",
+    "specs": {
+      "engine": "3.0L 직렬 6기통 가솔린 터보",
+      "horsepower": 381,
+      "torque": 520,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.2 km/L",
+      "dimensions": {
+        "length": 4935,
+        "width": 2005,
+        "height": 1745,
+        "wheelbase": 2975
+      }
+    },
+    "history": "BMW X5는 1999년 첫 출시된 BMW 최초의 SAV(Sports Activity Vehicle)입니다. 프리미엄 중대형 SUV 세그먼트를 개척한 모델로, 스포티한 주행 성능과 실용성을 겸비하고 있습니다.",
+    "trivia": [
+      "SAV(Sports Activity Vehicle)라는 새로운 세그먼트를 만든 선구자",
+      "미국 사우스캐롤라이나 공장에서 생산되어 전 세계로 수출",
+      "4세대 모델은 최초로 오프로드 패키지 옵션 제공"
+    ],
+    "image": "/images/x5.jpg",
+    "price": "9,890만원 ~ 1억 5,990만원"
+  },
+  {
+    "id": "mercedes-eclass-2024",
+    "manufacturer": "메르세데스-벤츠",
+    "model": "E-Class",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.0L 가솔린 터보 + 마일드 하이브리드",
+      "horsepower": 258,
+      "torque": 400,
+      "transmission": "9단 자동",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "12.1 km/L",
+      "dimensions": {
+        "length": 4949,
+        "width": 1880,
+        "height": 1468,
+        "wheelbase": 2961
+      }
+    },
+    "history": "메르세데스-벤츠 E-Class는 1946년부터 이어져 온 프리미엄 비즈니스 세단의 아이콘입니다. 6세대 W214 모델은 최첨단 MBUX 슈퍼스크린과 혁신적인 디자인으로 새로운 럭셔리의 기준을 제시합니다.",
+    "trivia": [
+      "1946년 W136을 시작으로 현재 6세대까지 진화",
+      "전 세계에서 가장 많이 팔린 프리미엄 세단 중 하나",
+      "새로운 MBUX 슈퍼스크린은 조수석까지 확장되는 디스플레이"
+    ],
+    "image": "/images/eclass.jpg",
+    "price": "7,640만원 ~ 1억 930만원"
+  },
+  {
+    "id": "mercedes-gle-2024",
+    "manufacturer": "메르세데스-벤츠",
+    "model": "GLE",
+    "year": 2024,
+    "category": "SUV",
+    "specs": {
+      "engine": "2.0L 디젤 터보 + 마일드 하이브리드",
+      "horsepower": 330,
+      "torque": 700,
+      "transmission": "9단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "11.8 km/L",
+      "dimensions": {
+        "length": 4941,
+        "width": 2018,
+        "height": 1788,
+        "wheelbase": 2935
+      }
+    },
+    "history": "GLE는 ML-Class의 후속 모델로, 1997년부터 이어져 온 메르세데스-벤츠의 중대형 SUV입니다. 럭셔리한 실내와 강력한 주행 성능, 그리고 최신 안전 기술을 갖추고 있습니다.",
+    "trivia": [
+      "1997년 출시된 M-Class가 전신, 2015년 GLE로 이름 변경",
+      "E-ACTIVE BODY CONTROL 서스펜션으로 차체 롤링 최소화",
+      "7인승 옵션으로 대가족용으로도 인기"
+    ],
+    "image": "/images/gle.jpg",
+    "price": "1억 240만원 ~ 1억 5,530만원"
+  },
+  {
+    "id": "tesla-model3-2024",
+    "manufacturer": "테슬라",
+    "model": "Model 3",
+    "year": 2024,
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 366,
+      "torque": 493,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "6.0 km/kWh",
+      "dimensions": {
+        "length": 4720,
+        "width": 1850,
+        "height": 1440,
+        "wheelbase": 2875
+      }
+    },
+    "history": "테슬라 Model 3는 2017년 출시된 대중적인 전기 세단으로, 전기차 대중화의 선두주자입니다. 2023년 대대적인 페이스리프트를 거쳐 '하이랜드'라는 별명으로 불리는 새로운 디자인을 선보였습니다.",
+    "trivia": [
+      "2017년 출시 전 사전예약 50만 대 돌파",
+      "전 세계에서 가장 많이 팔린 전기차",
+      "오토파일럿과 FSD(Full Self-Driving) 기능 지원"
+    ],
+    "image": "/images/model3.jpg",
+    "price": "5,299만원 ~ 6,599만원"
+  },
+  {
+    "id": "tesla-modely-2024",
+    "manufacturer": "테슬라",
+    "model": "Model Y",
+    "year": 2024,
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 456,
+      "torque": 639,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "5.4 km/kWh",
+      "dimensions": {
+        "length": 4751,
+        "width": 1921,
+        "height": 1624,
+        "wheelbase": 2890
+      }
+    },
+    "history": "테슬라 Model Y는 2020년 출시된 컴팩트 SUV로, Model 3의 플랫폼을 공유합니다. 넓은 실내 공간과 실용성으로 테슬라 라인업에서 가장 인기 있는 모델이 되었습니다.",
+    "trivia": [
+      "2023년 전 세계 베스트셀링 자동차 1위",
+      "Model 3와 약 75%의 부품 공유",
+      "7인승 옵션 제공으로 가족용으로 인기"
+    ],
+    "image": "/images/modely.jpg",
+    "price": "5,699만원 ~ 7,299만원"
+  },
+  {
+    "id": "porsche-911-2024",
+    "manufacturer": "포르쉐",
+    "model": "911",
+    "year": 2024,
+    "category": "스포츠카",
+    "specs": {
+      "engine": "3.0L 트윈터보 플랫식스",
+      "horsepower": 394,
+      "torque": 450,
+      "transmission": "8단 PDK",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "9.7 km/L",
+      "dimensions": {
+        "length": 4519,
+        "width": 1852,
+        "height": 1300,
+        "wheelbase": 2450
+      }
+    },
+    "history": "포르쉐 911은 1963년 첫 출시 이후 60년이 넘는 역사를 가진 전설적인 스포츠카입니다. 리어 엔진, 리어 드라이브 레이아웃을 고수하며, 세대를 거듭해도 변하지 않는 아이코닉한 실루엣을 유지하고 있습니다.",
+    "trivia": [
+      "1963년 901로 시작, 푸조의 상표권 문제로 911로 이름 변경",
+      "8세대 992 모델은 터보차저가 기본 적용",
+      "GT3 RS는 뉘르부르크링 양산차 랩타임 최상위권"
+    ],
+    "image": "/images/911.jpg",
+    "price": "1억 5,790만원 ~ 3억 3,920만원"
+  },
+  {
+    "id": "porsche-cayenne-2024",
+    "manufacturer": "포르쉐",
+    "model": "카이엔",
+    "year": 2024,
+    "category": "SUV",
+    "specs": {
+      "engine": "3.0L V6 터보",
+      "horsepower": 353,
+      "torque": 500,
+      "transmission": "8단 Tiptronic S",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.1 km/L",
+      "dimensions": {
+        "length": 4930,
+        "width": 1983,
+        "height": 1673,
+        "wheelbase": 2895
+      }
+    },
+    "history": "포르쉐 카이엔은 2002년 첫 출시된 포르쉐 최초의 SUV입니다. 출시 당시 스포츠카 브랜드의 SUV 제작에 대한 논란이 있었으나, 뛰어난 주행 성능으로 프리미엄 SUV 시장을 선도하며 포르쉐의 베스트셀러가 되었습니다.",
+    "trivia": [
+      "2002년 출시 당시 포르쉐의 생존을 위한 전략적 선택이었음",
+      "폭스바겐 투아렉과 플랫폼 공유",
+      "카이엔 터보 GT는 SUV 최초로 뉘르부르크링 7분 38초 기록"
+    ],
+    "image": "/images/cayenne.jpg",
+    "price": "1억 1,870만원 ~ 2억 6,450만원"
+  },
+  {
+    "id": "toyota-camry-2024",
+    "manufacturer": "토요타",
+    "model": "캠리",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 하이브리드",
+      "horsepower": 225,
+      "torque": 221,
+      "transmission": "CVT",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "18.1 km/L",
+      "dimensions": {
+        "length": 4885,
+        "width": 1840,
+        "height": 1455,
+        "wheelbase": 2825
+      }
+    },
+    "history": "토요타 캠리는 1982년 첫 출시 이후 전 세계에서 가장 많이 팔린 중형 세단 중 하나입니다. 뛰어난 신뢰성과 연비로 유명하며, 9세대 모델은 하이브리드 전용으로 출시되어 친환경성을 강조합니다.",
+    "trivia": [
+      "1982년 첫 출시 이후 전 세계 누적 2,000만 대 이상 판매",
+      "미국에서 20년 이상 베스트셀링 세단",
+      "9세대부터 북미에서 하이브리드 전용 모델로 전환"
+    ],
+    "image": "/images/camry.jpg",
+    "price": "3,690만원 ~ 4,250만원"
+  },
+  {
+    "id": "honda-civic-2024",
+    "manufacturer": "혼다",
+    "model": "시빅",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "1.5L 가솔린 터보",
+      "horsepower": 182,
+      "torque": 240,
+      "transmission": "CVT",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "14.5 km/L",
+      "dimensions": {
+        "length": 4550,
+        "width": 1800,
+        "height": 1415,
+        "wheelbase": 2735
+      }
+    },
+    "history": "혼다 시빅은 1972년 첫 출시 이후 전 세계에서 2,700만 대 이상 판매된 혼다의 대표 모델입니다. 11세대 모델은 성숙하고 세련된 디자인으로 진화했으며, Type R 버전은 최강의 FF 스포츠카로 인정받고 있습니다.",
+    "trivia": [
+      "1972년 첫 출시, 현재 11세대",
+      "Type R은 뉘르부르크링 전륜구동 양산차 최고 기록 보유",
+      "일본 카 오브 더 이어 2022 수상"
+    ],
+    "image": "/images/civic.jpg",
+    "price": "2,800만원 ~ 3,500만원"
+  },
+  {
+    "id": "audi-a6-2024",
+    "manufacturer": "아우디",
+    "model": "A6",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.0L TFSI 가솔린 터보",
+      "horsepower": 265,
+      "torque": 370,
+      "transmission": "7단 S tronic",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "11.2 km/L",
+      "dimensions": {
+        "length": 4939,
+        "width": 1886,
+        "height": 1457,
+        "wheelbase": 2924
+      }
+    },
+    "history": "아우디 A6는 1994년 첫 출시된 프리미엄 중대형 세단으로, 아우디 100의 후속 모델입니다. 콰트로 사륜구동 시스템과 첨단 기술의 집합체로, 스포티하면서도 우아한 비즈니스 세단의 정수를 보여줍니다.",
+    "trivia": [
+      "1994년 아우디 100의 후속으로 출시",
+      "5세대 C8은 듀얼 터치스크린 MMI 인터페이스 적용",
+      "RS 6 아반트는 600마력의 슈퍼 왜건"
+    ],
+    "image": "/images/a6.jpg",
+    "price": "6,910만원 ~ 9,550만원"
+  },
+  {
+    "id": "genesis-g80-2024",
+    "manufacturer": "제네시스",
+    "model": "G80",
+    "year": 2024,
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 304,
+      "torque": 422,
+      "transmission": "8단 자동",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "9.8 km/L",
+      "dimensions": {
+        "length": 4995,
+        "width": 1925,
+        "height": 1465,
+        "wheelbase": 3010
+      }
+    },
+    "history": "제네시스 G80은 현대자동차그룹의 프리미엄 브랜드 제네시스의 핵심 세단입니다. 3세대 모델은 '운동성 있는 우아함'이라는 디자인 철학을 바탕으로 수입 럭셔리 브랜드와 당당히 경쟁하고 있습니다.",
+    "trivia": [
+      "2020년 완전 변경된 3세대 모델은 레드닷 디자인 어워드 수상",
+      "eG80은 제네시스 최초의 순수 전기 세단",
+      "후륜구동 기반으로 역동적인 주행 성능 제공"
+    ],
+    "image": "/images/g80.jpg",
+    "price": "5,823만원 ~ 8,158만원"
+  },
+  {
+    "id": "genesis-gv80-2024",
+    "manufacturer": "제네시스",
+    "model": "GV80",
+    "year": 2024,
+    "category": "SUV",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 304,
+      "torque": 422,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.1 km/L",
+      "dimensions": {
+        "length": 4945,
+        "width": 1975,
+        "height": 1715,
+        "wheelbase": 2955
+      }
+    },
+    "history": "GV80은 제네시스 최초의 SUV로, 2020년 출시되었습니다. '운동성 있는 우아함' 디자인 철학을 SUV에 접목시켜 독창적인 존재감을 자랑하며, 제네시스 브랜드의 글로벌 인지도를 높이는 데 크게 기여했습니다.",
+    "trivia": [
+      "제네시스 브랜드 최초의 SUV",
+      "프레스티지 라운지 시트로 2열 VIP 옵션 제공",
+      "2021년 IIHS 최고 안전 등급 획득"
+    ],
+    "image": "/images/gv80.jpg",
+    "price": "6,596만원 ~ 9,413만원"
+  }
+]

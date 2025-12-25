@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm init -y)",
+      "Bash(npm install:*)",
+      "Bash(timeout /t 5 /nobreak)",
+      "Bash(git add:*)"
+    ]
+  }
+}

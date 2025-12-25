@@ -1,0 +1,155 @@
+.compareTable {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.emptyIcon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.empty h3 {
+  font-size: 20px;
+  color: #1a202c;
+  margin: 0 0 12px 0;
+}
+
+.empty p {
+  color: #718096;
+  font-size: 16px;
+  margin: 0;
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 140px repeat(3, 1fr);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+  gap: 16px;
+}
+
+.carHeader {
+  text-align: center;
+  color: #fff;
+}
+
+.carEmoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.carName {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.removeBtn {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #fff;
+}
+
+.labelCell {
+  font-weight: 600;
+  color: #4a5568;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px repeat(3, 1fr);
+  padding: 16px 20px;
+  gap: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.3s ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: #f7fafc;
+}
+
+.valueCell {
+  text-align: center;
+  color: #1a202c;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .headerRow,
+  .row {
+    grid-template-columns: 100px repeat(3, 1fr);
+  }
+
+  .carEmoji {
+    font-size: 36px;
+  }
+
+  .carName {
+    font-size: 14px;
+  }
+
+  .labelCell,
+  .valueCell {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerRow,
+  .row {
+    grid-template-columns: 80px repeat(3, 1fr);
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .carEmoji {
+    font-size: 28px;
+  }
+
+  .carName {
+    font-size: 12px;
+  }
+
+  .removeBtn {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .labelCell,
+  .valueCell {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+}

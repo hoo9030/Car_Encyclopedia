@@ -1,0 +1,195 @@
+.homePage {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: #a0aec0;
+  margin: 0 0 40px 0;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 24px 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionHeader .sectionTitle {
+  margin: 0;
+}
+
+.viewAllLink {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.viewAllLink:hover {
+  color: #5b21b6;
+}
+
+.categories {
+  padding: 60px 0;
+  background: #f7fafc;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.categoryCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+}
+
+.categoryEmoji {
+  font-size: 40px;
+}
+
+.categoryName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.categoryCount {
+  font-size: 14px;
+  color: #718096;
+}
+
+.featured {
+  padding: 60px 0;
+}
+
+.carGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.stats {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  padding: 60px 0;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.statItem {
+  color: #fff;
+}
+
+.statNumber {
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .carGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statGrid {
+    gap: 20px;
+  }
+
+  .statNumber {
+    font-size: 36px;
+  }
+
+  .statLabel {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+}

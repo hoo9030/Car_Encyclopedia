@@ -1,0 +1,95 @@
+.comparePage {
+  min-height: 100vh;
+  background: #f7fafc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.subtitle {
+  color: #a0aec0;
+  font-size: 16px;
+  margin: 0;
+}
+
+.content {
+  padding: 40px 0 60px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.count {
+  font-size: 16px;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.clearBtn {
+  background: none;
+  border: 2px solid #ef4444;
+  color: #ef4444;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clearBtn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.addMore {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.addMoreBtn {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.addMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.35);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .header {
+    padding: 40px 0;
+  }
+}
