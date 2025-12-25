@@ -8,7 +8,6 @@ export default function CompareTable() {
   if (compareCars.length === 0) {
     return (
       <div className={styles.empty}>
-        <span className={styles.emptyIcon}>📊</span>
         <h3>비교할 차량을 선택해주세요</h3>
         <p>검색 페이지에서 최대 3대의 차량을 비교 목록에 추가할 수 있습니다.</p>
       </div>
@@ -32,47 +31,42 @@ export default function CompareTable() {
     { key: 'price', label: '가격', getValue: (car) => car.price },
   ];
 
-  const getCategoryEmoji = (category: string) => {
-    const emojis: Record<string, string> = {
-      '세단': '🚗',
-      'SUV': '🚙',
-      '스포츠카': '🏎️',
-      '전기차': '⚡',
-      '하이브리드': '🔋',
-      '트럭': '🛻',
-      '왜건': '🚐'
-    };
-    return emojis[category] || '🚗';
-  };
-
   return (
     <div className={styles.compareTable}>
-      <div className={styles.headerRow}>
-        <div className={styles.labelCell}></div>
-        {compareCars.map((car) => (
-          <div key={car.id} className={styles.carHeader}>
-            <div className={styles.carEmoji}>{getCategoryEmoji(car.category)}</div>
-            <h3 className={styles.carName}>{car.model}</h3>
-            <button
-              className={styles.removeBtn}
-              onClick={() => removeFromCompare(car.id)}
-            >
-              ✕ 제거
-            </button>
-          </div>
-        ))}
-      </div>
-
-      {specs.map((spec) => (
-        <div key={spec.key} className={styles.row}>
-          <div className={styles.labelCell}>{spec.label}</div>
-          {compareCars.map((car) => (
-            <div key={car.id} className={styles.valueCell}>
-              {spec.getValue(car)}
-            </div>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th className={styles.labelCell}></th>
+            {compareCars.map((car) => (
+              <th key={car.id} className={styles.carHeader}>
+                <div className={styles.carInfo}>
+                  <span className={styles.carManufacturer}>{car.manufacturer}</span>
+                  <span className={styles.carName}>{car.model}</span>
+                </div>
+                <button
+                  type="button"
+                  className={styles.removeBtn}
+                  onClick={() => removeFromCompare(car.id)}
+                >
+                  제거
+                </button>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {specs.map((spec) => (
+            <tr key={spec.key}>
+              <th className={styles.labelCell}>{spec.label}</th>
+              {compareCars.map((car) => (
+                <td key={car.id} className={styles.valueCell}>
+                  {spec.getValue(car)}
+                </td>
+              ))}
+            </tr>
           ))}
-        </div>
-      ))}
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -1,25 +1,25 @@
 .searchPage {
   min-height: 100vh;
-  background: #f7fafc;
+  background: #fafafa;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .searchHeader {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  padding: 40px 0;
+  background: #1a365d;
+  padding: 32px 0;
 }
 
 .title {
   color: #fff;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
-  margin: 0 0 24px 0;
+  margin: 0 0 20px 0;
 }
 
 .content {
@@ -28,13 +28,13 @@
 
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 32px;
 }
 
 .sidebar {
   position: sticky;
-  top: 90px;
+  top: 80px;
   height: fit-content;
 }
 
@@ -43,48 +43,45 @@
 }
 
 .resultHeader {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #1a365d;
 }
 
 .resultCount {
-  font-size: 16px;
-  color: #4a5568;
+  font-size: 14px;
+  color: #475569;
   font-weight: 600;
 }
 
 .carGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e2e8f0;
+  border: 1px solid #e2e8f0;
 }
 
 .noResults {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.noResultsIcon {
-  font-size: 64px;
-  display: block;
-  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
 }
 
 .noResults h3 {
-  font-size: 20px;
-  color: #1a202c;
+  font-size: 18px;
+  color: #1e293b;
   margin: 0 0 12px 0;
 }
 
 .noResults p {
-  color: #718096;
-  font-size: 16px;
+  color: #64748b;
+  font-size: 14px;
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
   }
@@ -93,21 +90,11 @@
     position: static;
   }
 
-  .carGrid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
   .title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .searchHeader {
-    padding: 30px 0;
-  }
-
-  .carGrid {
-    grid-template-columns: 1fr;
+    padding: 24px 0;
   }
 }

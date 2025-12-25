@@ -19,7 +19,6 @@ export default function CarDetailPage() {
   if (!car) {
     return (
       <div className={styles.notFound}>
-        <span className={styles.notFoundIcon}>😕</span>
         <h2>차량을 찾을 수 없습니다</h2>
         <p>요청하신 차량 정보가 존재하지 않습니다.</p>
         <Link to="/search" className={styles.backLink}>
@@ -39,19 +38,6 @@ export default function CarDetailPage() {
     }
   };
 
-  const getCategoryEmoji = (category: string) => {
-    const emojis: Record<string, string> = {
-      '세단': '🚗',
-      'SUV': '🚙',
-      '스포츠카': '🏎️',
-      '전기차': '⚡',
-      '하이브리드': '🔋',
-      '트럭': '🛻',
-      '왜건': '🚐'
-    };
-    return emojis[category] || '🚗';
-  };
-
   const relatedCars = useMemo(() => {
     return cars
       .filter(c => c.id !== car.id && (c.manufacturer === car.manufacturer || c.category === car.category))
@@ -60,97 +46,100 @@ export default function CarDetailPage() {
 
   return (
     <div className={styles.detailPage}>
-      <div className={styles.hero}>
+      <div className={styles.header}>
         <div className={styles.container}>
           <button className={styles.backBtn} onClick={() => navigate(-1)}>
             ← 뒤로
           </button>
-          <div className={styles.heroContent}>
-            <div className={styles.carVisual}>
-              <span className={styles.carEmoji}>{getCategoryEmoji(car.category)}</span>
-            </div>
-            <div className={styles.carInfo}>
-              <span className={styles.category}>{car.category}</span>
-              <h1 className={styles.title}>
-                <span className={styles.manufacturer}>{car.manufacturer}</span>
-                <span className={styles.model}>{car.model}</span>
-              </h1>
-              <p className={styles.year}>{car.year}년형</p>
-              <div className={styles.price}>{car.price}</div>
-              <button
-                className={`${styles.compareBtn} ${inCompare ? styles.inCompare : ''}`}
-                onClick={handleCompareClick}
-                disabled={!inCompare && compareCars.length >= 3}
-              >
-                {inCompare ? '✓ 비교 목록에서 제거' : '+ 비교 목록에 추가'}
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
       <div className={styles.content}>
         <div className={styles.container}>
+          <div className={styles.mainInfo}>
+            <div className={styles.titleSection}>
+              <span className={styles.category}>{car.category}</span>
+              <span className={styles.manufacturer}>{car.manufacturer}</span>
+              <h1 className={styles.model}>{car.model}</h1>
+              <p className={styles.year}>{car.year}년형</p>
+            </div>
+            <div className={styles.priceSection}>
+              <span className={styles.priceLabel}>가격</span>
+              <span className={styles.price}>{car.price}</span>
+              <button
+                className={`${styles.compareBtn} ${inCompare ? styles.inCompare : ''}`}
+                onClick={handleCompareClick}
+                disabled={!inCompare && compareCars.length >= 3}
+              >
+                {inCompare ? '비교 목록에서 제거' : '비교 목록에 추가'}
+              </button>
+            </div>
+          </div>
+
           <div className={styles.sections}>
             <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>📊 상세 사양</h2>
-              <div className={styles.specsGrid}>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>엔진</span>
-                  <span className={styles.specValue}>{car.specs.engine}</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>최대 출력</span>
-                  <span className={styles.specValue}>{car.specs.horsepower} hp</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>최대 토크</span>
-                  <span className={styles.specValue}>{car.specs.torque} Nm</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>변속기</span>
-                  <span className={styles.specValue}>{car.specs.transmission}</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>구동방식</span>
-                  <span className={styles.specValue}>{car.specs.drivetrain}</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specLabel}>연비</span>
-                  <span className={styles.specValue}>{car.specs.fuelEfficiency}</span>
-                </div>
-              </div>
+              <h2 className={styles.sectionTitle}>상세 사양</h2>
+              <table className={styles.specTable}>
+                <tbody>
+                  <tr>
+                    <th>엔진</th>
+                    <td>{car.specs.engine}</td>
+                  </tr>
+                  <tr>
+                    <th>최대 출력</th>
+                    <td>{car.specs.horsepower} hp</td>
+                  </tr>
+                  <tr>
+                    <th>최대 토크</th>
+                    <td>{car.specs.torque} Nm</td>
+                  </tr>
+                  <tr>
+                    <th>변속기</th>
+                    <td>{car.specs.transmission}</td>
+                  </tr>
+                  <tr>
+                    <th>구동방식</th>
+                    <td>{car.specs.drivetrain}</td>
+                  </tr>
+                  <tr>
+                    <th>연비</th>
+                    <td>{car.specs.fuelEfficiency}</td>
+                  </tr>
+                </tbody>
+              </table>
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>📐 차량 크기</h2>
-              <div className={styles.dimensionsGrid}>
-                <div className={styles.dimensionItem}>
-                  <span className={styles.dimensionLabel}>전장</span>
-                  <span className={styles.dimensionValue}>{car.specs.dimensions.length} mm</span>
-                </div>
-                <div className={styles.dimensionItem}>
-                  <span className={styles.dimensionLabel}>전폭</span>
-                  <span className={styles.dimensionValue}>{car.specs.dimensions.width} mm</span>
-                </div>
-                <div className={styles.dimensionItem}>
-                  <span className={styles.dimensionLabel}>전고</span>
-                  <span className={styles.dimensionValue}>{car.specs.dimensions.height} mm</span>
-                </div>
-                <div className={styles.dimensionItem}>
-                  <span className={styles.dimensionLabel}>휠베이스</span>
-                  <span className={styles.dimensionValue}>{car.specs.dimensions.wheelbase} mm</span>
-                </div>
-              </div>
+              <h2 className={styles.sectionTitle}>차량 크기</h2>
+              <table className={styles.specTable}>
+                <tbody>
+                  <tr>
+                    <th>전장</th>
+                    <td>{car.specs.dimensions.length} mm</td>
+                  </tr>
+                  <tr>
+                    <th>전폭</th>
+                    <td>{car.specs.dimensions.width} mm</td>
+                  </tr>
+                  <tr>
+                    <th>전고</th>
+                    <td>{car.specs.dimensions.height} mm</td>
+                  </tr>
+                  <tr>
+                    <th>휠베이스</th>
+                    <td>{car.specs.dimensions.wheelbase} mm</td>
+                  </tr>
+                </tbody>
+              </table>
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>📖 역사</h2>
+              <h2 className={styles.sectionTitle}>역사</h2>
               <p className={styles.history}>{car.history}</p>
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>💡 알고 계셨나요?</h2>
+              <h2 className={styles.sectionTitle}>알고 계셨나요?</h2>
               <ul className={styles.triviaList}>
                 {car.trivia.map((item, index) => (
                   <li key={index} className={styles.triviaItem}>
@@ -162,17 +151,17 @@ export default function CarDetailPage() {
 
             {relatedCars.length > 0 && (
               <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>🚗 관련 차량</h2>
-                <div className={styles.relatedGrid}>
+                <h2 className={styles.sectionTitle}>관련 차량</h2>
+                <div className={styles.relatedList}>
                   {relatedCars.map(relatedCar => (
                     <Link
                       key={relatedCar.id}
                       to={`/car/${relatedCar.id}`}
-                      className={styles.relatedCard}
+                      className={styles.relatedItem}
                     >
-                      <span className={styles.relatedEmoji}>{getCategoryEmoji(relatedCar.category)}</span>
                       <span className={styles.relatedManufacturer}>{relatedCar.manufacturer}</span>
                       <span className={styles.relatedModel}>{relatedCar.model}</span>
+                      <span className={styles.relatedYear}>{relatedCar.year}</span>
                     </Link>
                   ))}
                 </div>

@@ -10,8 +10,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoIcon}>🚗</span>
-          <span className={styles.logoText}>자동차 백과사전</span>
+          자동차 백과사전
         </Link>
 
         <nav className={styles.nav}>

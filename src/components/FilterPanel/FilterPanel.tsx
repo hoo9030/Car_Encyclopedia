@@ -43,7 +43,7 @@ export default function FilterPanel({ cars, filters, onFilterChange }: FilterPan
   return (
     <div className={styles.filterPanel}>
       <div className={styles.header}>
-        <h3 className={styles.title}>🔧 필터</h3>
+        <h3 className={styles.title}>필터</h3>
         {hasActiveFilters && (
           <button className={styles.resetBtn} onClick={handleReset}>
             초기화
