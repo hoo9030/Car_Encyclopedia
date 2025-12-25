@@ -60,7 +60,28 @@
   color: #475569;
   text-decoration: none;
   border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.manufacturerLink.active {
+  background: #1a365d;
+  border-color: #1a365d;
+  color: #fff;
+}
+
+.manufacturerLink.active .manufacturerCount {
+  color: #94a3b8;
+}
+
+.manufacturerLink.active .manufacturerLogo {
+  filter: brightness(0) invert(1);
+}
+
+.manufacturerLink.active .logoFallback {
+  background: #fff;
+  color: #1a365d;
 }
 
 .manufacturerLogo {
@@ -130,16 +151,7 @@
   padding: 40px 0;
 }
 
-.manufacturerSection {
-  margin-bottom: 48px;
-  scroll-margin-top: 80px;
-}
-
-.manufacturerSection:last-child {
-  margin-bottom: 0;
-}
-
-.manufacturerHeader {
+.listHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,28 +160,28 @@
   border-bottom: 2px solid #1a365d;
 }
 
-.manufacturerTitleWrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.manufacturerTitle {
+.listTitle {
   font-size: 20px;
   font-weight: 700;
   color: #1e293b;
   margin: 0;
 }
 
-.viewAllLink {
-  color: #1e40af;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 13px;
+.listCount {
+  font-size: 14px;
+  color: #64748b;
 }
 
-.viewAllLink:hover {
-  text-decoration: underline;
+.manufacturerTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carManufacturer {
+  color: #64748b;
+  font-weight: 400;
+  margin-right: 8px;
 }
 
 /* 테이블 스타일 */
