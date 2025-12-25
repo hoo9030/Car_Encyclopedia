@@ -32,7 +32,7 @@ export default function ComparePage() {
 
           {compareCars.length < 3 && (
             <div className={styles.addMore}>
-              <Link to="/search" className={styles.addMoreBtn}>
+              <Link to="/" className={styles.addMoreBtn}>
                 + 차량 추가하기
               </Link>
             </div>

@@ -1,6 +1,6 @@
 .header {
-  background: #1a365d;
-  border-bottom: 1px solid #2d4a6f;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 .container {
@@ -14,15 +14,16 @@
 }
 
 .logo {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 300;
   color: #fff;
   text-decoration: none;
-  letter-spacing: -0.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .logo:hover {
-  color: #94a3b8;
+  color: #888;
 }
 
 .nav {
@@ -31,16 +32,17 @@
 }
 
 .navLink {
-  color: #94a3b8;
+  color: #555;
   text-decoration: none;
   padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   transition: all 0.2s ease;
   position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
+  letter-spacing: 0.5px;
 }
 
 .navLink:hover {
@@ -49,16 +51,15 @@
 
 .navLink.active {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .badge {
-  background: #2563eb;
+  background: #3b82f6;
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   padding: 2px 6px;
-  min-width: 18px;
+  min-width: 16px;
   text-align: center;
 }
 
@@ -68,11 +69,11 @@
   }
 
   .logo {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .navLink {
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
