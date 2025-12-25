@@ -80,7 +80,7 @@ export default function CarDetailPage() {
                   className={`${styles.lineupItem} ${item.id === car.id ? styles.lineupActive : ''}`}
                 >
                   <span className={styles.lineupYear}>{item.year}</span>
-                  <span className={styles.lineupCategory}>{item.category}</span>
+                  <span className={styles.lineupCategory}>{item.variant || item.category}</span>
                 </Link>
               ))}
               {modelLineup.length === 1 && (

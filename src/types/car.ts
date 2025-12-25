@@ -20,6 +20,7 @@ export interface Car {
   manufacturer: string;
   model: string;
   year: number;
+  variant?: string;  // 트림/파워트레인 (예: "2.5 가솔린", "하이브리드")
   category: string;
   specs: CarSpecs;
   history: string;

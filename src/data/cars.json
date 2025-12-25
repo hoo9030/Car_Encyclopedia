@@ -1,9 +1,10 @@
 [
   {
-    "id": "hyundai-grandeur-2024",
+    "id": "hyundai-grandeur-2024-25t",
     "manufacturer": "현대",
     "model": "그랜저",
     "year": 2024,
+    "variant": "2.5 터보",
     "category": "세단",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -29,10 +30,71 @@
     "price": "3,980만원 ~ 5,230만원"
   },
   {
-    "id": "hyundai-grandeur-2023",
+    "id": "hyundai-grandeur-2024-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "variant": "하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "1.6L 터보 하이브리드",
+      "horsepower": 230,
+      "torque": 367,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "16.5 km/L",
+      "dimensions": {
+        "length": 4990,
+        "width": 1880,
+        "height": 1470,
+        "wheelbase": 2895
+      }
+    },
+    "history": "그랜저 하이브리드는 대형 세단에 친환경 파워트레인을 결합한 모델입니다. 1.6L 터보 하이브리드 시스템으로 뛰어난 연비와 충분한 동력 성능을 제공합니다.",
+    "trivia": [
+      "1.6L 터보 하이브리드 시스템 적용",
+      "복합연비 16.5km/L의 뛰어난 효율",
+      "세금 감면 혜택 적용"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "4,285만원 ~ 5,135만원"
+  },
+  {
+    "id": "hyundai-grandeur-2024-lwb",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "variant": "롱휠베이스",
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 304,
+      "torque": 422,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "9.8 km/L",
+      "dimensions": {
+        "length": 5135,
+        "width": 1880,
+        "height": 1480,
+        "wheelbase": 3040
+      }
+    },
+    "history": "그랜저 롱휠베이스는 휠베이스를 145mm 연장하여 VIP를 위한 뒷좌석 공간을 극대화한 모델입니다. 리무진급 편의사양과 함께 최고급 이동 수단으로 자리매김하고 있습니다.",
+    "trivia": [
+      "휠베이스 145mm 연장",
+      "VIP 릴렉션 시트 적용",
+      "2열 전용 에어컨 및 무선 충전기"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "5,385만원 ~ 5,885만원"
+  },
+  {
+    "id": "hyundai-grandeur-2023-25t",
     "manufacturer": "현대",
     "model": "그랜저",
     "year": 2023,
+    "variant": "2.5 터보",
     "category": "세단",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -58,10 +120,41 @@
     "price": "3,780만원 ~ 5,030만원"
   },
   {
-    "id": "hyundai-grandeur-2020",
+    "id": "hyundai-grandeur-2023-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2023,
+    "variant": "하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "1.6L 터보 하이브리드",
+      "horsepower": 230,
+      "torque": 367,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "16.3 km/L",
+      "dimensions": {
+        "length": 4990,
+        "width": 1880,
+        "height": 1470,
+        "wheelbase": 2895
+      }
+    },
+    "history": "7세대 그랜저 하이브리드 첫 모델로, 출시와 동시에 친환경 세단의 새로운 기준을 제시했습니다.",
+    "trivia": [
+      "7세대 하이브리드 동시 출시",
+      "복합연비 16.3km/L",
+      "세금 감면 혜택 적용"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "4,085만원 ~ 4,935만원"
+  },
+  {
+    "id": "hyundai-grandeur-2020-33",
     "manufacturer": "현대",
     "model": "그랜저",
     "year": 2020,
+    "variant": "3.3 V6",
     "category": "세단",
     "specs": {
       "engine": "3.3L V6 가솔린",
@@ -87,10 +180,41 @@
     "price": "3,380만원 ~ 4,530만원"
   },
   {
-    "id": "hyundai-grandeur-2017",
+    "id": "hyundai-grandeur-2020-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2020,
+    "variant": "하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "2.4L 하이브리드",
+      "horsepower": 195,
+      "torque": 232,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "15.2 km/L",
+      "dimensions": {
+        "length": 4930,
+        "width": 1865,
+        "height": 1460,
+        "wheelbase": 2885
+      }
+    },
+    "history": "6세대 그랜저 하이브리드 페이스리프트 모델로, 2.4L 자연흡기 엔진과 전기모터를 조합했습니다.",
+    "trivia": [
+      "2.4L 하이브리드 시스템",
+      "복합연비 15.2km/L",
+      "친환경 차량 세금 혜택"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "3,685만원 ~ 4,235만원"
+  },
+  {
+    "id": "hyundai-grandeur-2017-30",
     "manufacturer": "현대",
     "model": "그랜저",
     "year": 2017,
+    "variant": "3.0 V6",
     "category": "세단",
     "specs": {
       "engine": "3.0L V6 가솔린",
@@ -116,10 +240,41 @@
     "price": "3,180만원 ~ 4,130만원"
   },
   {
-    "id": "hyundai-sonata-2024",
+    "id": "hyundai-grandeur-2017-24",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2017,
+    "variant": "2.4 GDi",
+    "category": "세단",
+    "specs": {
+      "engine": "2.4L 가솔린",
+      "horsepower": 193,
+      "torque": 241,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "11.2 km/L",
+      "dimensions": {
+        "length": 4930,
+        "width": 1865,
+        "height": 1460,
+        "wheelbase": 2885
+      }
+    },
+    "history": "6세대 그랜저의 엔트리 모델로, 2.4L 자연흡기 엔진을 탑재했습니다. 합리적인 가격과 적절한 성능으로 인기를 끌었습니다.",
+    "trivia": [
+      "6세대 엔트리 파워트레인",
+      "합리적인 유지비",
+      "도심 주행에 최적화"
+    ],
+    "image": "/images/grandeur.jpg",
+    "price": "2,880만원 ~ 3,530만원"
+  },
+  {
+    "id": "hyundai-sonata-2024-16t",
     "manufacturer": "현대",
     "model": "쏘나타",
     "year": 2024,
+    "variant": "1.6 터보",
     "category": "세단",
     "specs": {
       "engine": "1.6L 가솔린 터보",
@@ -145,10 +300,41 @@
     "price": "2,831만원 ~ 3,789만원"
   },
   {
-    "id": "hyundai-sonata-2022",
+    "id": "hyundai-sonata-2024-hev",
+    "manufacturer": "현대",
+    "model": "쏘나타",
+    "year": 2024,
+    "variant": "하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "2.0L 하이브리드",
+      "horsepower": 195,
+      "torque": 188,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "19.2 km/L",
+      "dimensions": {
+        "length": 4900,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2840
+      }
+    },
+    "history": "쏘나타 하이브리드는 중형 세단 시장에서 최고의 연비를 자랑합니다. 2.0L 자연흡기 엔진과 전기모터의 조합으로 뛰어난 효율성을 제공합니다.",
+    "trivia": [
+      "복합연비 19.2km/L",
+      "솔라 루프 옵션 제공",
+      "친환경차 세금 감면"
+    ],
+    "image": "/images/sonata.jpg",
+    "price": "3,131만원 ~ 3,889만원"
+  },
+  {
+    "id": "hyundai-sonata-2022-20",
     "manufacturer": "현대",
     "model": "쏘나타",
     "year": 2022,
+    "variant": "2.0 GDi",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린",
@@ -174,10 +360,41 @@
     "price": "2,656만원 ~ 3,564만원"
   },
   {
-    "id": "hyundai-sonata-2020",
+    "id": "hyundai-sonata-2022-nline",
+    "manufacturer": "현대",
+    "model": "쏘나타",
+    "year": 2022,
+    "variant": "N Line",
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 290,
+      "torque": 422,
+      "transmission": "8단 DCT",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "10.5 km/L",
+      "dimensions": {
+        "length": 4900,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2840
+      }
+    },
+    "history": "쏘나타 N Line은 현대 N의 스포티함을 쏘나타에 접목한 고성능 트림입니다. 2.5L 터보 엔진과 8단 DCT로 290마력의 강력한 성능을 발휘합니다.",
+    "trivia": [
+      "2.5L 터보 290마력",
+      "N 전용 서스펜션 튜닝",
+      "듀얼 클러치 변속기 적용"
+    ],
+    "image": "/images/sonata.jpg",
+    "price": "3,456만원 ~ 3,864만원"
+  },
+  {
+    "id": "hyundai-sonata-2020-20",
     "manufacturer": "현대",
     "model": "쏘나타",
     "year": 2020,
+    "variant": "2.0 GDi",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린",
@@ -203,10 +420,11 @@
     "price": "2,386만원 ~ 3,294만원"
   },
   {
-    "id": "hyundai-ioniq6-2024",
+    "id": "hyundai-ioniq6-2024-lr",
     "manufacturer": "현대",
     "model": "아이오닉 6",
     "year": 2024,
+    "variant": "롱레인지 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -232,10 +450,11 @@
     "price": "5,495만원 ~ 6,695만원"
   },
   {
-    "id": "hyundai-ioniq6-2023",
+    "id": "hyundai-ioniq6-2024-pe",
     "manufacturer": "현대",
     "model": "아이오닉 6",
-    "year": 2023,
+    "year": 2024,
+    "variant": "퍼포먼스 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -243,7 +462,37 @@
       "torque": 605,
       "transmission": "단일 감속기",
       "drivetrain": "사륜구동",
-      "fuelEfficiency": "5.1 km/kWh",
+      "fuelEfficiency": "4.8 km/kWh",
+      "dimensions": {
+        "length": 4855,
+        "width": 1880,
+        "height": 1495,
+        "wheelbase": 2950
+      }
+    },
+    "history": "아이오닉 6 퍼포먼스는 스포티한 주행 성능에 초점을 맞춘 고성능 트림입니다. 20인치 휠과 스포츠 튜닝 서스펜션으로 다이내믹한 드라이빙을 제공합니다.",
+    "trivia": [
+      "20인치 전용 휠 적용",
+      "스포츠 튜닝 서스펜션",
+      "0-100km/h 5.1초"
+    ],
+    "image": "/images/ioniq6.jpg",
+    "price": "6,195만원 ~ 6,695만원"
+  },
+  {
+    "id": "hyundai-ioniq6-2023-lr",
+    "manufacturer": "현대",
+    "model": "아이오닉 6",
+    "year": 2023,
+    "variant": "롱레인지 RWD",
+    "category": "전기차",
+    "specs": {
+      "engine": "싱글 모터 전기",
+      "horsepower": 229,
+      "torque": 350,
+      "transmission": "단일 감속기",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "6.2 km/kWh",
       "dimensions": {
         "length": 4855,
         "width": 1880,
@@ -254,17 +503,18 @@
     "history": "아이오닉 6의 출시 첫 해 모델로, 세계 올해의 차 수상과 함께 전기차 시장에서 큰 주목을 받았습니다.",
     "trivia": [
       "2023 세계 올해의 차 수상",
-      "유럽 Car of the Year 후보",
+      "1회 충전 주행거리 524km",
       "국내 전기차 판매 상위권 진입"
     ],
     "image": "/images/ioniq6.jpg",
     "price": "5,247만원 ~ 6,447만원"
   },
   {
-    "id": "kia-k9-2024",
+    "id": "kia-k9-2024-38",
     "manufacturer": "기아",
     "model": "K9",
     "year": 2024,
+    "variant": "3.8 V6",
     "category": "세단",
     "specs": {
       "engine": "3.8L V6 가솔린",
@@ -290,10 +540,41 @@
     "price": "5,535만원 ~ 8,025만원"
   },
   {
-    "id": "kia-k9-2022",
+    "id": "kia-k9-2024-33t",
+    "manufacturer": "기아",
+    "model": "K9",
+    "year": 2024,
+    "variant": "3.3 터보",
+    "category": "세단",
+    "specs": {
+      "engine": "3.3L V6 트윈터보",
+      "horsepower": 370,
+      "torque": 510,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "7.8 km/L",
+      "dimensions": {
+        "length": 5095,
+        "width": 1900,
+        "height": 1505,
+        "wheelbase": 3010
+      }
+    },
+    "history": "K9 3.3 터보는 K9 라인업의 최고 성능 모델입니다. 3.3L V6 트윈터보 엔진과 사륜구동 시스템으로 강력한 동력 성능과 안정적인 주행을 제공합니다.",
+    "trivia": [
+      "3.3L V6 트윈터보 370마력",
+      "HTRAC 사륜구동 시스템",
+      "0-100km/h 5.4초"
+    ],
+    "image": "/images/k9.jpg",
+    "price": "7,025만원 ~ 8,525만원"
+  },
+  {
+    "id": "kia-k9-2022-38",
     "manufacturer": "기아",
     "model": "K9",
     "year": 2022,
+    "variant": "3.8 V6",
     "category": "세단",
     "specs": {
       "engine": "3.8L V6 가솔린",
@@ -319,10 +600,11 @@
     "price": "5,335만원 ~ 7,825만원"
   },
   {
-    "id": "kia-k5-2024",
+    "id": "kia-k5-2024-16t",
     "manufacturer": "기아",
     "model": "K5",
     "year": 2024,
+    "variant": "1.6 터보",
     "category": "세단",
     "specs": {
       "engine": "1.6L 가솔린 터보",
@@ -348,10 +630,71 @@
     "price": "2,780만원 ~ 3,550만원"
   },
   {
-    "id": "kia-k5-2022",
+    "id": "kia-k5-2024-hev",
+    "manufacturer": "기아",
+    "model": "K5",
+    "year": 2024,
+    "variant": "하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "2.0L 하이브리드",
+      "horsepower": 195,
+      "torque": 188,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "18.2 km/L",
+      "dimensions": {
+        "length": 4880,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2850
+      }
+    },
+    "history": "K5 하이브리드는 중형 세단 시장에서 최고 수준의 연비를 자랑합니다. 2.0L 자연흡기 엔진과 전기모터의 조합으로 뛰어난 효율성을 제공합니다.",
+    "trivia": [
+      "복합연비 18.2km/L",
+      "친환경차 세금 감면",
+      "스포티한 디자인 유지"
+    ],
+    "image": "/images/k5.jpg",
+    "price": "3,080만원 ~ 3,750만원"
+  },
+  {
+    "id": "kia-k5-2024-gt",
+    "manufacturer": "기아",
+    "model": "K5",
+    "year": 2024,
+    "variant": "GT",
+    "category": "세단",
+    "specs": {
+      "engine": "2.5L 가솔린 터보",
+      "horsepower": 290,
+      "torque": 422,
+      "transmission": "8단 DCT",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "10.2 km/L",
+      "dimensions": {
+        "length": 4880,
+        "width": 1860,
+        "height": 1445,
+        "wheelbase": 2850
+      }
+    },
+    "history": "K5 GT는 K5 라인업의 최고 성능 모델입니다. 2.5L 터보 엔진과 8단 듀얼클러치 변속기로 스포츠카급 가속 성능을 제공합니다.",
+    "trivia": [
+      "2.5L 터보 290마력",
+      "GT 전용 스포츠 서스펜션",
+      "브렘보 브레이크 옵션"
+    ],
+    "image": "/images/k5.jpg",
+    "price": "3,550만원 ~ 3,850만원"
+  },
+  {
+    "id": "kia-k5-2022-16t",
     "manufacturer": "기아",
     "model": "K5",
     "year": 2022,
+    "variant": "1.6 터보",
     "category": "세단",
     "specs": {
       "engine": "1.6L 가솔린 터보",
@@ -377,10 +720,11 @@
     "price": "2,580만원 ~ 3,350만원"
   },
   {
-    "id": "kia-k5-2020",
+    "id": "kia-k5-2020-20",
     "manufacturer": "기아",
     "model": "K5",
     "year": 2020,
+    "variant": "2.0 GDi",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린",
@@ -406,10 +750,11 @@
     "price": "2,385만원 ~ 3,155만원"
   },
   {
-    "id": "kia-ev6-2024",
+    "id": "kia-ev6-2024-lr",
     "manufacturer": "기아",
     "model": "EV6",
     "year": 2024,
+    "variant": "롱레인지 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -435,18 +780,49 @@
     "price": "5,230만원 ~ 7,480만원"
   },
   {
-    "id": "kia-ev6-2022",
+    "id": "kia-ev6-2024-gt",
     "manufacturer": "기아",
     "model": "EV6",
-    "year": 2022,
+    "year": 2024,
+    "variant": "GT",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
-      "horsepower": 325,
-      "torque": 605,
+      "horsepower": 585,
+      "torque": 740,
       "transmission": "단일 감속기",
       "drivetrain": "사륜구동",
-      "fuelEfficiency": "4.8 km/kWh",
+      "fuelEfficiency": "4.0 km/kWh",
+      "dimensions": {
+        "length": 4695,
+        "width": 1890,
+        "height": 1550,
+        "wheelbase": 2900
+      }
+    },
+    "history": "EV6 GT는 기아 최초의 고성능 전기차로, 585마력의 압도적인 출력과 0-100km/h 3.5초의 슈퍼카급 가속 성능을 자랑합니다.",
+    "trivia": [
+      "585마력 듀얼 모터",
+      "0-100km/h 3.5초",
+      "드리프트 모드 탑재"
+    ],
+    "image": "/images/ev6.jpg",
+    "price": "7,980만원"
+  },
+  {
+    "id": "kia-ev6-2022-lr",
+    "manufacturer": "기아",
+    "model": "EV6",
+    "year": 2022,
+    "variant": "롱레인지 RWD",
+    "category": "전기차",
+    "specs": {
+      "engine": "싱글 모터 전기",
+      "horsepower": 229,
+      "torque": 350,
+      "transmission": "단일 감속기",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "5.6 km/kWh",
       "dimensions": {
         "length": 4680,
         "width": 1880,
@@ -464,18 +840,19 @@
     "price": "4,980만원 ~ 7,230만원"
   },
   {
-    "id": "bmw-5series-2024",
+    "id": "bmw-5series-2024-520i",
     "manufacturer": "BMW",
     "model": "5시리즈",
     "year": 2024,
+    "variant": "520i",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린 터보",
-      "horsepower": 258,
-      "torque": 400,
+      "horsepower": 208,
+      "torque": 330,
       "transmission": "8단 자동",
       "drivetrain": "후륜구동",
-      "fuelEfficiency": "11.5 km/L",
+      "fuelEfficiency": "12.5 km/L",
       "dimensions": {
         "length": 5060,
         "width": 1900,
@@ -490,18 +867,79 @@
       "8세대는 BMW 최초로 AR 헤드업 디스플레이 적용"
     ],
     "image": "/images/bmw5.jpg",
-    "price": "7,150만원 ~ 1억 2,700만원"
+    "price": "7,150만원 ~ 7,850만원"
   },
   {
-    "id": "bmw-5series-2021",
+    "id": "bmw-5series-2024-530i",
     "manufacturer": "BMW",
     "model": "5시리즈",
-    "year": 2021,
+    "year": 2024,
+    "variant": "530i xDrive",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린 터보",
-      "horsepower": 252,
-      "torque": 350,
+      "horsepower": 258,
+      "torque": 400,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "11.5 km/L",
+      "dimensions": {
+        "length": 5060,
+        "width": 1900,
+        "height": 1505,
+        "wheelbase": 2995
+      }
+    },
+    "history": "530i xDrive는 5시리즈의 핵심 모델로, 258마력의 출력과 xDrive 사륜구동 시스템을 결합했습니다.",
+    "trivia": [
+      "xDrive 사륜구동 시스템",
+      "48V 마일드 하이브리드",
+      "M Sport 패키지 인기"
+    ],
+    "image": "/images/bmw5.jpg",
+    "price": "8,150만원 ~ 9,850만원"
+  },
+  {
+    "id": "bmw-5series-2024-m550e",
+    "manufacturer": "BMW",
+    "model": "5시리즈",
+    "year": 2024,
+    "variant": "M550e xDrive",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "3.0L 직렬 6기통 PHEV",
+      "horsepower": 489,
+      "torque": 700,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "14.1 km/L",
+      "dimensions": {
+        "length": 5060,
+        "width": 1900,
+        "height": 1505,
+        "wheelbase": 2995
+      }
+    },
+    "history": "M550e xDrive는 5시리즈의 플러그인 하이브리드 최고 성능 모델입니다. 3.0L 직렬 6기통 엔진과 전기모터의 조합으로 489마력의 시스템 출력을 발휘합니다.",
+    "trivia": [
+      "시스템 출력 489마력",
+      "순수 전기 모드 100km 주행",
+      "M 퍼포먼스 모델"
+    ],
+    "image": "/images/bmw5.jpg",
+    "price": "1억 1,200만원 ~ 1억 2,700만원"
+  },
+  {
+    "id": "bmw-5series-2021-520i",
+    "manufacturer": "BMW",
+    "model": "5시리즈",
+    "year": 2021,
+    "variant": "520i",
+    "category": "세단",
+    "specs": {
+      "engine": "2.0L 가솔린 터보",
+      "horsepower": 184,
+      "torque": 290,
       "transmission": "8단 자동",
       "drivetrain": "후륜구동",
       "fuelEfficiency": "11.2 km/L",
@@ -519,21 +957,22 @@
       "iDrive 7.0 인포테인먼트 시스템"
     ],
     "image": "/images/bmw5.jpg",
-    "price": "6,950만원 ~ 1억 1,700만원"
+    "price": "6,950만원 ~ 7,650만원"
   },
   {
-    "id": "bmw-5series-2017",
+    "id": "bmw-5series-2017-520d",
     "manufacturer": "BMW",
     "model": "5시리즈",
     "year": 2017,
+    "variant": "520d",
     "category": "세단",
     "specs": {
-      "engine": "2.0L 가솔린 터보",
-      "horsepower": 252,
-      "torque": 350,
+      "engine": "2.0L 디젤 터보",
+      "horsepower": 190,
+      "torque": 400,
       "transmission": "8단 자동",
       "drivetrain": "후륜구동",
-      "fuelEfficiency": "11.0 km/L",
+      "fuelEfficiency": "15.4 km/L",
       "dimensions": {
         "length": 4935,
         "width": 1868,
@@ -548,13 +987,14 @@
       "제스처 컨트롤 최초 도입"
     ],
     "image": "/images/bmw5.jpg",
-    "price": "6,550만원 ~ 9,700만원"
+    "price": "6,550만원 ~ 7,250만원"
   },
   {
-    "id": "bmw-x5-2024",
+    "id": "bmw-x5-2024-40i",
     "manufacturer": "BMW",
     "model": "X5",
     "year": 2024,
+    "variant": "xDrive40i",
     "category": "SUV",
     "specs": {
       "engine": "3.0L 직렬 6기통 가솔린 터보",
@@ -577,21 +1017,52 @@
       "4세대 모델은 최초로 오프로드 패키지 옵션 제공"
     ],
     "image": "/images/x5.jpg",
-    "price": "9,890만원 ~ 1억 5,990만원"
+    "price": "9,890만원 ~ 1억 1,990만원"
   },
   {
-    "id": "bmw-x5-2021",
+    "id": "bmw-x5-2024-m60i",
+    "manufacturer": "BMW",
+    "model": "X5",
+    "year": 2024,
+    "variant": "M60i xDrive",
+    "category": "SUV",
+    "specs": {
+      "engine": "4.4L V8 트윈터보",
+      "horsepower": 530,
+      "torque": 750,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "7.8 km/L",
+      "dimensions": {
+        "length": 4935,
+        "width": 2005,
+        "height": 1745,
+        "wheelbase": 2975
+      }
+    },
+    "history": "X5 M60i는 X5 라인업의 M 퍼포먼스 최고 모델입니다. 4.4L V8 트윈터보 엔진으로 530마력의 강력한 성능을 발휘합니다.",
+    "trivia": [
+      "4.4L V8 트윈터보 530마력",
+      "0-100km/h 4.3초",
+      "M 스포츠 익스트림 패키지"
+    ],
+    "image": "/images/x5.jpg",
+    "price": "1억 4,290만원 ~ 1억 5,990만원"
+  },
+  {
+    "id": "bmw-x5-2021-30d",
     "manufacturer": "BMW",
     "model": "X5",
     "year": 2021,
+    "variant": "xDrive30d",
     "category": "SUV",
     "specs": {
-      "engine": "3.0L 직렬 6기통 가솔린 터보",
-      "horsepower": 340,
-      "torque": 450,
+      "engine": "3.0L 직렬 6기통 디젤 터보",
+      "horsepower": 286,
+      "torque": 650,
       "transmission": "8단 자동",
       "drivetrain": "사륜구동",
-      "fuelEfficiency": "9.0 km/L",
+      "fuelEfficiency": "11.5 km/L",
       "dimensions": {
         "length": 4922,
         "width": 2004,
@@ -602,22 +1073,23 @@
     "history": "4세대 G05 X5의 페이스리프트 모델로, 새로운 디자인과 최신 기술이 적용되었습니다.",
     "trivia": [
       "4세대 페이스리프트 모델",
-      "플러그인 하이브리드 xDrive45e 추가",
-      "M 퍼포먼스 파츠 옵션 확대"
+      "3.0L 디젤 650Nm 토크",
+      "에어 서스펜션 표준"
     ],
     "image": "/images/x5.jpg",
-    "price": "9,590만원 ~ 1억 4,990만원"
+    "price": "9,590만원 ~ 1억 1,290만원"
   },
   {
-    "id": "mercedes-eclass-2024",
+    "id": "mercedes-eclass-2024-200",
     "manufacturer": "메르세데스-벤츠",
     "model": "E-Class",
     "year": 2024,
+    "variant": "E 200",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린 터보 + 마일드 하이브리드",
-      "horsepower": 258,
-      "torque": 400,
+      "horsepower": 204,
+      "torque": 320,
       "transmission": "9단 자동",
       "drivetrain": "후륜구동",
       "fuelEfficiency": "12.1 km/L",
@@ -635,18 +1107,79 @@
       "새로운 MBUX 슈퍼스크린은 조수석까지 확장되는 디스플레이"
     ],
     "image": "/images/eclass.jpg",
-    "price": "7,640만원 ~ 1억 930만원"
+    "price": "7,640만원 ~ 8,540만원"
   },
   {
-    "id": "mercedes-eclass-2021",
+    "id": "mercedes-eclass-2024-300",
+    "manufacturer": "메르세데스-벤츠",
+    "model": "E-Class",
+    "year": 2024,
+    "variant": "E 300 4MATIC",
+    "category": "세단",
+    "specs": {
+      "engine": "2.0L 가솔린 터보 + 마일드 하이브리드",
+      "horsepower": 258,
+      "torque": 400,
+      "transmission": "9단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "11.5 km/L",
+      "dimensions": {
+        "length": 4949,
+        "width": 1880,
+        "height": 1468,
+        "wheelbase": 2961
+      }
+    },
+    "history": "E 300 4MATIC은 E-Class의 핵심 모델로, 258마력의 출력과 4MATIC 사륜구동 시스템을 결합했습니다.",
+    "trivia": [
+      "4MATIC 사륜구동",
+      "ISG 마일드 하이브리드",
+      "AMG 라인 패키지 인기"
+    ],
+    "image": "/images/eclass.jpg",
+    "price": "8,940만원 ~ 9,840만원"
+  },
+  {
+    "id": "mercedes-eclass-2024-amg53",
+    "manufacturer": "메르세데스-벤츠",
+    "model": "E-Class",
+    "year": 2024,
+    "variant": "AMG E 53 4MATIC+",
+    "category": "세단",
+    "specs": {
+      "engine": "3.0L 직렬 6기통 터보 + ISG",
+      "horsepower": 449,
+      "torque": 560,
+      "transmission": "9단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.8 km/L",
+      "dimensions": {
+        "length": 4949,
+        "width": 1880,
+        "height": 1468,
+        "wheelbase": 2961
+      }
+    },
+    "history": "AMG E 53은 E-Class의 AMG 퍼포먼스 모델입니다. 3.0L 직렬 6기통 터보 엔진과 ISG로 449마력의 강력한 성능을 발휘합니다.",
+    "trivia": [
+      "AMG 핸드크래프트 엔진",
+      "AMG SPEEDSHIFT TCT 9단",
+      "AMG 퍼포먼스 4MATIC+"
+    ],
+    "image": "/images/eclass.jpg",
+    "price": "1억 430만원 ~ 1억 930만원"
+  },
+  {
+    "id": "mercedes-eclass-2021-200",
     "manufacturer": "메르세데스-벤츠",
     "model": "E-Class",
     "year": 2021,
+    "variant": "E 200",
     "category": "세단",
     "specs": {
       "engine": "2.0L 가솔린 터보",
-      "horsepower": 258,
-      "torque": 370,
+      "horsepower": 197,
+      "torque": 320,
       "transmission": "9단 자동",
       "drivetrain": "후륜구동",
       "fuelEfficiency": "11.5 km/L",
@@ -664,18 +1197,19 @@
       "AMG 라인 디자인 옵션 인기"
     ],
     "image": "/images/eclass.jpg",
-    "price": "7,140만원 ~ 9,930만원"
+    "price": "7,140만원 ~ 7,940만원"
   },
   {
-    "id": "mercedes-gle-2024",
+    "id": "mercedes-gle-2024-300d",
     "manufacturer": "메르세데스-벤츠",
     "model": "GLE",
     "year": 2024,
+    "variant": "GLE 300 d 4MATIC",
     "category": "SUV",
     "specs": {
       "engine": "2.0L 디젤 터보 + 마일드 하이브리드",
-      "horsepower": 330,
-      "torque": 700,
+      "horsepower": 272,
+      "torque": 550,
       "transmission": "9단 자동",
       "drivetrain": "사륜구동",
       "fuelEfficiency": "11.8 km/L",
@@ -693,13 +1227,44 @@
       "7인승 옵션으로 대가족용으로도 인기"
     ],
     "image": "/images/gle.jpg",
-    "price": "1억 240만원 ~ 1억 5,530만원"
+    "price": "1억 240만원 ~ 1억 1,540만원"
   },
   {
-    "id": "tesla-model3-2024",
+    "id": "mercedes-gle-2024-450",
+    "manufacturer": "메르세데스-벤츠",
+    "model": "GLE",
+    "year": 2024,
+    "variant": "GLE 450 4MATIC",
+    "category": "SUV",
+    "specs": {
+      "engine": "3.0L 직렬 6기통 터보 + ISG",
+      "horsepower": 381,
+      "torque": 500,
+      "transmission": "9단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.5 km/L",
+      "dimensions": {
+        "length": 4941,
+        "width": 2018,
+        "height": 1788,
+        "wheelbase": 2935
+      }
+    },
+    "history": "GLE 450은 3.0L 직렬 6기통 터보 엔진과 ISG를 결합한 고성능 SUV입니다. 381마력의 출력과 뛰어난 주행 성능을 제공합니다.",
+    "trivia": [
+      "3.0L 직렬 6기통 381마력",
+      "ISG 마일드 하이브리드",
+      "에어매틱 서스펜션 표준"
+    ],
+    "image": "/images/gle.jpg",
+    "price": "1억 2,540만원 ~ 1억 5,530만원"
+  },
+  {
+    "id": "tesla-model3-2024-lr",
     "manufacturer": "테슬라",
     "model": "Model 3",
     "year": 2024,
+    "variant": "롱레인지 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -725,18 +1290,49 @@
     "price": "5,299만원 ~ 6,599만원"
   },
   {
-    "id": "tesla-model3-2021",
+    "id": "tesla-model3-2024-perf",
     "manufacturer": "테슬라",
     "model": "Model 3",
-    "year": 2021,
+    "year": 2024,
+    "variant": "퍼포먼스",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
-      "horsepower": 346,
-      "torque": 493,
+      "horsepower": 460,
+      "torque": 639,
       "transmission": "단일 감속기",
       "drivetrain": "사륜구동",
-      "fuelEfficiency": "5.8 km/kWh",
+      "fuelEfficiency": "5.5 km/kWh",
+      "dimensions": {
+        "length": 4720,
+        "width": 1850,
+        "height": 1440,
+        "wheelbase": 2875
+      }
+    },
+    "history": "Model 3 퍼포먼스는 Model 3의 최고 성능 모델입니다. 460마력의 듀얼 모터와 강화된 서스펜션으로 스포츠카급 성능을 제공합니다.",
+    "trivia": [
+      "0-100km/h 3.1초",
+      "트랙 모드 탑재",
+      "20인치 퍼포먼스 휠"
+    ],
+    "image": "/images/model3.jpg",
+    "price": "6,599만원"
+  },
+  {
+    "id": "tesla-model3-2021-sr",
+    "manufacturer": "테슬라",
+    "model": "Model 3",
+    "year": 2021,
+    "variant": "스탠다드 레인지 플러스",
+    "category": "전기차",
+    "specs": {
+      "engine": "싱글 모터 전기",
+      "horsepower": 283,
+      "torque": 330,
+      "transmission": "단일 감속기",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "6.3 km/kWh",
       "dimensions": {
         "length": 4694,
         "width": 1849,
@@ -751,13 +1347,14 @@
       "크롬 트림 삭제로 깔끔한 외관"
     ],
     "image": "/images/model3.jpg",
-    "price": "5,099만원 ~ 6,399만원"
+    "price": "5,099만원"
   },
   {
-    "id": "tesla-modely-2024",
+    "id": "tesla-modely-2024-lr",
     "manufacturer": "테슬라",
     "model": "Model Y",
     "year": 2024,
+    "variant": "롱레인지 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -783,10 +1380,41 @@
     "price": "5,699만원 ~ 7,299만원"
   },
   {
-    "id": "tesla-modely-2022",
+    "id": "tesla-modely-2024-perf",
+    "manufacturer": "테슬라",
+    "model": "Model Y",
+    "year": 2024,
+    "variant": "퍼포먼스",
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 514,
+      "torque": 639,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "5.0 km/kWh",
+      "dimensions": {
+        "length": 4751,
+        "width": 1921,
+        "height": 1624,
+        "wheelbase": 2890
+      }
+    },
+    "history": "Model Y 퍼포먼스는 Model Y의 최고 성능 모델입니다. 514마력의 강력한 출력과 스포츠 튜닝 서스펜션을 갖추고 있습니다.",
+    "trivia": [
+      "0-100km/h 3.7초",
+      "21인치 우버터빈 휠",
+      "트랙 모드 탑재"
+    ],
+    "image": "/images/modely.jpg",
+    "price": "7,299만원"
+  },
+  {
+    "id": "tesla-modely-2022-lr",
     "manufacturer": "테슬라",
     "model": "Model Y",
     "year": 2022,
+    "variant": "롱레인지 AWD",
     "category": "전기차",
     "specs": {
       "engine": "듀얼 모터 전기",
@@ -812,10 +1440,11 @@
     "price": "5,499만원 ~ 7,099만원"
   },
   {
-    "id": "porsche-911-2024",
+    "id": "porsche-911-2024-carrera",
     "manufacturer": "포르쉐",
     "model": "911",
     "year": 2024,
+    "variant": "Carrera",
     "category": "스포츠카",
     "specs": {
       "engine": "3.0L 트윈터보 플랫식스",
@@ -838,13 +1467,104 @@
       "GT3 RS는 뉘르부르크링 양산차 랩타임 최상위권"
     ],
     "image": "/images/911.jpg",
-    "price": "1억 5,790만원 ~ 3억 3,920만원"
+    "price": "1억 5,790만원 ~ 1억 7,290만원"
   },
   {
-    "id": "porsche-911-2022",
+    "id": "porsche-911-2024-carrera-s",
+    "manufacturer": "포르쉐",
+    "model": "911",
+    "year": 2024,
+    "variant": "Carrera S",
+    "category": "스포츠카",
+    "specs": {
+      "engine": "3.0L 트윈터보 플랫식스",
+      "horsepower": 450,
+      "torque": 530,
+      "transmission": "8단 PDK",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "9.3 km/L",
+      "dimensions": {
+        "length": 4519,
+        "width": 1852,
+        "height": 1300,
+        "wheelbase": 2450
+      }
+    },
+    "history": "911 Carrera S는 911 라인업의 핵심 고성능 모델입니다. 450마력의 강력한 출력과 후륜구동의 순수한 드라이빙 감각을 제공합니다.",
+    "trivia": [
+      "450마력 트윈터보",
+      "0-100km/h 3.5초",
+      "PASM 스포츠 서스펜션"
+    ],
+    "image": "/images/911.jpg",
+    "price": "1억 8,290만원 ~ 1억 9,790만원"
+  },
+  {
+    "id": "porsche-911-2024-turbo-s",
+    "manufacturer": "포르쉐",
+    "model": "911",
+    "year": 2024,
+    "variant": "Turbo S",
+    "category": "스포츠카",
+    "specs": {
+      "engine": "3.7L 트윈터보 플랫식스",
+      "horsepower": 650,
+      "torque": 800,
+      "transmission": "8단 PDK",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "8.1 km/L",
+      "dimensions": {
+        "length": 4535,
+        "width": 1900,
+        "height": 1303,
+        "wheelbase": 2450
+      }
+    },
+    "history": "911 Turbo S는 911 양산 모델의 정점입니다. 3.7L 트윈터보 엔진으로 650마력을 발휘하며, 0-100km/h 2.7초의 슈퍼카급 가속 성능을 자랑합니다.",
+    "trivia": [
+      "650마력 최고 출력",
+      "0-100km/h 2.7초",
+      "PCCB 세라믹 브레이크 옵션"
+    ],
+    "image": "/images/911.jpg",
+    "price": "3억 920만원 ~ 3억 3,920만원"
+  },
+  {
+    "id": "porsche-911-2024-gt3",
+    "manufacturer": "포르쉐",
+    "model": "911",
+    "year": 2024,
+    "variant": "GT3",
+    "category": "스포츠카",
+    "specs": {
+      "engine": "4.0L 자연흡기 플랫식스",
+      "horsepower": 510,
+      "torque": 450,
+      "transmission": "7단 PDK",
+      "drivetrain": "후륜구동",
+      "fuelEfficiency": "8.9 km/L",
+      "dimensions": {
+        "length": 4573,
+        "width": 1852,
+        "height": 1279,
+        "wheelbase": 2457
+      }
+    },
+    "history": "911 GT3는 모터스포츠 DNA를 가장 순수하게 담은 트랙 지향 모델입니다. 4.0L 자연흡기 엔진으로 9,000rpm까지 회전하며, 레이싱카에서 직접 파생된 기술이 적용됩니다.",
+    "trivia": [
+      "4.0L 자연흡기 9,000rpm",
+      "뉘르부르크링 6분 55초",
+      "레이싱카 파생 서스펜션"
+    ],
+    "image": "/images/911.jpg",
+    "price": "2억 4,890만원 ~ 2억 6,390만원"
+  },
+  {
+    "id": "porsche-911-2022-carrera",
     "manufacturer": "포르쉐",
     "model": "911",
     "year": 2022,
+    "variant": "Carrera",
     "category": "스포츠카",
     "specs": {
       "engine": "3.0L 트윈터보 플랫식스",
@@ -867,13 +1587,14 @@
       "PDK 변속기 응답성 향상"
     ],
     "image": "/images/911.jpg",
-    "price": "1억 5,290만원 ~ 3억 1,920만원"
+    "price": "1억 5,290만원 ~ 1억 6,790만원"
   },
   {
-    "id": "porsche-911-2020",
+    "id": "porsche-911-2020-carrera",
     "manufacturer": "포르쉐",
     "model": "911",
     "year": 2020,
+    "variant": "Carrera",
     "category": "스포츠카",
     "specs": {
       "engine": "3.0L 트윈터보 플랫식스",
@@ -896,13 +1617,14 @@
       "911 역사상 가장 넓은 차체"
     ],
     "image": "/images/911.jpg",
-    "price": "1억 4,790만원 ~ 2억 9,920만원"
+    "price": "1억 4,790만원 ~ 1억 6,290만원"
   },
   {
-    "id": "porsche-cayenne-2024",
+    "id": "porsche-cayenne-2024-base",
     "manufacturer": "포르쉐",
     "model": "카이엔",
     "year": 2024,
+    "variant": "Cayenne",
     "category": "SUV",
     "specs": {
       "engine": "3.0L V6 터보",
@@ -925,13 +1647,74 @@
       "카이엔 터보 GT는 SUV 최초로 뉘르부르크링 7분 38초 기록"
     ],
     "image": "/images/cayenne.jpg",
-    "price": "1억 1,870만원 ~ 2억 6,450만원"
+    "price": "1억 1,870만원 ~ 1억 3,370만원"
   },
   {
-    "id": "porsche-cayenne-2021",
+    "id": "porsche-cayenne-2024-s",
+    "manufacturer": "포르쉐",
+    "model": "카이엔",
+    "year": 2024,
+    "variant": "Cayenne S",
+    "category": "SUV",
+    "specs": {
+      "engine": "2.9L V6 트윈터보",
+      "horsepower": 474,
+      "torque": 600,
+      "transmission": "8단 Tiptronic S",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "8.5 km/L",
+      "dimensions": {
+        "length": 4930,
+        "width": 1983,
+        "height": 1673,
+        "wheelbase": 2895
+      }
+    },
+    "history": "카이엔 S는 V6 트윈터보 엔진으로 474마력을 발휘하는 고성능 SUV입니다. 포르쉐의 스포츠카 DNA를 SUV에 담았습니다.",
+    "trivia": [
+      "2.9L V6 트윈터보 474마력",
+      "0-100km/h 4.7초",
+      "스포츠 크로노 패키지 포함"
+    ],
+    "image": "/images/cayenne.jpg",
+    "price": "1억 5,870만원 ~ 1억 7,370만원"
+  },
+  {
+    "id": "porsche-cayenne-2024-turbo-gt",
+    "manufacturer": "포르쉐",
+    "model": "카이엔",
+    "year": 2024,
+    "variant": "Turbo GT",
+    "category": "SUV",
+    "specs": {
+      "engine": "4.0L V8 트윈터보",
+      "horsepower": 659,
+      "torque": 850,
+      "transmission": "8단 Tiptronic S",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "7.2 km/L",
+      "dimensions": {
+        "length": 4930,
+        "width": 1983,
+        "height": 1653,
+        "wheelbase": 2895
+      }
+    },
+    "history": "카이엔 터보 GT는 카이엔 라인업의 정점입니다. 659마력의 V8 트윈터보와 트랙 지향 세팅으로 뉘르부르크링 SUV 최고 기록을 보유하고 있습니다.",
+    "trivia": [
+      "659마력 V8 트윈터보",
+      "뉘르부르크링 7분 38초 기록",
+      "SUV 세계 최고 랩타임"
+    ],
+    "image": "/images/cayenne.jpg",
+    "price": "2억 4,450만원 ~ 2억 6,450만원"
+  },
+  {
+    "id": "porsche-cayenne-2021-base",
     "manufacturer": "포르쉐",
     "model": "카이엔",
     "year": 2021,
+    "variant": "Cayenne",
     "category": "SUV",
     "specs": {
       "engine": "3.0L V6 터보",
@@ -954,14 +1737,15 @@
       "Cayenne GTS 복귀"
     ],
     "image": "/images/cayenne.jpg",
-    "price": "1억 970만원 ~ 2억 4,450만원"
+    "price": "1억 970만원 ~ 1억 2,470만원"
   },
   {
-    "id": "toyota-camry-2024",
+    "id": "toyota-camry-2024-hev",
     "manufacturer": "토요타",
     "model": "캠리",
     "year": 2024,
-    "category": "세단",
+    "variant": "하이브리드",
+    "category": "하이브리드",
     "specs": {
       "engine": "2.5L 가솔린 하이브리드",
       "horsepower": 225,
@@ -986,11 +1770,42 @@
     "price": "3,690만원 ~ 4,250만원"
   },
   {
-    "id": "toyota-camry-2021",
+    "id": "toyota-camry-2024-hev-awd",
+    "manufacturer": "토요타",
+    "model": "캠리",
+    "year": 2024,
+    "variant": "하이브리드 AWD",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "2.5L 가솔린 하이브리드",
+      "horsepower": 232,
+      "torque": 239,
+      "transmission": "CVT",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "16.8 km/L",
+      "dimensions": {
+        "length": 4885,
+        "width": 1840,
+        "height": 1455,
+        "wheelbase": 2825
+      }
+    },
+    "history": "캠리 하이브리드 AWD는 후륜에 별도의 전기모터를 추가하여 사륜구동을 구현합니다. 눈길이나 미끄러운 도로에서도 안정적인 주행이 가능합니다.",
+    "trivia": [
+      "전자식 온디맨드 AWD",
+      "후륜 전기모터 추가",
+      "눈길 안정성 향상"
+    ],
+    "image": "/images/camry.jpg",
+    "price": "4,050만원 ~ 4,550만원"
+  },
+  {
+    "id": "toyota-camry-2021-hev",
     "manufacturer": "토요타",
     "model": "캠리",
     "year": 2021,
-    "category": "세단",
+    "variant": "하이브리드",
+    "category": "하이브리드",
     "specs": {
       "engine": "2.5L 가솔린 하이브리드",
       "horsepower": 218,
@@ -1015,10 +1830,11 @@
     "price": "3,490만원 ~ 4,050만원"
   },
   {
-    "id": "honda-civic-2024",
+    "id": "honda-civic-2024-15t",
     "manufacturer": "혼다",
     "model": "시빅",
     "year": 2024,
+    "variant": "1.5 터보",
     "category": "세단",
     "specs": {
       "engine": "1.5L 가솔린 터보",
@@ -1041,13 +1857,44 @@
       "일본 카 오브 더 이어 2022 수상"
     ],
     "image": "/images/civic.jpg",
-    "price": "2,800만원 ~ 3,500만원"
+    "price": "2,800만원 ~ 3,200만원"
   },
   {
-    "id": "honda-civic-2022",
+    "id": "honda-civic-2024-typer",
+    "manufacturer": "혼다",
+    "model": "시빅",
+    "year": 2024,
+    "variant": "Type R",
+    "category": "스포츠카",
+    "specs": {
+      "engine": "2.0L VTEC 터보",
+      "horsepower": 329,
+      "torque": 420,
+      "transmission": "6단 수동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "10.8 km/L",
+      "dimensions": {
+        "length": 4595,
+        "width": 1890,
+        "height": 1405,
+        "wheelbase": 2735
+      }
+    },
+    "history": "시빅 Type R은 혼다의 모터스포츠 정신을 담은 최강의 전륜구동 스포츠카입니다. 329마력의 VTEC 터보 엔진과 6단 수동변속기로 순수한 드라이빙 경험을 제공합니다.",
+    "trivia": [
+      "뉘르부르크링 FF 최고 기록",
+      "6단 수동변속기 전용",
+      "리미티드 슬립 디퍼렌셜"
+    ],
+    "image": "/images/civic.jpg",
+    "price": "5,500만원"
+  },
+  {
+    "id": "honda-civic-2022-15t",
     "manufacturer": "혼다",
     "model": "시빅",
     "year": 2022,
+    "variant": "1.5 터보",
     "category": "세단",
     "specs": {
       "engine": "1.5L 가솔린 터보",
@@ -1070,13 +1917,14 @@
       "새로운 수평형 인테리어 디자인"
     ],
     "image": "/images/civic.jpg",
-    "price": "2,700만원 ~ 3,400만원"
+    "price": "2,700만원 ~ 3,100만원"
   },
   {
-    "id": "audi-a6-2024",
+    "id": "audi-a6-2024-45tfsi",
     "manufacturer": "아우디",
     "model": "A6",
     "year": 2024,
+    "variant": "45 TFSI quattro",
     "category": "세단",
     "specs": {
       "engine": "2.0L TFSI 가솔린 터보",
@@ -1099,13 +1947,44 @@
       "RS 6 아반트는 600마력의 슈퍼 왜건"
     ],
     "image": "/images/a6.jpg",
-    "price": "6,910만원 ~ 9,550만원"
+    "price": "6,910만원 ~ 7,910만원"
   },
   {
-    "id": "audi-a6-2021",
+    "id": "audi-a6-2024-55tfsi",
+    "manufacturer": "아우디",
+    "model": "A6",
+    "year": 2024,
+    "variant": "55 TFSI quattro",
+    "category": "세단",
+    "specs": {
+      "engine": "3.0L TFSI V6 터보",
+      "horsepower": 340,
+      "torque": 500,
+      "transmission": "7단 S tronic",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "9.8 km/L",
+      "dimensions": {
+        "length": 4939,
+        "width": 1886,
+        "height": 1457,
+        "wheelbase": 2924
+      }
+    },
+    "history": "A6 55 TFSI는 3.0L V6 터보 엔진을 탑재한 고성능 모델입니다. 340마력의 출력과 콰트로 사륜구동으로 역동적인 주행 성능을 제공합니다.",
+    "trivia": [
+      "3.0L V6 터보 340마력",
+      "48V 마일드 하이브리드",
+      "0-100km/h 5.1초"
+    ],
+    "image": "/images/a6.jpg",
+    "price": "8,510만원 ~ 9,550만원"
+  },
+  {
+    "id": "audi-a6-2021-45tfsi",
     "manufacturer": "아우디",
     "model": "A6",
     "year": 2021,
+    "variant": "45 TFSI quattro",
     "category": "세단",
     "specs": {
       "engine": "2.0L TFSI 가솔린 터보",
@@ -1128,13 +2007,14 @@
       "버추얼 콕핏 플러스 옵션"
     ],
     "image": "/images/a6.jpg",
-    "price": "6,610만원 ~ 9,150만원"
+    "price": "6,610만원 ~ 7,610만원"
   },
   {
-    "id": "genesis-g80-2024",
+    "id": "genesis-g80-2024-25t",
     "manufacturer": "제네시스",
     "model": "G80",
     "year": 2024,
+    "variant": "2.5T",
     "category": "세단",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -1157,13 +2037,74 @@
       "후륜구동 기반으로 역동적인 주행 성능 제공"
     ],
     "image": "/images/g80.jpg",
-    "price": "5,823만원 ~ 8,158만원"
+    "price": "5,823만원 ~ 6,823만원"
   },
   {
-    "id": "genesis-g80-2022",
+    "id": "genesis-g80-2024-35t",
+    "manufacturer": "제네시스",
+    "model": "G80",
+    "year": 2024,
+    "variant": "3.5T",
+    "category": "세단",
+    "specs": {
+      "engine": "3.5L V6 가솔린 터보",
+      "horsepower": 380,
+      "torque": 530,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "8.5 km/L",
+      "dimensions": {
+        "length": 4995,
+        "width": 1925,
+        "height": 1465,
+        "wheelbase": 3010
+      }
+    },
+    "history": "G80 3.5T는 3.5L V6 트윈터보 엔진으로 380마력을 발휘하는 고성능 모델입니다. HTRAC 사륜구동 시스템과 함께 역동적인 주행 성능을 제공합니다.",
+    "trivia": [
+      "3.5L V6 트윈터보 380마력",
+      "HTRAC 사륜구동",
+      "0-100km/h 5.3초"
+    ],
+    "image": "/images/g80.jpg",
+    "price": "7,158만원 ~ 8,158만원"
+  },
+  {
+    "id": "genesis-g80-2024-ev",
+    "manufacturer": "제네시스",
+    "model": "G80",
+    "year": 2024,
+    "variant": "전기차",
+    "category": "전기차",
+    "specs": {
+      "engine": "듀얼 모터 전기",
+      "horsepower": 365,
+      "torque": 700,
+      "transmission": "단일 감속기",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "4.3 km/kWh",
+      "dimensions": {
+        "length": 4995,
+        "width": 1925,
+        "height": 1465,
+        "wheelbase": 3010
+      }
+    },
+    "history": "제네시스 일렉트리파이드 G80은 제네시스 최초의 순수 전기 세단입니다. 800V 초급속 충전과 V2L 기능을 지원하며, 1회 충전으로 427km 주행이 가능합니다.",
+    "trivia": [
+      "800V 초급속 충전",
+      "V2L 기능 지원",
+      "1회 충전 427km"
+    ],
+    "image": "/images/g80.jpg",
+    "price": "8,158만원 ~ 8,658만원"
+  },
+  {
+    "id": "genesis-g80-2022-25t",
     "manufacturer": "제네시스",
     "model": "G80",
     "year": 2022,
+    "variant": "2.5T",
     "category": "세단",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -1186,13 +2127,14 @@
       "원격 스마트 파킹 어시스트 2 적용"
     ],
     "image": "/images/g80.jpg",
-    "price": "5,623만원 ~ 7,958만원"
+    "price": "5,623만원 ~ 6,623만원"
   },
   {
-    "id": "genesis-g80-2020",
+    "id": "genesis-g80-2020-25t",
     "manufacturer": "제네시스",
     "model": "G80",
     "year": 2020,
+    "variant": "2.5T",
     "category": "세단",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -1215,13 +2157,14 @@
       "투 라인 쿼드 램프 디자인"
     ],
     "image": "/images/g80.jpg",
-    "price": "5,223만원 ~ 7,558만원"
+    "price": "5,223만원 ~ 6,223만원"
   },
   {
-    "id": "genesis-gv80-2024",
+    "id": "genesis-gv80-2024-25t",
     "manufacturer": "제네시스",
     "model": "GV80",
     "year": 2024,
+    "variant": "2.5T",
     "category": "SUV",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -1244,13 +2187,74 @@
       "2021년 IIHS 최고 안전 등급 획득"
     ],
     "image": "/images/gv80.jpg",
-    "price": "6,596만원 ~ 9,413만원"
+    "price": "6,596만원 ~ 7,596만원"
   },
   {
-    "id": "genesis-gv80-2022",
+    "id": "genesis-gv80-2024-35t",
+    "manufacturer": "제네시스",
+    "model": "GV80",
+    "year": 2024,
+    "variant": "3.5T",
+    "category": "SUV",
+    "specs": {
+      "engine": "3.5L V6 가솔린 터보",
+      "horsepower": 380,
+      "torque": 530,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "8.2 km/L",
+      "dimensions": {
+        "length": 4945,
+        "width": 1975,
+        "height": 1715,
+        "wheelbase": 2955
+      }
+    },
+    "history": "GV80 3.5T는 3.5L V6 트윈터보 엔진으로 380마력을 발휘하는 고성능 SUV입니다. HTRAC 사륜구동 시스템과 함께 강력한 동력 성능을 제공합니다.",
+    "trivia": [
+      "3.5L V6 트윈터보 380마력",
+      "HTRAC 사륜구동",
+      "프레스티지 라운지 패키지"
+    ],
+    "image": "/images/gv80.jpg",
+    "price": "8,413만원 ~ 9,413만원"
+  },
+  {
+    "id": "genesis-gv80-2024-coupe",
+    "manufacturer": "제네시스",
+    "model": "GV80",
+    "year": 2024,
+    "variant": "쿠페",
+    "category": "SUV",
+    "specs": {
+      "engine": "3.5L V6 가솔린 터보",
+      "horsepower": 380,
+      "torque": 530,
+      "transmission": "8단 자동",
+      "drivetrain": "사륜구동",
+      "fuelEfficiency": "8.0 km/L",
+      "dimensions": {
+        "length": 4945,
+        "width": 1975,
+        "height": 1690,
+        "wheelbase": 2955
+      }
+    },
+    "history": "GV80 쿠페는 GV80의 스포티한 변형 모델입니다. 낮은 루프라인과 쿠페 스타일의 디자인으로 역동적인 스타일을 강조합니다.",
+    "trivia": [
+      "쿠페 스타일 루프라인",
+      "21인치 전용 휠",
+      "스포츠 튜닝 서스펜션"
+    ],
+    "image": "/images/gv80.jpg",
+    "price": "9,013만원 ~ 9,913만원"
+  },
+  {
+    "id": "genesis-gv80-2022-25t",
     "manufacturer": "제네시스",
     "model": "GV80",
     "year": 2022,
+    "variant": "2.5T",
     "category": "SUV",
     "specs": {
       "engine": "2.5L 가솔린 터보",
@@ -1273,13 +2277,14 @@
       "3.5L V6 터보 엔진 추가"
     ],
     "image": "/images/gv80.jpg",
-    "price": "6,396만원 ~ 9,213만원"
+    "price": "6,396만원 ~ 7,396만원"
   },
   {
-    "id": "genesis-gv80-2020",
+    "id": "genesis-gv80-2020-30d",
     "manufacturer": "제네시스",
     "model": "GV80",
     "year": 2020,
+    "variant": "3.0 디젤",
     "category": "SUV",
     "specs": {
       "engine": "3.0L 디젤",
@@ -1302,6 +2307,6 @@
       "IIHS 최고 안전 등급"
     ],
     "image": "/images/gv80.jpg",
-    "price": "5,896만원 ~ 8,713만원"
+    "price": "5,896만원 ~ 6,896만원"
   }
 ]
