@@ -8,7 +8,6 @@ import styles from './HomePage.module.css';
 const cars: Car[] = carsData as Car[];
 
 export default function HomePage() {
-  const [selectedManufacturer, setSelectedManufacturer] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const manufacturers = useMemo(() => {
@@ -16,32 +15,26 @@ export default function HomePage() {
     return unique.sort();
   }, []);
 
-  const categories = useMemo(() => {
-    const unique = [...new Set(cars.map(car => car.category))];
-    return unique;
-  }, []);
+  const carsByManufacturer = useMemo(() => {
+    const grouped: Record<string, Car[]> = {};
+    manufacturers.forEach(manufacturer => {
+      let manufacturerCars = cars.filter(car => car.manufacturer === manufacturer);
 
-  const filteredCars = useMemo(() => {
-    let result = cars;
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        manufacturerCars = manufacturerCars.filter(car =>
+          car.model.toLowerCase().includes(query)
+        );
+      }
 
-    if (selectedManufacturer) {
-      result = result.filter(car => car.manufacturer === selectedManufacturer);
-    }
+      if (manufacturerCars.length > 0) {
+        grouped[manufacturer] = manufacturerCars;
+      }
+    });
+    return grouped;
+  }, [manufacturers, searchQuery]);
 
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(car =>
-        car.model.toLowerCase().includes(query) ||
-        car.manufacturer.toLowerCase().includes(query)
-      );
-    }
-
-    return result;
-  }, [selectedManufacturer, searchQuery]);
-
-  const getManufacturerCount = (manufacturer: string) => {
-    return cars.filter(car => car.manufacturer === manufacturer).length;
-  };
+  const visibleManufacturers = Object.keys(carsByManufacturer);
 
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
 
@@ -49,23 +42,28 @@ export default function HomePage() {
     setLogoErrors(prev => new Set(prev).add(manufacturer));
   };
 
-  const renderLogo = (manufacturer: string, size: 'small' | 'large' = 'small') => {
+  const renderLogo = (manufacturer: string, size: 'small' | 'large' | 'xlarge' = 'small') => {
     const logoUrl = manufacturerLogos[manufacturer];
     const abbr = manufacturerAbbr[manufacturer] || manufacturer[0];
 
     if (!logoUrl || logoErrors.has(manufacturer)) {
+      const sizeClass = size === 'xlarge' ? styles.logoFallbackXLarge :
+                        size === 'large' ? styles.logoFallbackLarge : styles.logoFallback;
       return (
-        <span className={size === 'small' ? styles.logoFallback : styles.logoFallbackLarge}>
+        <span className={sizeClass}>
           {abbr}
         </span>
       );
     }
 
+    const sizeClass = size === 'xlarge' ? styles.manufacturerLogoXLarge :
+                      size === 'large' ? styles.manufacturerLogoLarge : styles.manufacturerLogo;
+
     return (
       <img
         src={logoUrl}
         alt={`${manufacturer} 로고`}
-        className={size === 'small' ? styles.manufacturerLogo : styles.manufacturerLogoLarge}
+        className={sizeClass}
         onError={() => handleLogoError(manufacturer)}
       />
     );
@@ -91,79 +89,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.manufacturerNav}>
-        <div className={styles.container}>
-          <div className={styles.manufacturerList}>
-            <button
-              type="button"
-              className={`${styles.manufacturerLink} ${!selectedManufacturer ? styles.active : ''}`}
-              onClick={() => setSelectedManufacturer(null)}
-            >
-              전체
-              <span className={styles.manufacturerCount}>{cars.length}</span>
-            </button>
-            {manufacturers.map(manufacturer => (
-              <button
-                type="button"
-                key={manufacturer}
-                className={`${styles.manufacturerLink} ${selectedManufacturer === manufacturer ? styles.active : ''}`}
-                onClick={() => setSelectedManufacturer(manufacturer)}
-              >
-                {renderLogo(manufacturer, 'small')}
-                {manufacturer}
-                <span className={styles.manufacturerCount}>{getManufacturerCount(manufacturer)}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.carList}>
-        <div className={styles.container}>
-          <div className={styles.listHeader}>
-            <h2 className={styles.listTitle}>
-              {selectedManufacturer ? (
-                <span className={styles.manufacturerTitleWrapper}>
-                  {renderLogo(selectedManufacturer, 'large')}
-                  {selectedManufacturer}
-                </span>
-              ) : '전체 차량'}
-            </h2>
-            <span className={styles.listCount}>{filteredCars.length}개 차량</span>
-          </div>
-          <ul className={styles.carModelList}>
-            {filteredCars.map(car => (
-              <li key={car.id}>
-                <Link to={`/car/${car.id}`} className={styles.carModelLink}>
-                  {!selectedManufacturer && <span className={styles.carManufacturer}>{car.manufacturer}</span>}
-                  {car.model}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          {filteredCars.length === 0 && (
-            <p className={styles.noResults}>검색 결과가 없습니다.</p>
-          )}
-        </div>
-      </section>
-
-      <section className={styles.stats}>
-        <div className={styles.container}>
-          <div className={styles.statGrid}>
-            <div className={styles.statItem}>
-              <span className={styles.statLabel}>총 차량</span>
-              <span className={styles.statNumber}>{cars.length}</span>
+      <section className={styles.dealership}>
+        {visibleManufacturers.length === 0 ? (
+          <div className={styles.noResults}>검색 결과가 없습니다.</div>
+        ) : (
+          visibleManufacturers.map(manufacturer => (
+            <div key={manufacturer} className={styles.brandSection}>
+              <div className={styles.brandHeader}>
+                {renderLogo(manufacturer, 'xlarge')}
+                <h2 className={styles.brandName}>{manufacturer}</h2>
+              </div>
+              <div className={styles.carScroller}>
+                <div className={styles.carTrack}>
+                  {carsByManufacturer[manufacturer].map(car => (
+                    <Link key={car.id} to={`/car/${car.id}`} className={styles.carCard}>
+                      <div className={styles.carInfo}>
+                        <span className={styles.carCategory}>{car.category}</span>
+                        <h3 className={styles.carName}>{car.model}</h3>
+                        <div className={styles.carSpecs}>
+                          <span>{car.year}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className={styles.statItem}>
-              <span className={styles.statLabel}>브랜드</span>
-              <span className={styles.statNumber}>{manufacturers.length}</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statLabel}>차종</span>
-              <span className={styles.statNumber}>{categories.length}</span>
-            </div>
-          </div>
-        </div>
+          ))
+        )}
       </section>
     </div>
   );
