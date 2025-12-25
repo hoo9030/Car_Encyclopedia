@@ -85,6 +85,17 @@ export interface CarSpecs {
   comfort?: ComfortSpecs;
 }
 
+export interface ModelIntroduction {
+  overview: string;           // 모델 개요 (간단한 소개)
+  history: string;            // 개발 역사 및 세대 변화
+  designPhilosophy?: string;  // 디자인 철학
+  targetAudience?: string;    // 타겟 고객층
+  competitorModels?: string[]; // 경쟁 모델
+  highlights?: string[];      // 주요 특징/하이라이트
+  awards?: string[];          // 수상 이력
+  trivia?: string[];          // 알고 계셨나요? (흥미로운 사실)
+}
+
 export interface Car {
   id: string;
   manufacturer: string;
@@ -93,8 +104,7 @@ export interface Car {
   variant?: string;  // 트림/파워트레인 (예: "2.5 가솔린", "하이브리드")
   category: string;
   specs: CarSpecs;
-  history: string;
-  trivia: string[];
+  introduction: ModelIntroduction;  // 상세 모델 소개
   image: string;
   price: string;
 }

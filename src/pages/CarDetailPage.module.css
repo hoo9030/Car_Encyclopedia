@@ -241,6 +241,79 @@
   margin: 0;
 }
 
+/* 모델 개요 */
+.overviewText {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #ccc;
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #222;
+}
+
+/* 주요 특징 */
+.highlightList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlightItem {
+  font-size: 13px;
+  color: #aaa;
+  padding: 10px 14px;
+  background: rgba(59, 130, 246, 0.05);
+  border-left: 2px solid #3b82f6;
+  line-height: 1.5;
+}
+
+/* 경쟁 모델 태그 */
+.competitorTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.competitorTag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  color: #999;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+/* 수상 이력 */
+.awardsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.awardItem {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #f59e0b;
+  border-bottom: 1px solid #1a1a1a;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.awardItem::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+  font-size: 11px;
+}
+
+.awardItem:last-child {
+  border-bottom: none;
+}
+
 .triviaList {
   list-style: none;
   padding: 0;

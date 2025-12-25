@@ -429,20 +429,81 @@ export default function CarDetailPage() {
           {/* 3단: 모델 설명 */}
           <section className={styles.column}>
             <h2 className={styles.columnTitle}>모델 소개</h2>
+
+            {/* 개요 */}
             <div className={styles.descSection}>
-              <h3 className={styles.descSubtitle}>역사</h3>
-              <p className={styles.descText}>{car.history}</p>
+              <p className={styles.overviewText}>{car.introduction.overview}</p>
             </div>
+
+            {/* 주요 특징 */}
+            {car.introduction.highlights && car.introduction.highlights.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>주요 특징</h3>
+                <ul className={styles.highlightList}>
+                  {car.introduction.highlights.map((item, index) => (
+                    <li key={index} className={styles.highlightItem}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 역사 */}
             <div className={styles.descSection}>
-              <h3 className={styles.descSubtitle}>알고 계셨나요?</h3>
-              <ul className={styles.triviaList}>
-                {car.trivia.map((item, index) => (
-                  <li key={index} className={styles.triviaItem}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <h3 className={styles.descSubtitle}>개발 역사</h3>
+              <p className={styles.descText}>{car.introduction.history}</p>
             </div>
+
+            {/* 디자인 철학 */}
+            {car.introduction.designPhilosophy && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>디자인 철학</h3>
+                <p className={styles.descText}>{car.introduction.designPhilosophy}</p>
+              </div>
+            )}
+
+            {/* 타겟 고객층 */}
+            {car.introduction.targetAudience && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>타겟 고객</h3>
+                <p className={styles.descText}>{car.introduction.targetAudience}</p>
+              </div>
+            )}
+
+            {/* 경쟁 모델 */}
+            {car.introduction.competitorModels && car.introduction.competitorModels.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>경쟁 모델</h3>
+                <div className={styles.competitorTags}>
+                  {car.introduction.competitorModels.map((model, index) => (
+                    <span key={index} className={styles.competitorTag}>{model}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 수상 이력 */}
+            {car.introduction.awards && car.introduction.awards.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>수상 이력</h3>
+                <ul className={styles.awardsList}>
+                  {car.introduction.awards.map((award, index) => (
+                    <li key={index} className={styles.awardItem}>{award}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 알고 계셨나요? */}
+            {car.introduction.trivia && car.introduction.trivia.length > 0 && (
+              <div className={styles.descSection}>
+                <h3 className={styles.descSubtitle}>알고 계셨나요?</h3>
+                <ul className={styles.triviaList}>
+                  {car.introduction.trivia.map((item, index) => (
+                    <li key={index} className={styles.triviaItem}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         </div>
       </div>
