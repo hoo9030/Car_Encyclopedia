@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 import carsData from '../data/cars.json';
 import { Car } from '../types/car';
+import { manufacturerLogos, manufacturerAbbr } from '../utils/manufacturerLogos';
 import styles from './HomePage.module.css';
 
 const cars: Car[] = carsData as Car[];
@@ -30,6 +31,34 @@ export default function HomePage() {
     return cars.filter(car => car.manufacturer === manufacturer).length;
   };
 
+  const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
+
+  const handleLogoError = (manufacturer: string) => {
+    setLogoErrors(prev => new Set(prev).add(manufacturer));
+  };
+
+  const renderLogo = (manufacturer: string, size: 'small' | 'large' = 'small') => {
+    const logoUrl = manufacturerLogos[manufacturer];
+    const abbr = manufacturerAbbr[manufacturer] || manufacturer[0];
+
+    if (!logoUrl || logoErrors.has(manufacturer)) {
+      return (
+        <span className={size === 'small' ? styles.logoFallback : styles.logoFallbackLarge}>
+          {abbr}
+        </span>
+      );
+    }
+
+    return (
+      <img
+        src={logoUrl}
+        alt={`${manufacturer} 로고`}
+        className={size === 'small' ? styles.manufacturerLogo : styles.manufacturerLogoLarge}
+        onError={() => handleLogoError(manufacturer)}
+      />
+    );
+  };
+
   return (
     <div className={styles.homePage}>
       <section className={styles.hero}>
@@ -51,6 +80,7 @@ export default function HomePage() {
                 href={`#${manufacturer}`}
                 className={styles.manufacturerLink}
               >
+                {renderLogo(manufacturer, 'small')}
                 {manufacturer}
                 <span className={styles.manufacturerCount}>{getManufacturerCount(manufacturer)}</span>
               </a>
@@ -64,7 +94,10 @@ export default function HomePage() {
           {manufacturers.map(manufacturer => (
             <div key={manufacturer} id={manufacturer} className={styles.manufacturerSection}>
               <div className={styles.manufacturerHeader}>
-                <h2 className={styles.manufacturerTitle}>{manufacturer}</h2>
+                <div className={styles.manufacturerTitleWrapper}>
+                  {renderLogo(manufacturer, 'large')}
+                  <h2 className={styles.manufacturerTitle}>{manufacturer}</h2>
+                </div>
                 <Link
                   to={`/search?manufacturer=${encodeURIComponent(manufacturer)}`}
                   className={styles.viewAllLink}

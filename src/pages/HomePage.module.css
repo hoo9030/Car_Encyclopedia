@@ -53,7 +53,7 @@
 .manufacturerLink {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   padding: 8px 14px;
   font-size: 13px;
   font-weight: 500;
@@ -61,6 +61,44 @@
   text-decoration: none;
   border: 1px solid #e2e8f0;
   transition: all 0.2s ease;
+}
+
+.manufacturerLogo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.manufacturerLogoLarge {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.logoFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #1a365d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.logoFallbackLarge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #1a365d;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 2px;
 }
 
 .manufacturerLink:hover {
@@ -71,6 +109,15 @@
 
 .manufacturerLink:hover .manufacturerCount {
   color: #94a3b8;
+}
+
+.manufacturerLink:hover .manufacturerLogo {
+  filter: brightness(0) invert(1);
+}
+
+.manufacturerLink:hover .logoFallback {
+  background: #fff;
+  color: #1a365d;
 }
 
 .manufacturerCount {
@@ -99,6 +146,12 @@
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 2px solid #1a365d;
+}
+
+.manufacturerTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .manufacturerTitle {
