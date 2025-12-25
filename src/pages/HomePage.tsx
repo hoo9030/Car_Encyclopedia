@@ -106,8 +106,9 @@ export default function HomePage() {
                       <div className={styles.carInfo}>
                         <span className={styles.carCategory}>{car.category}</span>
                         <h3 className={styles.carName}>{car.model}</h3>
+                        {car.variant && <span className={styles.carVariant}>{car.variant}</span>}
                         <div className={styles.carSpecs}>
-                          <span>{car.year}</span>
+                          <span>{car.year}년형</span>
                         </div>
                       </div>
                     </Link>
