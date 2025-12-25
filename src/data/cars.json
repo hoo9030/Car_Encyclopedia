@@ -7,7 +7,7 @@
     "variant": "2.5 가솔린",
     "category": "세단",
     "specs": {
-      "engine": "스마트스트림 가솔린 2.5",
+      "engine": "스마트스트림 G2.5",
       "horsepower": 198,
       "torque": 255,
       "transmission": "8단 자동",
@@ -30,7 +30,10 @@
         "valves": 16,
         "compressionRatio": "13.0:1",
         "bore": 88,
-        "stroke": 102.4
+        "stroke": 102.4,
+        "maxPowerRpm": 6100,
+        "maxTorqueRpm": 4500,
+        "fuelInjection": "MPI + GDI"
       },
       "performance": {
         "acceleration": 9.2,
@@ -65,18 +68,1007 @@
           "안전 하차 보조",
           "원격 스마트 주차 보조",
           "고속도로 주행 보조 2"
-        ]
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
       },
       "comfort": {
         "seats": 5,
         "seatMaterial": "천연가죽",
-        "sunroof": "파노라믹 썬루프"
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
       }
     },
     "modelInfo": {
       "introduction": "1986년, 대한민국 자동차 역사에 새로운 장이 열렸다. 현대 그랜저. 국산차로는 최초로 V6 엔진을 품은 이 세단은 단순한 이동수단을 넘어 '성공'이라는 단어의 동의어가 되었다. 거리 위의 그랜저는 곧 누군가의 꿈이었고, 그 꿈을 향해 달려온 시간의 증거였다.\n\n7세대에 이른 지금, 그랜저는 다시 한번 진화했다. GN7이라는 코드명 아래 탄생한 이 세단은 '감각적 스포티니스'라는 새로운 디자인 철학을 담아냈다. 세계 최초로 양산차에 적용된 히든 라이트 헤드램프가 어둠 속에서 222개의 LED를 순차 점등하며 존재감을 드러낼 때, 보는 이는 미래가 이미 도착했음을 직감하게 된다.\n\n심장부에는 스마트스트림 G2.5 엔진이 자리한다. 198마력의 출력과 25.5kgf·m의 토크가 8단 자동변속기와 만나 노면 위를 미끄러지듯 나아간다. 0-100km/h 가속 9.2초. 화려하지 않지만, 그랜저가 추구하는 것은 언제나 과시가 아닌 여유였다.\n\n운전석에 앉으면 12.3인치 파노라믹 커브드 디스플레이가 시선을 사로잡는다. BOSE 12스피커 사운드 시스템이 만들어내는 640W의 음향, 64컬러 앰비언트 라이팅이 그려내는 분위기. 이곳은 단순한 운전석이 아니라 자신만의 공간이다.\n\n40년 가까이 대한민국 도로 위에서 달려온 그랜저. 누적 판매 240만 대라는 숫자가 증명하듯, 이 차는 단순한 모델명이 아니다. 세대를 관통하는 하나의 문화이자, 여전히 많은 이들이 꿈꾸는 목표다."
     },
-    "image": "/images/grandeur.jpg",
+    "image": "/images/grandeur-2025-25g.jpg",
     "price": "3,768만원 ~ 4,769만원"
+  },
+  {
+    "id": "hyundai-grandeur-2025-35",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2025,
+    "variant": "3.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "람다 III G3.5",
+      "horsepower": 300,
+      "torque": 350,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "9.5 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1730,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "V6 자연흡기 가솔린",
+        "displacement": 3470,
+        "cylinders": 6,
+        "valves": 24,
+        "compressionRatio": "11.5:1",
+        "bore": 92,
+        "stroke": 86.7,
+        "maxPowerRpm": 6400,
+        "maxTorqueRpm": 5200,
+        "fuelInjection": "GDI"
+      },
+      "performance": {
+        "acceleration": 6.8,
+        "topSpeed": 240,
+        "combinedFuelEconomy": "9.5 km/L",
+        "cityFuelEconomy": "8.1 km/L",
+        "highwayFuelEconomy": "11.8 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "벤틸레이티드 디스크",
+        "frontDiscSize": 345,
+        "rearDiscSize": 320
+      },
+      "tires": {
+        "front": "245/40R19",
+        "rear": "245/40R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "나파가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "그랜저의 심장이 더 강하게 뛴다. 람다 III 3.5 V6 엔진은 그랜저 라인업의 정점에 서 있다. 300마력, 35.0kgf·m. 이 숫자들은 단순한 스펙이 아니다. 정지 상태에서 100km/h까지 6.8초. 고속도로 합류로에서 가속 페달을 밟는 순간, V6 특유의 중후한 배기음과 함께 등을 밀어붙이는 가속감이 전해진다.\n\n3.5 가솔린은 그랜저가 추구하는 '여유'의 완성형이다. 2.5 모델이 효율과 합리성을 말한다면, 3.5는 넉넉함과 품격을 이야기한다. 6기통 엔진 특유의 부드러운 회전질감, 저회전에서도 충분한 토크, 고회전에서 터지는 파워. 어떤 상황에서도 여유롭다.\n\n실내는 나파 가죽으로 마감되어 한층 고급스러운 촉감을 선사한다. 캘리그라피 트림에서는 2열 VIP 시트와 함께 리무진에 버금가는 뒷좌석 공간이 제공된다. 조용히 달리면서도 원할 때 언제든 폭발적인 가속을 보여주는 것. 그것이 3.5 V6가 존재하는 이유다.\n\n법인차 수요가 많은 이유도 여기에 있다. 임원을 태우고, 중요한 손님을 모시고, 때로는 가족과 함께. 모든 순간에 격에 맞는 품격을 유지하면서도 드라이빙의 즐거움을 포기하지 않는다. 그랜저 3.5, 여유의 완성."
+    },
+    "image": "/images/grandeur-2025-35g.jpg",
+    "price": "4,523만원 ~ 5,436만원"
+  },
+  {
+    "id": "hyundai-grandeur-2025-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2025,
+    "variant": "1.6 터보 하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "스마트스트림 G1.6 T-GDi + 전기모터",
+      "horsepower": 230,
+      "torque": 350,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "18.0 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1700,
+        "trunkCapacity": 424,
+        "fuelTankCapacity": 50
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 터보 가솔린 + 전기모터",
+        "displacement": 1598,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "10.5:1",
+        "bore": 77,
+        "stroke": 85.8,
+        "maxPowerRpm": 5500,
+        "maxTorqueRpm": 1500,
+        "fuelInjection": "GDI",
+        "turbocharger": "싱글 터보"
+      },
+      "performance": {
+        "acceleration": 8.0,
+        "topSpeed": 220,
+        "combinedFuelEconomy": "18.0 km/L",
+        "cityFuelEconomy": "17.8 km/L",
+        "highwayFuelEconomy": "18.3 km/L"
+      },
+      "electric": {
+        "motorPowerKw": 44,
+        "motorTorque": 264,
+        "batteryCapacity": 1.49,
+        "regenBrakingLevels": 4
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R18",
+        "rear": "245/45R18",
+        "wheelSize": "18인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "효율과 성능, 그 완벽한 균형점. 그랜저 하이브리드는 타협이 아닌 진화의 결과물이다. 1.6 터보 엔진과 44kW 전기모터가 만들어내는 시스템 출력 230마력. 내연기관의 반응성과 전기모터의 즉각적인 토크가 조화를 이루며, 가속 페달을 밟는 순간 예상을 뛰어넘는 가속감을 선사한다.\n\n복합연비 18.0km/L. 이 숫자가 의미하는 것은 명확하다. 서울에서 부산까지 한 번의 주유로 왕복이 가능하다. 주유소에 들르는 횟수는 줄어들고, 자동차세 혜택까지. 하이브리드를 선택하는 이유는 단순히 친환경을 넘어 합리적인 경제성에 있다.\n\n그러나 하이브리드라고 해서 지루한 것은 아니다. 스포츠 모드에서는 엔진과 모터가 동시에 힘을 쏟아내며 0-100km/h를 8.0초에 주파한다. 정숙한 EV 모드로 주택가를 조용히 빠져나가고, 고속도로에서는 터보의 힘을 빌려 시원하게 달린다. 상황에 따라 달라지는 주행 경험, 그것이 하이브리드의 매력이다.\n\n4단계 회생제동 레벨을 통해 운전자는 자신만의 원페달 드라이빙을 경험할 수 있다. 브레이크를 밟지 않아도 감속이 가능하고, 그 에너지는 다시 배터리로 돌아간다. 미래를 향한 한 걸음, 그랜저 하이브리드."
+    },
+    "image": "/images/grandeur-2025-hev.jpg",
+    "price": "4,228만원 ~ 5,132만원"
+  },
+  {
+    "id": "hyundai-grandeur-2024-25",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "variant": "2.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "스마트스트림 G2.5",
+      "horsepower": 198,
+      "torque": 255,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "11.5 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1620,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 자연흡기 가솔린",
+        "displacement": 2497,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "13.0:1",
+        "bore": 88,
+        "stroke": 102.4,
+        "maxPowerRpm": 6100,
+        "maxTorqueRpm": 4500,
+        "fuelInjection": "MPI + GDI"
+      },
+      "performance": {
+        "acceleration": 9.2,
+        "topSpeed": 210,
+        "combinedFuelEconomy": "11.5 km/L",
+        "cityFuelEconomy": "10.0 km/L",
+        "highwayFuelEconomy": "13.8 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R19",
+        "rear": "245/45R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2024년형 그랜저 2.5 가솔린. 7세대 출시 2년차를 맞아 더욱 성숙해진 모습이다. 스마트스트림 G2.5 엔진은 198마력의 출력으로 일상의 모든 순간을 여유롭게 소화한다. 연비는 복합 11.5km/L로, 준대형 세단으로서는 경제적인 수치를 자랑한다.\n\n2024년형에서는 인포테인먼트 시스템의 소프트웨어가 업데이트되었다. OTA(무선 업데이트)를 통해 최신 기능을 유지할 수 있으며, 커넥티드카 서비스가 더욱 확장되었다. 음성인식 성능도 개선되어 자연어 명령에 더욱 정확하게 반응한다.\n\n히든 라이트 헤드램프는 여전히 도로 위에서 시선을 사로잡는다. 점등 순간의 드라마틱한 연출은 그랜저만의 특권이다. 외관상 큰 변화는 없지만, 새로운 컬러 옵션이 추가되어 선택의 폭이 넓어졌다.\n\n그랜저 2.5 가솔린은 가장 많이 팔리는 트림이기도 하다. 적절한 가격에 충분한 성능, 그리고 그랜저라는 이름이 주는 가치. 대한민국 준대형 세단 시장의 스테디셀러는 2024년에도 변함없이 그 자리를 지키고 있다."
+    },
+    "image": "/images/grandeur-2024-25g.jpg",
+    "price": "3,648만원 ~ 4,649만원"
+  },
+  {
+    "id": "hyundai-grandeur-2024-35",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "variant": "3.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "람다 III G3.5",
+      "horsepower": 300,
+      "torque": 350,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "9.3 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1730,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "V6 자연흡기 가솔린",
+        "displacement": 3470,
+        "cylinders": 6,
+        "valves": 24,
+        "compressionRatio": "11.5:1",
+        "bore": 92,
+        "stroke": 86.7,
+        "maxPowerRpm": 6400,
+        "maxTorqueRpm": 5200,
+        "fuelInjection": "GDI"
+      },
+      "performance": {
+        "acceleration": 6.8,
+        "topSpeed": 240,
+        "combinedFuelEconomy": "9.3 km/L",
+        "cityFuelEconomy": "7.9 km/L",
+        "highwayFuelEconomy": "11.6 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "벤틸레이티드 디스크",
+        "frontDiscSize": 345,
+        "rearDiscSize": 320
+      },
+      "tires": {
+        "front": "245/40R19",
+        "rear": "245/40R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "나파가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2024년형 그랜저 3.5 가솔린. 람다 III V6 엔진의 300마력은 어떤 상황에서도 넉넉한 여유를 제공한다. 법인 임원차량으로, 자영업자의 업무용 차량으로, 때로는 가족을 태우는 패밀리카로. 3.5 V6는 모든 역할을 품격 있게 수행한다.\n\n6기통 엔진 특유의 부드러운 회전질감은 4기통으로는 대체할 수 없는 감성이다. 저회전에서 묵직하게 올라오는 토크, 중속에서의 안정감, 고회전에서 터지는 파워까지. 0-100km/h 가속 6.8초는 이 클래스에서 충분히 빠른 수치다.\n\n2024년형에서는 나파가죽 시트의 색상 조합이 다양해졌다. 블랙과 브라운 외에도 베이지 투톤 옵션이 추가되어 보다 밝은 분위기의 실내를 연출할 수 있다. 캘리그라피 트림의 2열 VIP 시트는 풋레스트와 열선/통풍이 기본 적용된다.\n\n연비는 복합 9.3km/L. 3.5 V6 치고는 준수한 수치지만, 이 차를 선택하는 사람들에게 연비가 최우선은 아닐 것이다. 성능과 품격, 그리고 V6라는 상징성. 그랜저 3.5는 그 가치를 아는 사람들을 위한 선택이다."
+    },
+    "image": "/images/grandeur-2024-35g.jpg",
+    "price": "4,403만원 ~ 5,316만원"
+  },
+  {
+    "id": "hyundai-grandeur-2024-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2024,
+    "variant": "1.6 터보 하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "스마트스트림 G1.6 T-GDi + 전기모터",
+      "horsepower": 230,
+      "torque": 350,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "17.8 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1700,
+        "trunkCapacity": 424,
+        "fuelTankCapacity": 50
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 터보 가솔린 + 전기모터",
+        "displacement": 1598,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "10.5:1",
+        "bore": 77,
+        "stroke": 85.8,
+        "maxPowerRpm": 5500,
+        "maxTorqueRpm": 1500,
+        "fuelInjection": "GDI",
+        "turbocharger": "싱글 터보"
+      },
+      "performance": {
+        "acceleration": 8.0,
+        "topSpeed": 220,
+        "combinedFuelEconomy": "17.8 km/L",
+        "cityFuelEconomy": "17.5 km/L",
+        "highwayFuelEconomy": "18.1 km/L"
+      },
+      "electric": {
+        "motorPowerKw": 44,
+        "motorTorque": 264,
+        "batteryCapacity": 1.49,
+        "regenBrakingLevels": 4
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R18",
+        "rear": "245/45R18",
+        "wheelSize": "18인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2024년형 그랜저 하이브리드. 1.6 터보와 전기모터의 조합은 효율성의 정점을 보여준다. 복합연비 17.8km/L는 준대형 세단 중에서 압도적인 수치다. 서울에서 부산까지 왕복 800km를 한 번의 주유로 해결할 수 있다.\n\n하이브리드가 느리다는 편견은 그랜저 하이브리드를 만나면 사라진다. 터보 엔진과 전기모터의 시스템 출력 230마력, 최대토크 35.7kgf·m. 특히 저속에서 전기모터가 즉각적으로 반응하기 때문에 시내 주행에서의 가속은 오히려 가솔린 모델보다 민첩하게 느껴진다.\n\n2024년형에서는 배터리 관리 시스템이 개선되어 혹서기와 혹한기의 연비 저하가 줄어들었다. EV 모드의 진입 빈도도 높아져 정차 시 엔진이 꺼지는 시간이 늘어났다. 이는 연비 향상과 정숙성 개선으로 이어진다.\n\n유류비 절감, 자동차세 감면, 공영주차장 할인까지. 하이브리드를 선택하는 것은 단순히 환경을 생각해서만은 아니다. 실용적인 이유가 충분하다. 그랜저의 품격에 하이브리드의 효율성까지, 2024년형 그랜저 하이브리드."
+    },
+    "image": "/images/grandeur-2024-hev.jpg",
+    "price": "4,108만원 ~ 5,012만원"
+  },
+  {
+    "id": "hyundai-grandeur-2023-25",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2023,
+    "variant": "2.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "스마트스트림 G2.5",
+      "horsepower": 198,
+      "torque": 255,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "11.4 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1620,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 자연흡기 가솔린",
+        "displacement": 2497,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "13.0:1",
+        "bore": 88,
+        "stroke": 102.4,
+        "maxPowerRpm": 6100,
+        "maxTorqueRpm": 4500,
+        "fuelInjection": "MPI + GDI"
+      },
+      "performance": {
+        "acceleration": 9.2,
+        "topSpeed": 210,
+        "combinedFuelEconomy": "11.4 km/L",
+        "cityFuelEconomy": "9.9 km/L",
+        "highwayFuelEconomy": "13.6 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R19",
+        "rear": "245/45R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2023년형 그랜저 2.5 가솔린. 7세대의 첫 연식변경 모델로, 출시 첫해의 피드백을 반영하여 완성도를 높였다. 스마트스트림 G2.5 엔진의 198마력은 변함없지만, 변속 로직이 개선되어 가속 시 더욱 자연스러운 반응을 보여준다.\n\n2023년형의 가장 큰 변화는 소프트웨어에 있다. 인포테인먼트 시스템의 반응 속도가 빨라졌고, 내비게이션의 실시간 교통정보 정확도가 향상되었다. 블루링크 서비스도 확장되어 원격 시동, 에어컨 제어, 차량 위치 확인 등의 기능이 더욱 안정적으로 작동한다.\n\n히든 라이트 헤드램프의 점등 시퀀스는 그랜저만의 시그니처가 되었다. 주차장에서 다가가면 222개의 LED가 순차 점등되며 인사하는 듯한 연출. 이 순간을 위해 그랜저를 선택하는 사람들도 있다.\n\n복합연비 11.4km/L로 전년 대비 소폭 개선되었다. 준대형 세단의 기준을 만들어온 그랜저, 2023년형은 그 기준을 한층 더 정교하게 다듬었다."
+    },
+    "image": "/images/grandeur-2023-25g.jpg",
+    "price": "3,548만원 ~ 4,549만원"
+  },
+  {
+    "id": "hyundai-grandeur-2023-35",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2023,
+    "variant": "3.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "람다 III G3.5",
+      "horsepower": 300,
+      "torque": 350,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "9.2 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1730,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "V6 자연흡기 가솔린",
+        "displacement": 3470,
+        "cylinders": 6,
+        "valves": 24,
+        "compressionRatio": "11.5:1",
+        "bore": 92,
+        "stroke": 86.7,
+        "maxPowerRpm": 6400,
+        "maxTorqueRpm": 5200,
+        "fuelInjection": "GDI"
+      },
+      "performance": {
+        "acceleration": 6.8,
+        "topSpeed": 240,
+        "combinedFuelEconomy": "9.2 km/L",
+        "cityFuelEconomy": "7.8 km/L",
+        "highwayFuelEconomy": "11.5 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "벤틸레이티드 디스크",
+        "frontDiscSize": 345,
+        "rearDiscSize": 320
+      },
+      "tires": {
+        "front": "245/40R19",
+        "rear": "245/40R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "나파가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2023년형 그랜저 3.5 가솔린. 람다 III V6의 300마력과 35.0kgf·m 토크는 7세대에서도 변함없이 건재하다. 0-100km/h 가속 6.8초. 준대형 세단에서 이 정도 성능이면 어디서든 여유롭다.\n\n2023년형에서는 서스펜션 세팅이 미세하게 조정되었다. 노면에서 올라오는 충격이 한층 더 부드럽게 흡수되며, 고속 주행 시 안정성도 개선되었다. 프리미엄 세단에 어울리는 승차감을 위한 현대차의 노력이 느껴진다.\n\nV6 엔진의 배기음은 여전히 중후하다. 엔진이 꺼지는 아이들 스탑 상태에서 다시 시동이 걸릴 때의 진동도 최소화되어 정숙성이 더욱 향상되었다. 6기통의 부드러운 회전질감은 숫자로 표현되지 않는 가치다.\n\n나파가죽 시트와 프리미엄 사운드 시스템, 대형 파노라마 썬루프. 캘리그라피 트림에서는 2열 VIP 시트가 제공되어 오너 드라이빙보다 뒷좌석을 더 중시하는 고객에게 적합하다. 2023년형 그랜저 3.5, 변함없는 품격."
+    },
+    "image": "/images/grandeur-2023-35g.jpg",
+    "price": "4,303만원 ~ 5,216만원"
+  },
+  {
+    "id": "hyundai-grandeur-2023-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2023,
+    "variant": "1.6 터보 하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "스마트스트림 G1.6 T-GDi + 전기모터",
+      "horsepower": 230,
+      "torque": 350,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "17.5 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1700,
+        "trunkCapacity": 424,
+        "fuelTankCapacity": 50
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 터보 가솔린 + 전기모터",
+        "displacement": 1598,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "10.5:1",
+        "bore": 77,
+        "stroke": 85.8,
+        "maxPowerRpm": 5500,
+        "maxTorqueRpm": 1500,
+        "fuelInjection": "GDI",
+        "turbocharger": "싱글 터보"
+      },
+      "performance": {
+        "acceleration": 8.0,
+        "topSpeed": 220,
+        "combinedFuelEconomy": "17.5 km/L",
+        "cityFuelEconomy": "17.2 km/L",
+        "highwayFuelEconomy": "17.8 km/L"
+      },
+      "electric": {
+        "motorPowerKw": 44,
+        "motorTorque": 264,
+        "batteryCapacity": 1.49,
+        "regenBrakingLevels": 4
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R18",
+        "rear": "245/45R18",
+        "wheelSize": "18인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2023년형 그랜저 하이브리드. 7세대 그랜저 하이브리드의 첫 연식변경 모델이다. 1.6 터보와 전기모터의 조합은 시스템 출력 230마력을 발휘하며, 복합연비 17.5km/L의 뛰어난 효율성을 자랑한다.\n\n2023년형에서는 하이브리드 시스템의 제어 로직이 개선되었다. 엔진과 모터의 전환이 더욱 자연스러워졌고, 특히 저속 주행 시 EV 모드 유지 시간이 늘어났다. 주차장이나 주택가에서 조용히 움직이고 싶을 때 유용하다.\n\n회생제동 시스템도 보정되어 4단계 레벨별 감속감이 더욱 선형적으로 변했다. 패들 시프트로 회생제동 레벨을 조절하는 원페달 드라이빙의 재미가 한층 살아났다. 브레이크 페달을 밟지 않아도 자연스럽게 감속되는 경험.\n\n하이브리드 특유의 조용한 출발과 정숙한 크루징은 그대로다. 신호 대기 중 엔진이 꺼져 있을 때의 고요함, 그리고 액셀을 밟는 순간 모터가 먼저 반응하며 시작되는 가속. 2023년형 그랜저 하이브리드는 내연기관과 전동화 사이의 완벽한 징검다리다."
+    },
+    "image": "/images/grandeur-2023-hev.jpg",
+    "price": "4,008만원 ~ 4,912만원"
+  },
+  {
+    "id": "hyundai-grandeur-2022-25",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2022,
+    "variant": "2.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "스마트스트림 G2.5",
+      "horsepower": 198,
+      "torque": 255,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "11.3 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1620,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 자연흡기 가솔린",
+        "displacement": 2497,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "13.0:1",
+        "bore": 88,
+        "stroke": 102.4,
+        "maxPowerRpm": 6100,
+        "maxTorqueRpm": 4500,
+        "fuelInjection": "MPI + GDI"
+      },
+      "performance": {
+        "acceleration": 9.2,
+        "topSpeed": 210,
+        "combinedFuelEconomy": "11.3 km/L",
+        "cityFuelEconomy": "9.8 km/L",
+        "highwayFuelEconomy": "13.5 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R19",
+        "rear": "245/45R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2022년 11월, 7세대 그랜저 GN7이 베일을 벗었다. 그것은 단순한 풀체인지가 아니었다. 대한민국 자동차 역사에서 가장 드라마틱한 디자인 혁신이었다. 히든 라이트 헤드램프라는, 누구도 상상하지 못했던 기술이 현실이 되었다.\n\n엔진을 끄고 다가가면 라디에이터 그릴은 단단한 금속 패턴처럼 보인다. 그러나 도어 핸들을 잡는 순간, 222개의 LED가 일렬로 점등되기 시작한다. 마치 잠에서 깨어나는 것처럼, 그랜저가 눈을 뜨는 순간이다. 세계 최초 양산차 적용이라는 타이틀은 이 연출의 무게를 더한다.\n\n스마트스트림 G2.5 엔진은 198마력을 발휘한다. 6세대 IG의 2.4 엔진 대비 배기량은 늘었지만, 연비는 오히려 개선되었다. 듀얼 인젝션(MPI+GDI) 시스템의 효율성 덕분이다. 8단 자동변속기와의 조합도 완벽하다.\n\n실내로 들어서면 12.3인치 파노라믹 커브드 디스플레이가 시선을 사로잡는다. 클러스터와 AVN이 하나의 커브로 연결된 혁신적인 디자인. 2022년형은 그 시작점이었다. 대한민국 준대형 세단의 새로운 기준, 7세대 그랜저 GN7."
+    },
+    "image": "/images/grandeur-2022-25g.jpg",
+    "price": "3,448만원 ~ 4,449만원"
+  },
+  {
+    "id": "hyundai-grandeur-2022-35",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2022,
+    "variant": "3.5 가솔린",
+    "category": "세단",
+    "specs": {
+      "engine": "람다 III G3.5",
+      "horsepower": 300,
+      "torque": 350,
+      "transmission": "8단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "9.1 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1730,
+        "trunkCapacity": 480,
+        "fuelTankCapacity": 60
+      },
+      "engineDetails": {
+        "type": "V6 자연흡기 가솔린",
+        "displacement": 3470,
+        "cylinders": 6,
+        "valves": 24,
+        "compressionRatio": "11.5:1",
+        "bore": 92,
+        "stroke": 86.7,
+        "maxPowerRpm": 6400,
+        "maxTorqueRpm": 5200,
+        "fuelInjection": "GDI"
+      },
+      "performance": {
+        "acceleration": 6.8,
+        "topSpeed": 240,
+        "combinedFuelEconomy": "9.1 km/L",
+        "cityFuelEconomy": "7.7 km/L",
+        "highwayFuelEconomy": "11.4 km/L"
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "벤틸레이티드 디스크",
+        "frontDiscSize": 345,
+        "rearDiscSize": 320
+      },
+      "tires": {
+        "front": "245/40R19",
+        "rear": "245/40R19",
+        "wheelSize": "19인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "나파가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2022년형 그랜저 3.5 가솔린. 7세대 출시와 함께 등장한 람다 III V6 모델이다. 그랜저에서 V6는 특별한 의미를 갖는다. 1986년 1세대 그랜저가 국산 최초로 V6 엔진을 탑재했고, 그 전통은 7세대에서도 이어진다.\n\n300마력의 출력과 35.0kgf·m의 토크. 숫자만 보면 6세대 IG 3.3 터보와 비슷하지만, 성격은 다르다. 터보의 폭발적인 가속 대신 자연흡기 V6 특유의 선형적인 파워 딜리버리. 회전수가 올라갈수록 점점 더 힘을 쏟아내는 느낌은 기분 좋은 아날로그 감성이다.\n\n캘리그라피 트림에서는 2열 VIP 패키지가 제공된다. 동승석 시트가 앞으로 접히며 발을 뻗을 수 있는 풋레스트가 전개되고, 2열 시트의 등받이 각도가 더 뒤로 눕혀진다. 뒷좌석의 편안함을 중시하는 법인 고객들에게 인기가 높다.\n\n전륜구동 플랫폼에서 V6 엔진이 줄 수 있는 최고의 경험. 7세대 그랜저 3.5 가솔린은 그 완성형을 보여준다. 효율성의 시대에도 여전히 여섯 개의 실린더가 필요한 이유가 있다."
+    },
+    "image": "/images/grandeur-2022-35g.jpg",
+    "price": "4,203만원 ~ 5,116만원"
+  },
+  {
+    "id": "hyundai-grandeur-2022-hev",
+    "manufacturer": "현대",
+    "model": "그랜저",
+    "year": 2022,
+    "variant": "1.6 터보 하이브리드",
+    "category": "하이브리드",
+    "specs": {
+      "engine": "스마트스트림 G1.6 T-GDi + 전기모터",
+      "horsepower": 230,
+      "torque": 350,
+      "transmission": "6단 자동",
+      "drivetrain": "전륜구동",
+      "fuelEfficiency": "17.2 km/L",
+      "dimensions": {
+        "length": 5035,
+        "width": 1880,
+        "height": 1460,
+        "wheelbase": 2895,
+        "groundClearance": 150,
+        "curbWeight": 1700,
+        "trunkCapacity": 424,
+        "fuelTankCapacity": 50
+      },
+      "engineDetails": {
+        "type": "직렬 4기통 터보 가솔린 + 전기모터",
+        "displacement": 1598,
+        "cylinders": 4,
+        "valves": 16,
+        "compressionRatio": "10.5:1",
+        "bore": 77,
+        "stroke": 85.8,
+        "maxPowerRpm": 5500,
+        "maxTorqueRpm": 1500,
+        "fuelInjection": "GDI",
+        "turbocharger": "싱글 터보"
+      },
+      "performance": {
+        "acceleration": 8.0,
+        "topSpeed": 220,
+        "combinedFuelEconomy": "17.2 km/L",
+        "cityFuelEconomy": "17.0 km/L",
+        "highwayFuelEconomy": "17.5 km/L"
+      },
+      "electric": {
+        "motorPowerKw": 44,
+        "motorTorque": 264,
+        "batteryCapacity": 1.49,
+        "regenBrakingLevels": 4
+      },
+      "suspension": {
+        "front": "맥퍼슨 스트럿",
+        "rear": "멀티링크"
+      },
+      "brakes": {
+        "front": "벤틸레이티드 디스크",
+        "rear": "디스크",
+        "frontDiscSize": 320,
+        "rearDiscSize": 300
+      },
+      "tires": {
+        "front": "245/45R18",
+        "rear": "245/45R18",
+        "wheelSize": "18인치 알로이"
+      },
+      "safety": {
+        "airbags": 10,
+        "adasFeatures": [
+          "전방 충돌방지 보조",
+          "차로 이탈방지 보조",
+          "차로 유지 보조",
+          "하이빔 보조",
+          "후측방 충돌방지 보조",
+          "안전 하차 보조",
+          "원격 스마트 주차 보조",
+          "고속도로 주행 보조 2"
+        ],
+        "ncapRating": 5,
+        "ncapYear": 2022,
+        "ncapOrg": "KNCAP"
+      },
+      "comfort": {
+        "seats": 5,
+        "seatMaterial": "천연가죽",
+        "sunroof": "파노라믹 썬루프",
+        "doors": 4
+      }
+    },
+    "modelInfo": {
+      "introduction": "2022년형 그랜저 하이브리드. 7세대와 함께 완전히 새로워진 하이브리드 시스템이 탑재되었다. 6세대 IG 하이브리드가 2.4 자연흡기 + 모터 조합이었다면, GN7은 1.6 터보 + 모터로 완전히 다른 성격을 보여준다.\n\n시스템 출력 230마력. 순수 가솔린 2.5 모델(198마력)보다 출력이 높다. 터보엔진의 저회전 토크와 전기모터의 즉각적인 반응이 만나 가속감이 상당히 역동적이다. 하이브리드라서 느릴 것이라는 선입견을 깨는 성능.\n\n복합연비 17.2km/L. 6세대 하이브리드(17.0km/L) 대비 소폭 향상되었지만, 더 중요한 것은 운전의 질적 변화다. 4단계 회생제동 시스템으로 원페달 드라이빙이 가능해졌고, EV 모드에서 더 긴 거리를 전기만으로 주행할 수 있다.\n\n7세대 그랜저 하이브리드는 '타협'이 아닌 '선택'의 영역으로 들어왔다. 연비를 위해 성능을 포기하는 것이 아니라, 효율과 성능을 모두 잡으면서도 새로운 드라이빙 경험까지 제공한다. 2022년, 그랜저 하이브리드의 새 시대가 열렸다."
+    },
+    "image": "/images/grandeur-2022-hev.jpg",
+    "price": "3,908만원 ~ 4,812만원"
   }
 ]
