@@ -722,6 +722,933 @@
   border-radius: 2px;
 }
 
+/* 미디어 등장 */
+.mediaList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mediaItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.mediaItem.notableMedia {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.mediaHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.mediaType {
+  font-size: 10px;
+  color: #fff;
+  background: #3b82f6;
+  padding: 2px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mediaTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.mediaYear {
+  font-size: 12px;
+  color: #666;
+}
+
+.notableBadge {
+  font-size: 10px;
+  background: #f59e0b;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.mediaDesc {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 리콜 이력 */
+.recallList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recallItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+  border-left: 3px solid #666;
+}
+
+.recallItem.severityLow {
+  border-left-color: #10b981;
+}
+
+.recallItem.severityMedium {
+  border-left-color: #f59e0b;
+}
+
+.recallItem.severityHigh {
+  border-left-color: #f97316;
+}
+
+.recallItem.severityCritical {
+  border-left-color: #ef4444;
+}
+
+.recallHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.recallDate {
+  font-size: 12px;
+  color: #888;
+}
+
+.severityBadge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.severityBadge.low {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.severityBadge.medium {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.severityBadge.high {
+  background: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+}
+
+.severityBadge.critical {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.recallReason {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0 0 6px 0;
+  font-weight: 500;
+}
+
+.recallAffected {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 4px 0;
+}
+
+.recallRemedy {
+  font-size: 12px;
+  color: #10b981;
+  margin: 0;
+}
+
+/* 사용자 리뷰 */
+.reviewSummary {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.overallRating {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.ratingScore {
+  font-size: 32px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.ratingMax {
+  font-size: 16px;
+  color: #666;
+}
+
+.reviewCount {
+  font-size: 12px;
+  color: #888;
+  margin-left: 8px;
+}
+
+.recommendRate {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #222;
+}
+
+.recommendRate strong {
+  color: #10b981;
+}
+
+.detailedRatings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #222;
+}
+
+.ratingBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ratingLabel {
+  font-size: 12px;
+  color: #888;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.barContainer {
+  flex: 1;
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.ratingValue {
+  font-size: 12px;
+  color: #aaa;
+  width: 30px;
+  text-align: right;
+}
+
+.prosConsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.prosSection,
+.consSection {
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.prosSection {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.consSection {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.prosTitle,
+.consTitle {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.prosTitle {
+  color: #10b981;
+}
+
+.consTitle {
+  color: #ef4444;
+}
+
+.prosList,
+.consList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prosList li,
+.consList li {
+  font-size: 11px;
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.prosList li {
+  color: #10b981;
+}
+
+.consList li {
+  color: #ef4444;
+}
+
+.prosList li::before,
+.consList li::before {
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+}
+
+.prosList li::before {
+  content: '+';
+  color: #10b981;
+}
+
+.consList li::before {
+  content: '-';
+  color: #ef4444;
+}
+
+/* 옵션 패키지 */
+.packageList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.packageItem {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.packageItem.recommendedPackage {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.packageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.packageName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.packagePrice {
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.recommendedBadge {
+  font-size: 10px;
+  background: #3b82f6;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.packageIncludes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.packageIncludes li {
+  font-size: 12px;
+  color: #888;
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+
+.packageIncludes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-size: 10px;
+}
+
+/* 개별 옵션 */
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.optionItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.optionCategory {
+  font-size: 10px;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.optionName {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.optionPrice {
+  font-size: 12px;
+  color: #3b82f6;
+}
+
+.optionDesc {
+  font-size: 11px;
+  color: #666;
+  margin: 4px 0 0 0;
+  line-height: 1.5;
+}
+
+/* 보증 정보 테이블 */
+.warrantyTable,
+.serviceTable,
+.usedCarTable,
+.envTable,
+.insuranceTable,
+.testTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.warrantyTable th,
+.warrantyTable td,
+.serviceTable th,
+.serviceTable td,
+.usedCarTable th,
+.usedCarTable td,
+.envTable th,
+.envTable td,
+.insuranceTable th,
+.insuranceTable td,
+.testTable th,
+.testTable td {
+  padding: 8px 0;
+  border-bottom: 1px solid #1a1a1a;
+  text-align: left;
+  font-size: 12px;
+}
+
+.warrantyTable th,
+.serviceTable th,
+.usedCarTable th,
+.envTable th,
+.insuranceTable th,
+.testTable th {
+  color: #666;
+  width: 120px;
+  font-weight: 400;
+}
+
+.warrantyTable td,
+.serviceTable td,
+.usedCarTable td,
+.envTable td,
+.insuranceTable td,
+.testTable td {
+  color: #aaa;
+}
+
+.warrantyTable tr:last-child th,
+.warrantyTable tr:last-child td,
+.serviceTable tr:last-child th,
+.serviceTable tr:last-child td,
+.usedCarTable tr:last-child th,
+.usedCarTable tr:last-child td,
+.envTable tr:last-child th,
+.envTable tr:last-child td,
+.insuranceTable tr:last-child th,
+.insuranceTable tr:last-child td,
+.testTable tr:last-child th,
+.testTable tr:last-child td {
+  border-bottom: none;
+}
+
+.repairCosts {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #222;
+}
+
+/* 중고차 시세 */
+.popularTrims {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #888;
+}
+
+.popularTrimsLabel {
+  color: #666;
+}
+
+.trimTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.trimTag {
+  font-size: 11px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* 튜닝/애프터마켓 */
+.communityInfo,
+.modFriendly {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 12px 0;
+}
+
+.communityInfo strong,
+.modFriendly strong {
+  color: #aaa;
+}
+
+.popularMods {
+  margin-bottom: 16px;
+}
+
+.modCategory {
+  margin-bottom: 12px;
+}
+
+.modCategoryName {
+  font-size: 11px;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modItem {
+  font-size: 11px;
+  color: #888;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #333;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.tuningBrands {
+  margin-top: 16px;
+}
+
+.brandTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.brandTag {
+  font-size: 11px;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* 경쟁 모델 비교 */
+.marketPosition {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 16px 0;
+}
+
+.marketPosition strong {
+  color: #aaa;
+}
+
+.uspSection {
+  margin-bottom: 16px;
+}
+
+.uspList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.uspList li {
+  font-size: 12px;
+  color: #3b82f6;
+  padding: 6px 0 6px 18px;
+  position: relative;
+}
+
+.uspList li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-size: 10px;
+}
+
+.competitorComparison {
+  margin-top: 16px;
+}
+
+.competitorList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.competitorItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.competitorName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.competitorAnalysis {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.advantage,
+.disadvantage {
+  font-size: 11px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.advantage {
+  color: #10b981;
+}
+
+.disadvantage {
+  color: #ef4444;
+}
+
+/* 특별판/한정판 */
+.specialEditionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editionItem {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.editionItem.editionAvailable {
+  border-color: #10b981;
+}
+
+.editionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.editionName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.editionYear {
+  font-size: 12px;
+  color: #888;
+}
+
+.limitedBadge {
+  font-size: 10px;
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.availableBadge {
+  font-size: 10px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.editionPrice {
+  font-size: 12px;
+  color: #3b82f6;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.editionFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.editionFeatures li {
+  font-size: 12px;
+  color: #888;
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+
+.editionFeatures li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+}
+
+/* 시승/테스트 정보 */
+.professionalReviews {
+  margin-bottom: 16px;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.reviewSource {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.reviewRating {
+  font-size: 12px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.reviewDate {
+  font-size: 11px;
+  color: #666;
+  margin-left: auto;
+}
+
+.reviewSummary {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.testResults {
+  margin-top: 16px;
+}
+
+.testConditions {
+  font-size: 11px;
+  color: #666;
+}
+
+/* 구매 정보 */
+.deliveryTime {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 16px 0;
+}
+
+.deliveryTime strong {
+  color: #aaa;
+}
+
+.purchaseChannels {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.channelList {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.channelList li {
+  font-size: 12px;
+  color: #888;
+  padding: 4px 0 4px 14px;
+  position: relative;
+}
+
+.channelList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+}
+
+.incentives {
+  margin-bottom: 16px;
+}
+
+.incentiveList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.incentiveList li {
+  font-size: 12px;
+  color: #10b981;
+  padding: 6px 0 6px 18px;
+  position: relative;
+}
+
+.incentiveList li::before {
+  content: '🎁';
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+}
+
+.financingOptions {
+  margin-bottom: 16px;
+}
+
+.financeList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.financeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.financeType {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 80px;
+}
+
+.financeRate {
+  font-size: 12px;
+  color: #3b82f6;
+}
+
+.financeTerms {
+  font-size: 11px;
+  color: #666;
+}
+
+.tradeInBonus {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 4px;
+}
+
+.tradeInBonus strong {
+  color: #10b981;
+}
+
 /* 반응형 */
 @media (max-width: 1024px) {
   .threeColumn {
