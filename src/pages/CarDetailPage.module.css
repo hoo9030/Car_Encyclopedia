@@ -25,8 +25,8 @@
   border: 1px solid #333;
   color: #666;
   padding: 8px 16px;
-  cursor: pointer;
   font-size: 13px;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 

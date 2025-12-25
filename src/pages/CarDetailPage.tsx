@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { useCompare } from '../context/CompareContext';
 import carsData from '../data/cars.json';
@@ -9,7 +9,6 @@ const cars: Car[] = carsData as Car[];
 
 export default function CarDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   const { addToCompare, removeFromCompare, isInCompare, compareCars } = useCompare();
 
   const car = useMemo(() => {
@@ -50,9 +49,9 @@ export default function CarDetailPage() {
     <div className={styles.detailPage}>
       <div className={styles.header}>
         <div className={styles.container}>
-          <button className={styles.backBtn} type="button" onClick={() => navigate(-1)}>
+          <Link to="/" className={styles.backBtn}>
             ← 뒤로
-          </button>
+          </Link>
           <div className={styles.headerTitle}>
             <span className={styles.headerManufacturer}>{car.manufacturer}</span>
             <h1 className={styles.headerModel}>{car.model}</h1>
