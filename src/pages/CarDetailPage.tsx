@@ -16,6 +16,14 @@ export default function CarDetailPage() {
     return cars.find(c => c.id === id);
   }, [id]);
 
+  // 같은 모델의 연식별 라인업
+  const modelLineup = useMemo(() => {
+    if (!car) return [];
+    return cars
+      .filter(c => c.manufacturer === car.manufacturer && c.model === car.model)
+      .sort((a, b) => b.year - a.year);
+  }, [car]);
+
   if (!car) {
     return (
       <div className={styles.notFound}>
@@ -38,12 +46,6 @@ export default function CarDetailPage() {
     }
   };
 
-  const relatedCars = useMemo(() => {
-    return cars
-      .filter(c => c.id !== car.id && (c.manufacturer === car.manufacturer || c.category === car.category))
-      .slice(0, 3);
-  }, [car]);
-
   return (
     <div className={styles.detailPage}>
       <div className={styles.header}>
@@ -51,33 +53,48 @@ export default function CarDetailPage() {
           <button className={styles.backBtn} type="button" onClick={() => navigate(-1)}>
             ← 뒤로
           </button>
+          <div className={styles.headerTitle}>
+            <span className={styles.headerManufacturer}>{car.manufacturer}</span>
+            <h1 className={styles.headerModel}>{car.model}</h1>
+          </div>
+          <button
+            type="button"
+            className={`${styles.compareBtn} ${inCompare ? styles.inCompare : ''}`}
+            onClick={handleCompareClick}
+            disabled={!inCompare && compareCars.length >= 3}
+          >
+            {inCompare ? '비교에서 제거' : '비교에 추가'}
+          </button>
         </div>
       </div>
 
       <div className={styles.content}>
-        <div className={styles.container}>
-          <div className={styles.mainInfo}>
-            <div className={styles.titleSection}>
-              <span className={styles.category}>{car.category}</span>
-              <span className={styles.manufacturer}>{car.manufacturer}</span>
-              <h1 className={styles.model}>{car.model}</h1>
-              <p className={styles.year}>{car.year}</p>
+        <div className={styles.threeColumn}>
+          {/* 1단: 연식별 라인업 */}
+          <section className={styles.column}>
+            <h2 className={styles.columnTitle}>연식별 라인업</h2>
+            <div className={styles.lineupList}>
+              {modelLineup.map(item => (
+                <Link
+                  key={item.id}
+                  to={`/car/${item.id}`}
+                  className={`${styles.lineupItem} ${item.id === car.id ? styles.lineupActive : ''}`}
+                >
+                  <span className={styles.lineupYear}>{item.year}</span>
+                  <span className={styles.lineupCategory}>{item.category}</span>
+                </Link>
+              ))}
+              {modelLineup.length === 1 && (
+                <p className={styles.lineupNote}>현재 {car.year}년형만 등록되어 있습니다.</p>
+              )}
             </div>
-            <div className={styles.actionSection}>
-              <button
-                type="button"
-                className={`${styles.compareBtn} ${inCompare ? styles.inCompare : ''}`}
-                onClick={handleCompareClick}
-                disabled={!inCompare && compareCars.length >= 3}
-              >
-                {inCompare ? '비교에서 제거' : '비교에 추가'}
-              </button>
-            </div>
-          </div>
+          </section>
 
-          <div className={styles.sections}>
-            <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>상세 사양</h2>
+          {/* 2단: 제원 상세 */}
+          <section className={styles.column}>
+            <h2 className={styles.columnTitle}>제원</h2>
+            <div className={styles.specSection}>
+              <h3 className={styles.specSubtitle}>파워트레인</h3>
               <table className={styles.specTable}>
                 <tbody>
                   <tr>
@@ -106,10 +123,9 @@ export default function CarDetailPage() {
                   </tr>
                 </tbody>
               </table>
-            </section>
-
-            <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>차량 크기</h2>
+            </div>
+            <div className={styles.specSection}>
+              <h3 className={styles.specSubtitle}>차체</h3>
               <table className={styles.specTable}>
                 <tbody>
                   <tr>
@@ -130,15 +146,18 @@ export default function CarDetailPage() {
                   </tr>
                 </tbody>
               </table>
-            </section>
+            </div>
+          </section>
 
-            <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>역사</h2>
-              <p className={styles.history}>{car.history}</p>
-            </section>
-
-            <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>알고 계셨나요?</h2>
+          {/* 3단: 모델 설명 */}
+          <section className={styles.column}>
+            <h2 className={styles.columnTitle}>모델 소개</h2>
+            <div className={styles.descSection}>
+              <h3 className={styles.descSubtitle}>역사</h3>
+              <p className={styles.descText}>{car.history}</p>
+            </div>
+            <div className={styles.descSection}>
+              <h3 className={styles.descSubtitle}>알고 계셨나요?</h3>
               <ul className={styles.triviaList}>
                 {car.trivia.map((item, index) => (
                   <li key={index} className={styles.triviaItem}>
@@ -146,27 +165,8 @@ export default function CarDetailPage() {
                   </li>
                 ))}
               </ul>
-            </section>
-
-            {relatedCars.length > 0 && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>관련 차량</h2>
-                <div className={styles.relatedList}>
-                  {relatedCars.map(relatedCar => (
-                    <Link
-                      key={relatedCar.id}
-                      to={`/car/${relatedCar.id}`}
-                      className={styles.relatedItem}
-                    >
-                      <span className={styles.relatedManufacturer}>{relatedCar.manufacturer}</span>
-                      <span className={styles.relatedModel}>{relatedCar.model}</span>
-                      <span className={styles.relatedYear}>{relatedCar.year}</span>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )}
-          </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

@@ -4,14 +4,20 @@
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
   background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0a 100%);
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .backBtn {
@@ -20,7 +26,7 @@
   color: #666;
   padding: 8px 16px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.2s ease;
 }
 
@@ -29,67 +35,33 @@
   color: #fff;
 }
 
-.content {
-  padding: 40px 0 60px;
+.headerTitle {
+  text-align: center;
 }
 
-.mainInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid #222;
-}
-
-.titleSection {
-  flex: 1;
-}
-
-.category {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.manufacturer {
+.headerManufacturer {
   display: block;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 4px;
+  font-size: 11px;
+  color: #555;
   letter-spacing: 1px;
+  margin-bottom: 4px;
 }
 
-.model {
-  font-size: 32px;
+.headerModel {
+  font-size: 20px;
   font-weight: 300;
   color: #fff;
-  margin: 0 0 8px 0;
-  line-height: 1.2;
-  letter-spacing: 2px;
-}
-
-.year {
-  font-size: 14px;
-  color: #555;
   margin: 0;
-}
-
-.actionSection {
-  text-align: right;
+  letter-spacing: 2px;
 }
 
 .compareBtn {
   background: transparent;
   border: 1px solid #3b82f6;
   color: #3b82f6;
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: 500;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease;
   letter-spacing: 0.5px;
@@ -110,26 +82,103 @@
   cursor: not-allowed;
 }
 
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.content {
+  padding: 40px 32px 60px;
 }
 
-.section {
+/* 3단 레이아웃 */
+.threeColumn {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.column {
   background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
   border: 1px solid #222;
   padding: 24px;
+  min-height: 400px;
 }
 
-.sectionTitle {
-  font-size: 14px;
+.columnTitle {
+  font-size: 12px;
   font-weight: 400;
   color: #fff;
   margin: 0 0 20px 0;
   padding-bottom: 12px;
   border-bottom: 1px solid #222;
   letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 연식별 라인업 */
+.lineupList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lineupItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1a1a1a;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.lineupItem:hover {
+  border-color: #333;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lineupItem.lineupActive {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.lineupYear {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.lineupActive .lineupYear {
+  color: #3b82f6;
+}
+
+.lineupCategory {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+.lineupNote {
+  font-size: 12px;
+  color: #444;
+  margin: 16px 0 0 0;
+  line-height: 1.6;
+}
+
+/* 제원 섹션 */
+.specSection {
+  margin-bottom: 24px;
+}
+
+.specSection:last-child {
+  margin-bottom: 0;
+}
+
+.specSubtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -140,20 +189,20 @@
 
 .specTable th,
 .specTable td {
-  padding: 12px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #1a1a1a;
   text-align: left;
 }
 
 .specTable th {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: #555;
-  width: 120px;
+  width: 80px;
 }
 
 .specTable td {
-  font-size: 14px;
+  font-size: 13px;
   color: #ccc;
 }
 
@@ -162,8 +211,26 @@
   border-bottom: none;
 }
 
-.history {
-  font-size: 14px;
+/* 모델 설명 섹션 */
+.descSection {
+  margin-bottom: 24px;
+}
+
+.descSection:last-child {
+  margin-bottom: 0;
+}
+
+.descSubtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.descText {
+  font-size: 13px;
   line-height: 1.8;
   color: #888;
   margin: 0;
@@ -176,12 +243,13 @@
 }
 
 .triviaItem {
-  padding: 12px 0;
-  font-size: 14px;
+  padding: 10px 0;
+  font-size: 13px;
   color: #888;
   border-bottom: 1px solid #1a1a1a;
-  padding-left: 20px;
+  padding-left: 16px;
   position: relative;
+  line-height: 1.6;
 }
 
 .triviaItem::before {
@@ -195,50 +263,7 @@
   border-bottom: none;
 }
 
-.relatedList {
-  display: flex;
-  flex-direction: column;
-}
-
-.relatedItem {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid #1a1a1a;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.relatedItem:last-child {
-  border-bottom: none;
-}
-
-.relatedItem:hover {
-  background: rgba(255, 255, 255, 0.02);
-  margin: 0 -24px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.relatedManufacturer {
-  font-size: 12px;
-  color: #555;
-  width: 80px;
-}
-
-.relatedModel {
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  flex: 1;
-}
-
-.relatedYear {
-  font-size: 12px;
-  color: #444;
-}
-
+/* 404 페이지 */
 .notFound {
   text-align: center;
   padding: 100px 20px;
@@ -277,25 +302,41 @@
   color: #fff;
 }
 
+/* 반응형 */
+@media (max-width: 1024px) {
+  .threeColumn {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .column:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 768px) {
-  .mainInfo {
-    flex-direction: column;
-    gap: 24px;
+  .container {
+    padding: 0 16px;
   }
 
-  .actionSection {
-    text-align: left;
+  .content {
+    padding: 24px 16px 40px;
   }
 
-  .model {
-    font-size: 24px;
+  .threeColumn {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .column {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .headerTitle {
+    display: none;
   }
 
   .specTable th {
-    width: 100px;
-  }
-
-  .section {
-    padding: 20px 16px;
+    width: 70px;
   }
 }
