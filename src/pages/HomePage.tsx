@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../components/SearchBar';
 import carsData from '../data/cars.json';
 import { Car } from '../types/car';
 import { manufacturerLogos, manufacturerAbbr } from '../utils/manufacturerLogos';
@@ -10,6 +9,7 @@ const cars: Car[] = carsData as Car[];
 
 export default function HomePage() {
   const [selectedManufacturer, setSelectedManufacturer] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const manufacturers = useMemo(() => {
     const unique = [...new Set(cars.map(car => car.manufacturer))];
@@ -22,9 +22,22 @@ export default function HomePage() {
   }, []);
 
   const filteredCars = useMemo(() => {
-    if (!selectedManufacturer) return cars;
-    return cars.filter(car => car.manufacturer === selectedManufacturer);
-  }, [selectedManufacturer]);
+    let result = cars;
+
+    if (selectedManufacturer) {
+      result = result.filter(car => car.manufacturer === selectedManufacturer);
+    }
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(car =>
+        car.model.toLowerCase().includes(query) ||
+        car.manufacturer.toLowerCase().includes(query)
+      );
+    }
+
+    return result;
+  }, [selectedManufacturer, searchQuery]);
 
   const getManufacturerCount = (manufacturer: string) => {
     return cars.filter(car => car.manufacturer === manufacturer).length;
@@ -66,7 +79,15 @@ export default function HomePage() {
           <p className={styles.heroSubtitle}>
             {cars.length}개 차량의 상세 스펙, 역사, 트리비아를 확인하세요
           </p>
-          <SearchBar placeholder="브랜드, 모델명으로 검색..." />
+          <div className={styles.searchContainer}>
+            <input
+              type="text"
+              className={styles.searchInput}
+              placeholder="모델명으로 검색..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         </div>
       </section>
 
@@ -110,27 +131,18 @@ export default function HomePage() {
             </h2>
             <span className={styles.listCount}>{filteredCars.length}개 차량</span>
           </div>
-          <div className={styles.carTable}>
-            <div className={styles.tableHeader}>
-              <span className={styles.colModel}>모델</span>
-              <span className={styles.colCategory}>차종</span>
-              <span className={styles.colYear}>연식</span>
-              <span className={styles.colEngine}>엔진</span>
-              <span className={styles.colPower}>출력</span>
-            </div>
+          <ul className={styles.carModelList}>
             {filteredCars.map(car => (
-              <Link key={car.id} to={`/car/${car.id}`} className={styles.tableRow}>
-                <span className={styles.colModel}>
-                  {!selectedManufacturer && <span className={styles.carManufacturer}>{car.manufacturer}</span>}
+              <li key={car.id}>
+                <Link to={`/car/${car.id}`} className={styles.carModelLink}>
                   {car.model}
-                </span>
-                <span className={styles.colCategory}>{car.category}</span>
-                <span className={styles.colYear}>{car.year}</span>
-                <span className={styles.colEngine}>{car.specs.engine}</span>
-                <span className={styles.colPower}>{car.specs.horsepower}hp</span>
-              </Link>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
+          {filteredCars.length === 0 && (
+            <p className={styles.noResults}>검색 결과가 없습니다.</p>
+          )}
         </div>
       </section>
 

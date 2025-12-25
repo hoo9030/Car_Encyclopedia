@@ -34,6 +34,28 @@
   margin: 0 0 32px 0;
 }
 
+.searchContainer {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  font-size: 14px;
+  color: #1e293b;
+  background: #fff;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
 /* 제조사 네비게이션 */
 .manufacturerNav {
   background: #fff;
@@ -178,75 +200,43 @@
   gap: 12px;
 }
 
-.carManufacturer {
-  color: #64748b;
-  font-weight: 400;
-  margin-right: 8px;
-}
-
-/* 테이블 스타일 */
-.carTable {
+/* 모델 리스트 */
+.carModelList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background: #fff;
   border: 1px solid #e2e8f0;
 }
 
-.tableHeader {
-  display: grid;
-  grid-template-columns: 2fr 1fr 80px 1.5fr 80px;
-  gap: 16px;
-  padding: 12px 16px;
-  background: #f8fafc;
+.carModelList li {
   border-bottom: 1px solid #e2e8f0;
-  font-size: 12px;
-  font-weight: 600;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.tableRow {
-  display: grid;
-  grid-template-columns: 2fr 1fr 80px 1.5fr 80px;
-  gap: 16px;
-  padding: 14px 16px;
-  border-bottom: 1px solid #e2e8f0;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s ease;
-}
-
-.tableRow:last-child {
+.carModelList li:last-child {
   border-bottom: none;
 }
 
-.tableRow:hover {
-  background: #f8fafc;
-}
-
-.colModel {
-  font-weight: 600;
+.carModelLink {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
   color: #1e293b;
-}
-
-.colCategory {
-  color: #64748b;
-  font-size: 13px;
-}
-
-.colYear {
-  color: #64748b;
-  font-size: 13px;
-}
-
-.colEngine {
-  color: #475569;
-  font-size: 13px;
-}
-
-.colPower {
-  color: #1e40af;
   font-weight: 500;
-  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.carModelLink:hover {
+  background: #f8fafc;
+  color: #1e40af;
+}
+
+.noResults {
+  text-align: center;
+  color: #64748b;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
 }
 
 /* 통계 */
@@ -300,30 +290,6 @@
   .manufacturerLink {
     padding: 6px 10px;
     font-size: 12px;
-  }
-
-  .tableHeader {
-    display: none;
-  }
-
-  .tableRow {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 12px 16px;
-  }
-
-  .colModel {
-    font-size: 15px;
-  }
-
-  .colCategory,
-  .colYear,
-  .colEngine {
-    font-size: 12px;
-  }
-
-  .colPrice {
-    margin-top: 4px;
   }
 
   .statGrid {

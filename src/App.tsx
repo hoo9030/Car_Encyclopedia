@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CompareProvider } from './context/CompareContext';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-import SearchPage from './pages/SearchPage';
 import CarDetailPage from './pages/CarDetailPage';
 import ComparePage from './pages/ComparePage';
 import './App.css';
@@ -16,7 +15,6 @@ function App() {
           <main className="main-content">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/search" element={<SearchPage />} />
               <Route path="/car/:id" element={<CarDetailPage />} />
               <Route path="/compare" element={<ComparePage />} />
             </Routes>

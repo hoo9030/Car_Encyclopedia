@@ -21,12 +21,6 @@ export default function Header() {
             홈
           </Link>
           <Link
-            to="/search"
-            className={`${styles.navLink} ${location.pathname === '/search' ? styles.active : ''}`}
-          >
-            검색
-          </Link>
-          <Link
             to="/compare"
             className={`${styles.navLink} ${location.pathname === '/compare' ? styles.active : ''}`}
           >
