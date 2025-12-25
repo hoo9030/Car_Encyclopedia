@@ -351,17 +351,124 @@ export interface ModelIntroduction {
   purchase?: PurchaseInfo;         // 구매 정보
 }
 
+// ============================================
+// 모델 시리즈 (브랜드/모델 라인 공통 정보)
+// ============================================
+export interface ModelSeries {
+  id: string;                       // 시리즈 ID (예: "grandeur", "sonata")
+  manufacturer: string;             // 제조사
+  modelName: string;                // 모델명 (예: "그랜저", "소나타")
+  category: string;                 // 차종
+
+  // 브랜드/모델 라인 공통 정보
+  overview: string;                 // 모델 개요
+  history: string;                  // 전체 역사 (모든 세대 포함)
+  designPhilosophy?: string;        // 디자인 철학
+  targetAudience?: string;          // 타겟 고객층
+
+  // 세대별 정보 (전체 세대)
+  generations: GenerationInfo[];    // 모든 세대 정보
+
+  // 브랜드 차원의 정보
+  awards?: string[];                // 수상 이력 (전체)
+  trivia?: string[];                // 흥미로운 사실들
+  media?: MediaAppearance[];        // 미디어 등장 (전체)
+
+  // 글로벌/시장 정보
+  global?: GlobalInfo;              // 글로벌 정보
+  comparison?: ComparisonInfo;      // 경쟁 모델 비교
+
+  // 커뮤니티/애프터마켓
+  aftermarket?: AftermarketInfo;    // 튜닝/애프터마켓 정보
+
+  // 특별판 (전 세대 걸쳐)
+  specialEditions?: SpecialEdition[];
+
+  // 이미지
+  heroImage?: string;               // 대표 이미지
+}
+
+// ============================================
+// 개별 차량 (특정 연도/트림의 구체적 정보)
+// ============================================
+export interface CarModelInfo {
+  overview: string;                 // 해당 모델 개요
+  highlights?: string[];            // 주요 특징/하이라이트
+
+  // 해당 연식/트림 전용 정보
+  trims?: TrimInfo[];               // 트림 정보
+  colors?: ColorOption[];           // 색상 옵션
+  technology?: TechnologyInfo;      // 기술/편의사양
+
+  // 유지/구매 관련 (시점 특정)
+  ownership?: OwnershipCost;        // 유지비
+  warranty?: WarrantyInfo;          // 보증 정보
+  service?: ServiceInfo;            // 정비 정보
+
+  // 가격/시세 (시점 특정)
+  usedCarValue?: UsedCarValue;      // 중고차 시세
+  purchase?: PurchaseInfo;          // 구매 정보
+  optionPackages?: OptionPackage[]; // 옵션 패키지
+  individualOptions?: IndividualOption[]; // 개별 옵션
+
+  // 평가 (해당 모델 특정)
+  userReviews?: UserReviewSummary;  // 사용자 평가
+  testDrive?: TestDriveInfo;        // 시승/테스트
+
+  // 리콜 (해당 세대/연식 특정)
+  recalls?: RecallInfo[];           // 리콜 이력
+
+  // 환경/보험 (해당 모델 특정)
+  environment?: EnvironmentInfo;    // 환경 등급
+  insurance?: InsuranceInfo;        // 보험 정보
+}
+
 export interface Car {
   id: string;
+  seriesId: string;                 // 모델 시리즈 참조 (예: "grandeur")
   manufacturer: string;
   model: string;
   year: number;
-  variant?: string;  // 트림/파워트레인 (예: "2.5 가솔린", "하이브리드")
+  variant?: string;                 // 트림/파워트레인 (예: "2.5 가솔린", "하이브리드")
+  generationCode?: string;          // 세대 코드명 (예: "GN7")
   category: string;
   specs: CarSpecs;
-  introduction: ModelIntroduction;  // 상세 모델 소개
+  modelInfo: CarModelInfo;          // 해당 차량 특정 정보
   image: string;
   price: string;
+}
+
+// 하위 호환성을 위한 타입 (기존 ModelIntroduction 유지)
+export interface ModelIntroduction {
+  overview: string;
+  history: string;
+  designPhilosophy?: string;
+  targetAudience?: string;
+  competitorModels?: string[];
+  highlights?: string[];
+  awards?: string[];
+  trivia?: string[];
+  generations?: GenerationInfo[];
+  trims?: TrimInfo[];
+  colors?: ColorOption[];
+  technology?: TechnologyInfo;
+  ownership?: OwnershipCost;
+  global?: GlobalInfo;
+  media?: MediaAppearance[];
+  recalls?: RecallInfo[];
+  userReviews?: UserReviewSummary;
+  optionPackages?: OptionPackage[];
+  individualOptions?: IndividualOption[];
+  warranty?: WarrantyInfo;
+  service?: ServiceInfo;
+  usedCarValue?: UsedCarValue;
+  environment?: EnvironmentInfo;
+  insurance?: InsuranceInfo;
+  aftermarket?: AftermarketInfo;
+  comparison?: ComparisonInfo;
+  specialEditions?: SpecialEdition[];
+  testDrive?: TestDriveInfo;
+  purchase?: PurchaseInfo;
 }
 
 export type CarCategory = '세단' | 'SUV' | '스포츠카' | '전기차' | '하이브리드' | '트럭' | '왜건';

@@ -55,6 +55,17 @@
   letter-spacing: 2px;
 }
 
+.generationCode {
+  display: inline-block;
+  font-size: 10px;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.15);
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+
 .compareBtn {
   background: transparent;
   border: 1px solid #3b82f6;
@@ -421,6 +432,20 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #222;
   border-radius: 4px;
+}
+
+.generationItem.currentGeneration {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.currentBadge {
+  font-size: 10px;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
 }
 
 .genHeader {
