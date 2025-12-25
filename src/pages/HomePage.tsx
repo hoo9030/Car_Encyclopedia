@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
-import CarCard from '../components/CarCard';
 import carsData from '../data/cars.json';
 import { Car } from '../types/car';
 import styles from './HomePage.module.css';
@@ -9,17 +8,26 @@ import styles from './HomePage.module.css';
 const cars: Car[] = carsData as Car[];
 
 export default function HomePage() {
+  const manufacturers = useMemo(() => {
+    const unique = [...new Set(cars.map(car => car.manufacturer))];
+    return unique.sort();
+  }, []);
+
   const categories = useMemo(() => {
     const unique = [...new Set(cars.map(car => car.category))];
     return unique;
   }, []);
 
-  const featuredCars = useMemo(() => {
-    return cars.slice(0, 6);
-  }, []);
+  const carsByManufacturer = useMemo(() => {
+    const grouped: Record<string, Car[]> = {};
+    manufacturers.forEach(manufacturer => {
+      grouped[manufacturer] = cars.filter(car => car.manufacturer === manufacturer);
+    });
+    return grouped;
+  }, [manufacturers]);
 
-  const getCategoryCount = (category: string) => {
-    return cars.filter(car => car.category === category).length;
+  const getManufacturerCount = (manufacturer: string) => {
+    return cars.filter(car => car.manufacturer === manufacturer).length;
   };
 
   return (
@@ -34,37 +42,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.categories}>
+      <section className={styles.manufacturerNav}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>차종별 탐색</h2>
-          <div className={styles.categoryGrid}>
-            {categories.map(category => (
-              <Link
-                key={category}
-                to={`/search?category=${encodeURIComponent(category)}`}
-                className={styles.categoryCard}
+          <div className={styles.manufacturerList}>
+            {manufacturers.map(manufacturer => (
+              <a
+                key={manufacturer}
+                href={`#${manufacturer}`}
+                className={styles.manufacturerLink}
               >
-                <span className={styles.categoryName}>{category}</span>
-                <span className={styles.categoryCount}>{getCategoryCount(category)}대</span>
-              </Link>
+                {manufacturer}
+                <span className={styles.manufacturerCount}>{getManufacturerCount(manufacturer)}</span>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={styles.featured}>
+      <section className={styles.carList}>
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>차량 목록</h2>
-            <Link to="/search" className={styles.viewAllLink}>
-              전체보기
-            </Link>
-          </div>
-          <div className={styles.carGrid}>
-            {featuredCars.map(car => (
-              <CarCard key={car.id} car={car} />
-            ))}
-          </div>
+          {manufacturers.map(manufacturer => (
+            <div key={manufacturer} id={manufacturer} className={styles.manufacturerSection}>
+              <div className={styles.manufacturerHeader}>
+                <h2 className={styles.manufacturerTitle}>{manufacturer}</h2>
+                <Link
+                  to={`/search?manufacturer=${encodeURIComponent(manufacturer)}`}
+                  className={styles.viewAllLink}
+                >
+                  전체보기
+                </Link>
+              </div>
+              <div className={styles.carTable}>
+                <div className={styles.tableHeader}>
+                  <span className={styles.colModel}>모델</span>
+                  <span className={styles.colCategory}>차종</span>
+                  <span className={styles.colYear}>연식</span>
+                  <span className={styles.colEngine}>엔진</span>
+                  <span className={styles.colPrice}>가격</span>
+                </div>
+                {carsByManufacturer[manufacturer].map(car => (
+                  <Link key={car.id} to={`/car/${car.id}`} className={styles.tableRow}>
+                    <span className={styles.colModel}>{car.model}</span>
+                    <span className={styles.colCategory}>{car.category}</span>
+                    <span className={styles.colYear}>{car.year}</span>
+                    <span className={styles.colEngine}>{car.specs.horsepower}hp</span>
+                    <span className={styles.colPrice}>{car.price}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -77,7 +104,7 @@ export default function HomePage() {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statLabel}>브랜드</span>
-              <span className={styles.statNumber}>{new Set(cars.map(c => c.manufacturer)).size}</span>
+              <span className={styles.statNumber}>{manufacturers.length}</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statLabel}>차종</span>
