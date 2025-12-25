@@ -158,6 +158,30 @@ export default function CarDetailPage() {
                         <td>{car.specs.engineDetails.bore} × {car.specs.engineDetails.stroke} mm</td>
                       </tr>
                     )}
+                    {car.specs.engineDetails.maxPowerRpm && (
+                      <tr>
+                        <th>최대출력 rpm</th>
+                        <td>{car.specs.engineDetails.maxPowerRpm.toLocaleString()} rpm</td>
+                      </tr>
+                    )}
+                    {car.specs.engineDetails.maxTorqueRpm && (
+                      <tr>
+                        <th>최대토크 rpm</th>
+                        <td>{car.specs.engineDetails.maxTorqueRpm.toLocaleString()} rpm</td>
+                      </tr>
+                    )}
+                    {car.specs.engineDetails.fuelInjection && (
+                      <tr>
+                        <th>연료분사</th>
+                        <td>{car.specs.engineDetails.fuelInjection}</td>
+                      </tr>
+                    )}
+                    {car.specs.engineDetails.turbocharger && (
+                      <tr>
+                        <th>과급기</th>
+                        <td>{car.specs.engineDetails.turbocharger}</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -199,6 +223,18 @@ export default function CarDetailPage() {
                         <td>{car.specs.performance.highwayFuelEconomy}</td>
                       </tr>
                     )}
+                    {car.specs.performance.brakingDistance && (
+                      <tr>
+                        <th>제동거리</th>
+                        <td>{car.specs.performance.brakingDistance}m (100-0)</td>
+                      </tr>
+                    )}
+                    {car.specs.performance.quarterMile && (
+                      <tr>
+                        <th>1/4마일</th>
+                        <td>{car.specs.performance.quarterMile}초</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -238,6 +274,36 @@ export default function CarDetailPage() {
                       <tr>
                         <th>모터 종류</th>
                         <td>{car.specs.electric.motorType}</td>
+                      </tr>
+                    )}
+                    {car.specs.electric.motorPowerKw && (
+                      <tr>
+                        <th>모터 출력</th>
+                        <td>{car.specs.electric.motorPowerKw} kW</td>
+                      </tr>
+                    )}
+                    {car.specs.electric.motorTorque && (
+                      <tr>
+                        <th>모터 토크</th>
+                        <td>{car.specs.electric.motorTorque} Nm</td>
+                      </tr>
+                    )}
+                    {car.specs.electric.regenBrakingLevels && (
+                      <tr>
+                        <th>회생제동</th>
+                        <td>{car.specs.electric.regenBrakingLevels}단계</td>
+                      </tr>
+                    )}
+                    {car.specs.electric.v2l !== undefined && (
+                      <tr>
+                        <th>V2L</th>
+                        <td>{car.specs.electric.v2l ? '지원' : '미지원'}</td>
+                      </tr>
+                    )}
+                    {car.specs.electric.batteryWarranty && (
+                      <tr>
+                        <th>배터리 보증</th>
+                        <td>{car.specs.electric.batteryWarranty}</td>
                       </tr>
                     )}
                   </tbody>
@@ -288,6 +354,30 @@ export default function CarDetailPage() {
                     <tr>
                       <th>연료탱크</th>
                       <td>{car.specs.dimensions.fuelTankCapacity} L</td>
+                    </tr>
+                  )}
+                  {car.specs.dimensions.frontOverhang && (
+                    <tr>
+                      <th>전면 오버행</th>
+                      <td>{car.specs.dimensions.frontOverhang} mm</td>
+                    </tr>
+                  )}
+                  {car.specs.dimensions.rearOverhang && (
+                    <tr>
+                      <th>후면 오버행</th>
+                      <td>{car.specs.dimensions.rearOverhang} mm</td>
+                    </tr>
+                  )}
+                  {car.specs.dimensions.dragCoefficient && (
+                    <tr>
+                      <th>공기저항계수</th>
+                      <td>Cd {car.specs.dimensions.dragCoefficient}</td>
+                    </tr>
+                  )}
+                  {car.specs.dimensions.turningRadius && (
+                    <tr>
+                      <th>회전반경</th>
+                      <td>{car.specs.dimensions.turningRadius}m</td>
                     </tr>
                   )}
                 </tbody>
@@ -381,6 +471,16 @@ export default function CarDetailPage() {
                         <td>{car.specs.safety.airbags}개</td>
                       </tr>
                     )}
+                    {car.specs.safety.ncapRating && (
+                      <tr>
+                        <th>충돌테스트</th>
+                        <td>
+                          {'★'.repeat(car.specs.safety.ncapRating)}{'☆'.repeat(5 - car.specs.safety.ncapRating)}
+                          {car.specs.safety.ncapOrg && ` (${car.specs.safety.ncapOrg}`}
+                          {car.specs.safety.ncapYear && ` ${car.specs.safety.ncapYear})`}
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
                 {car.specs.safety.adasFeatures && car.specs.safety.adasFeatures.length > 0 && (
@@ -420,627 +520,52 @@ export default function CarDetailPage() {
                         <td>{car.specs.comfort.sunroof}</td>
                       </tr>
                     )}
+                    {car.specs.comfort.doors && (
+                      <tr>
+                        <th>도어</th>
+                        <td>{car.specs.comfort.doors}도어</td>
+                      </tr>
+                    )}
+                    {car.specs.comfort.frontLegroom && (
+                      <tr>
+                        <th>1열 레그룸</th>
+                        <td>{car.specs.comfort.frontLegroom} mm</td>
+                      </tr>
+                    )}
+                    {car.specs.comfort.frontHeadroom && (
+                      <tr>
+                        <th>1열 헤드룸</th>
+                        <td>{car.specs.comfort.frontHeadroom} mm</td>
+                      </tr>
+                    )}
+                    {car.specs.comfort.secondRowLegroom && (
+                      <tr>
+                        <th>2열 레그룸</th>
+                        <td>{car.specs.comfort.secondRowLegroom} mm</td>
+                      </tr>
+                    )}
+                    {car.specs.comfort.secondRowHeadroom && (
+                      <tr>
+                        <th>2열 헤드룸</th>
+                        <td>{car.specs.comfort.secondRowHeadroom} mm</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
             )}
           </section>
 
-          {/* 3단: 모델 설명 */}
+          {/* 3단: 모델 소개 */}
           <section className={styles.column}>
             <h2 className={styles.columnTitle}>모델 소개</h2>
-
-            {/* 개요 - 차량 특정 */}
             <div className={styles.descSection}>
-              <p className={styles.overviewText}>{car.modelInfo.overview}</p>
+              <div className={styles.introductionText}>
+                {car.modelInfo.introduction.split('\n\n').map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
             </div>
-
-            {/* 주요 특징 - 차량 특정 */}
-            {car.modelInfo.highlights && car.modelInfo.highlights.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>주요 특징</h3>
-                <ul className={styles.highlightList}>
-                  {car.modelInfo.highlights.map((item, index) => (
-                    <li key={index} className={styles.highlightItem}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* 트림 라인업 - 차량 특정 */}
-            {car.modelInfo.trims && car.modelInfo.trims.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>트림 라인업</h3>
-                <div className={styles.trimList}>
-                  {car.modelInfo.trims.map((trim, index) => (
-                    <div key={index} className={styles.trimItem}>
-                      <div className={styles.trimHeader}>
-                        <span className={styles.trimName}>{trim.name}</span>
-                        <span className={styles.trimPrice}>{trim.price}</span>
-                      </div>
-                      <ul className={styles.trimFeatures}>
-                        {trim.keyFeatures.map((feature, idx) => (
-                          <li key={idx}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* 색상 옵션 - 차량 특정 */}
-            {car.modelInfo.colors && car.modelInfo.colors.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>색상 옵션</h3>
-                <div className={styles.colorSection}>
-                  <div className={styles.colorGroup}>
-                    <span className={styles.colorGroupLabel}>외장</span>
-                    <div className={styles.colorList}>
-                      {car.modelInfo.colors
-                        .filter(c => c.type === 'exterior')
-                        .map((color, index) => (
-                          <span key={index} className={`${styles.colorTag} ${color.isPopular ? styles.popularColor : ''}`}>
-                            {color.name}
-                            {color.isPopular && <span className={styles.popularBadge}>인기</span>}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-                  <div className={styles.colorGroup}>
-                    <span className={styles.colorGroupLabel}>내장</span>
-                    <div className={styles.colorList}>
-                      {car.modelInfo.colors
-                        .filter(c => c.type === 'interior')
-                        .map((color, index) => (
-                          <span key={index} className={`${styles.colorTag} ${color.isPopular ? styles.popularColor : ''}`}>
-                            {color.name}
-                            {color.isPopular && <span className={styles.popularBadge}>인기</span>}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* 기술 및 편의사양 - 차량 특정 */}
-            {car.modelInfo.technology && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>기술 및 편의사양</h3>
-
-                {car.modelInfo.technology.infotainment && (
-                  <div className={styles.techGroup}>
-                    <h4 className={styles.techGroupTitle}>인포테인먼트</h4>
-                    {car.modelInfo.technology.infotainment.screenSize && (
-                      <p className={styles.techItem}>화면: {car.modelInfo.technology.infotainment.screenSize}</p>
-                    )}
-                    {car.modelInfo.technology.infotainment.system && (
-                      <p className={styles.techItem}>시스템: {car.modelInfo.technology.infotainment.system}</p>
-                    )}
-                    {car.modelInfo.technology.infotainment.features && (
-                      <div className={styles.techTags}>
-                        {car.modelInfo.technology.infotainment.features.map((f, i) => (
-                          <span key={i} className={styles.techTag}>{f}</span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {car.modelInfo.technology.soundSystem && (
-                  <div className={styles.techGroup}>
-                    <h4 className={styles.techGroupTitle}>사운드 시스템</h4>
-                    <p className={styles.techItem}>
-                      {car.modelInfo.technology.soundSystem.brand} {car.modelInfo.technology.soundSystem.speakers}스피커 ({car.modelInfo.technology.soundSystem.power})
-                    </p>
-                  </div>
-                )}
-
-                {car.modelInfo.technology.drivingModes && (
-                  <div className={styles.techGroup}>
-                    <h4 className={styles.techGroupTitle}>주행 모드</h4>
-                    <div className={styles.techTags}>
-                      {car.modelInfo.technology.drivingModes.map((mode, i) => (
-                        <span key={i} className={styles.techTag}>{mode}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {car.modelInfo.technology.connectivity && (
-                  <div className={styles.techGroup}>
-                    <h4 className={styles.techGroupTitle}>커넥티비티</h4>
-                    <ul className={styles.techList}>
-                      {car.modelInfo.technology.connectivity.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {car.modelInfo.technology.convenience && (
-                  <div className={styles.techGroup}>
-                    <h4 className={styles.techGroupTitle}>편의 기능</h4>
-                    <div className={styles.techTags}>
-                      {car.modelInfo.technology.convenience.map((item, i) => (
-                        <span key={i} className={styles.techTag}>{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 유지비 정보 - 차량 특정 */}
-            {car.modelInfo.ownership && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>유지비 정보</h3>
-                <table className={styles.ownershipTable}>
-                  <tbody>
-                    {car.modelInfo.ownership.annualTax && (
-                      <tr>
-                        <th>자동차세</th>
-                        <td>{car.modelInfo.ownership.annualTax}</td>
-                      </tr>
-                    )}
-                    {car.modelInfo.ownership.insuranceEstimate && (
-                      <tr>
-                        <th>보험료 (예상)</th>
-                        <td>{car.modelInfo.ownership.insuranceEstimate}</td>
-                      </tr>
-                    )}
-                    {car.modelInfo.ownership.fuelCostEstimate && (
-                      <tr>
-                        <th>연료비 (예상)</th>
-                        <td>{car.modelInfo.ownership.fuelCostEstimate}</td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-                {car.modelInfo.ownership.maintenanceCycle && (
-                  <div className={styles.maintenanceInfo}>
-                    <h4 className={styles.techGroupTitle}>소모품 교체 주기</h4>
-                    <table className={styles.ownershipTable}>
-                      <tbody>
-                        {car.modelInfo.ownership.maintenanceCycle.engineOil && (
-                          <tr><th>엔진오일</th><td>{car.modelInfo.ownership.maintenanceCycle.engineOil}</td></tr>
-                        )}
-                        {car.modelInfo.ownership.maintenanceCycle.brakeFluid && (
-                          <tr><th>브레이크 오일</th><td>{car.modelInfo.ownership.maintenanceCycle.brakeFluid}</td></tr>
-                        )}
-                        {car.modelInfo.ownership.maintenanceCycle.tires && (
-                          <tr><th>타이어</th><td>{car.modelInfo.ownership.maintenanceCycle.tires}</td></tr>
-                        )}
-                        {car.modelInfo.ownership.maintenanceCycle.battery && (
-                          <tr><th>배터리</th><td>{car.modelInfo.ownership.maintenanceCycle.battery}</td></tr>
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 리콜 이력 - 차량 특정 */}
-            {car.modelInfo.recalls && car.modelInfo.recalls.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>리콜 이력 ({car.year}년형 {car.variant})</h3>
-                <div className={styles.recallList}>
-                  {car.modelInfo.recalls.map((recall, index) => (
-                    <div key={index} className={`${styles.recallItem} ${styles[`severity${recall.severity.charAt(0).toUpperCase() + recall.severity.slice(1)}`]}`}>
-                      <div className={styles.recallHeader}>
-                        <span className={styles.recallDate}>{recall.date}</span>
-                        <span className={`${styles.severityBadge} ${styles[recall.severity]}`}>
-                          {recall.severity === 'low' && '경미'}
-                          {recall.severity === 'medium' && '보통'}
-                          {recall.severity === 'high' && '주의'}
-                          {recall.severity === 'critical' && '심각'}
-                        </span>
-                      </div>
-                      <p className={styles.recallReason}>{recall.reason}</p>
-                      {recall.affectedUnits && (
-                        <p className={styles.recallAffected}>대상: {recall.affectedUnits}</p>
-                      )}
-                      <p className={styles.recallRemedy}>조치: {recall.remedy}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* 사용자 리뷰 요약 - 차량 특정 */}
-            {car.modelInfo.userReviews && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>사용자 평가 ({car.year}년형 {car.variant})</h3>
-                <div className={styles.reviewSummary}>
-                  {car.modelInfo.userReviews.overallRating && (
-                    <div className={styles.overallRating}>
-                      <span className={styles.ratingScore}>{car.modelInfo.userReviews.overallRating.toFixed(1)}</span>
-                      <span className={styles.ratingMax}>/ 5.0</span>
-                      {car.modelInfo.userReviews.totalReviews && (
-                        <span className={styles.reviewCount}>({car.modelInfo.userReviews.totalReviews.toLocaleString()}개 리뷰)</span>
-                      )}
-                    </div>
-                  )}
-                  {car.modelInfo.userReviews.recommendationRate && (
-                    <div className={styles.recommendRate}>
-                      추천율: <strong>{car.modelInfo.userReviews.recommendationRate}%</strong>
-                    </div>
-                  )}
-                  {car.modelInfo.userReviews.ratings && (
-                    <div className={styles.detailedRatings}>
-                      {car.modelInfo.userReviews.ratings.performance && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>성능</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.performance / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.performance.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {car.modelInfo.userReviews.ratings.comfort && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>편의성</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.comfort / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.comfort.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {car.modelInfo.userReviews.ratings.fuelEfficiency && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>연비</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.fuelEfficiency / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.fuelEfficiency.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {car.modelInfo.userReviews.ratings.value && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>가성비</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.value / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.value.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {car.modelInfo.userReviews.ratings.reliability && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>신뢰성</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.reliability / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.reliability.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {car.modelInfo.userReviews.ratings.design && (
-                        <div className={styles.ratingBar}>
-                          <span className={styles.ratingLabel}>디자인</span>
-                          <div className={styles.barContainer}>
-                            <div className={styles.barFill} style={{ width: `${(car.modelInfo.userReviews.ratings.design / 5) * 100}%` }} />
-                          </div>
-                          <span className={styles.ratingValue}>{car.modelInfo.userReviews.ratings.design.toFixed(1)}</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                  <div className={styles.prosConsContainer}>
-                    {car.modelInfo.userReviews.pros && car.modelInfo.userReviews.pros.length > 0 && (
-                      <div className={styles.prosSection}>
-                        <h4 className={styles.prosTitle}>장점</h4>
-                        <ul className={styles.prosList}>
-                          {car.modelInfo.userReviews.pros.map((pro, i) => (
-                            <li key={i}>{pro}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    {car.modelInfo.userReviews.cons && car.modelInfo.userReviews.cons.length > 0 && (
-                      <div className={styles.consSection}>
-                        <h4 className={styles.consTitle}>단점</h4>
-                        <ul className={styles.consList}>
-                          {car.modelInfo.userReviews.cons.map((con, i) => (
-                            <li key={i}>{con}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* 옵션 패키지 - 차량 특정 */}
-            {car.modelInfo.optionPackages && car.modelInfo.optionPackages.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>옵션 패키지</h3>
-                <div className={styles.packageList}>
-                  {car.modelInfo.optionPackages.map((pkg, index) => (
-                    <div key={index} className={`${styles.packageItem} ${pkg.recommended ? styles.recommendedPackage : ''}`}>
-                      <div className={styles.packageHeader}>
-                        <span className={styles.packageName}>{pkg.name}</span>
-                        <span className={styles.packagePrice}>{pkg.price}</span>
-                        {pkg.recommended && <span className={styles.recommendedBadge}>추천</span>}
-                      </div>
-                      <ul className={styles.packageIncludes}>
-                        {pkg.includes.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* 개별 옵션 - 차량 특정 */}
-            {car.modelInfo.individualOptions && car.modelInfo.individualOptions.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>개별 옵션</h3>
-                <div className={styles.optionGrid}>
-                  {car.modelInfo.individualOptions.map((opt, index) => (
-                    <div key={index} className={styles.optionItem}>
-                      <span className={styles.optionCategory}>{opt.category}</span>
-                      <span className={styles.optionName}>{opt.name}</span>
-                      <span className={styles.optionPrice}>{opt.price}</span>
-                      {opt.description && <p className={styles.optionDesc}>{opt.description}</p>}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* 보증 정보 - 차량 특정 */}
-            {car.modelInfo.warranty && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>보증 정보</h3>
-                <table className={styles.warrantyTable}>
-                  <tbody>
-                    {car.modelInfo.warranty.basic && (
-                      <tr><th>기본 보증</th><td>{car.modelInfo.warranty.basic}</td></tr>
-                    )}
-                    {car.modelInfo.warranty.powertrain && (
-                      <tr><th>파워트레인</th><td>{car.modelInfo.warranty.powertrain}</td></tr>
-                    )}
-                    {car.modelInfo.warranty.battery && (
-                      <tr><th>배터리</th><td>{car.modelInfo.warranty.battery}</td></tr>
-                    )}
-                    {car.modelInfo.warranty.corrosion && (
-                      <tr><th>부식 보증</th><td>{car.modelInfo.warranty.corrosion}</td></tr>
-                    )}
-                    {car.modelInfo.warranty.roadside && (
-                      <tr><th>긴급출동</th><td>{car.modelInfo.warranty.roadside}</td></tr>
-                    )}
-                    {car.modelInfo.warranty.maintenance && (
-                      <tr><th>무상점검</th><td>{car.modelInfo.warranty.maintenance}</td></tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            )}
-
-            {/* 정비 정보 - 차량 특정 */}
-            {car.modelInfo.service && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>정비 정보</h3>
-                <table className={styles.serviceTable}>
-                  <tbody>
-                    {car.modelInfo.service.oilChangePrice && (
-                      <tr><th>엔진오일 교환</th><td>{car.modelInfo.service.oilChangePrice}</td></tr>
-                    )}
-                    {car.modelInfo.service.majorServicePrice && (
-                      <tr><th>주요 정비</th><td>{car.modelInfo.service.majorServicePrice}</td></tr>
-                    )}
-                    {car.modelInfo.service.partAvailability && (
-                      <tr><th>부품 수급성</th><td>{car.modelInfo.service.partAvailability}</td></tr>
-                    )}
-                    {car.modelInfo.service.serviceCenterCount && (
-                      <tr><th>전국 서비스센터</th><td>{car.modelInfo.service.serviceCenterCount.toLocaleString()}개소</td></tr>
-                    )}
-                  </tbody>
-                </table>
-                {car.modelInfo.service.commonRepairCosts && car.modelInfo.service.commonRepairCosts.length > 0 && (
-                  <div className={styles.repairCosts}>
-                    <h4 className={styles.techGroupTitle}>주요 정비 비용</h4>
-                    <table className={styles.serviceTable}>
-                      <tbody>
-                        {car.modelInfo.service.commonRepairCosts.map((cost, i) => (
-                          <tr key={i}><th>{cost.item}</th><td>{cost.price}</td></tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 중고차 시세 - 차량 특정 */}
-            {car.modelInfo.usedCarValue && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>중고차 시세</h3>
-                <table className={styles.usedCarTable}>
-                  <tbody>
-                    {car.modelInfo.usedCarValue.currentUsedPrice && (
-                      <tr><th>현재 시세 (1년차)</th><td>{car.modelInfo.usedCarValue.currentUsedPrice}</td></tr>
-                    )}
-                    {car.modelInfo.usedCarValue.threeYearValue && (
-                      <tr><th>3년 후 예상</th><td>{car.modelInfo.usedCarValue.threeYearValue}</td></tr>
-                    )}
-                    {car.modelInfo.usedCarValue.fiveYearValue && (
-                      <tr><th>5년 후 예상</th><td>{car.modelInfo.usedCarValue.fiveYearValue}</td></tr>
-                    )}
-                    {car.modelInfo.usedCarValue.depreciationRate && (
-                      <tr><th>감가율 (3년)</th><td>{car.modelInfo.usedCarValue.depreciationRate}</td></tr>
-                    )}
-                    {car.modelInfo.usedCarValue.resaleRating && (
-                      <tr><th>리세일 등급</th><td>{car.modelInfo.usedCarValue.resaleRating}</td></tr>
-                    )}
-                  </tbody>
-                </table>
-                {car.modelInfo.usedCarValue.popularUsedTrims && car.modelInfo.usedCarValue.popularUsedTrims.length > 0 && (
-                  <div className={styles.popularTrims}>
-                    <span className={styles.popularTrimsLabel}>인기 중고 트림:</span>
-                    <div className={styles.trimTags}>
-                      {car.modelInfo.usedCarValue.popularUsedTrims.map((trim, i) => (
-                        <span key={i} className={styles.trimTag}>{trim}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 환경 정보 - 차량 특정 */}
-            {car.modelInfo.environment && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>환경 정보</h3>
-                <table className={styles.envTable}>
-                  <tbody>
-                    {car.modelInfo.environment.emissionStandard && (
-                      <tr><th>배출가스 기준</th><td>{car.modelInfo.environment.emissionStandard}</td></tr>
-                    )}
-                    {car.modelInfo.environment.co2Emission && (
-                      <tr><th>CO2 배출량</th><td>{car.modelInfo.environment.co2Emission}</td></tr>
-                    )}
-                    {car.modelInfo.environment.emissionGrade && (
-                      <tr><th>환경부 등급</th><td>{car.modelInfo.environment.emissionGrade}</td></tr>
-                    )}
-                    {car.modelInfo.environment.greenCarType && (
-                      <tr><th>친환경차 유형</th><td>{car.modelInfo.environment.greenCarType}</td></tr>
-                    )}
-                    {car.modelInfo.environment.fuelType && (
-                      <tr><th>연료 종류</th><td>{car.modelInfo.environment.fuelType}</td></tr>
-                    )}
-                    {car.modelInfo.environment.noiseLevelDb && (
-                      <tr><th>소음 수준</th><td>{car.modelInfo.environment.noiseLevelDb} dB</td></tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            )}
-
-            {/* 보험 정보 - 차량 특정 */}
-            {car.modelInfo.insurance && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>보험 정보</h3>
-                <table className={styles.insuranceTable}>
-                  <tbody>
-                    {car.modelInfo.insurance.insuranceGrade && (
-                      <tr><th>보험 등급</th><td>{car.modelInfo.insurance.insuranceGrade}</td></tr>
-                    )}
-                    {car.modelInfo.insurance.annualPremiumEstimate && (
-                      <tr><th>연간 보험료 (예상)</th><td>{car.modelInfo.insurance.annualPremiumEstimate}</td></tr>
-                    )}
-                    {car.modelInfo.insurance.repairCostIndex && (
-                      <tr><th>수리비 지수</th><td>{car.modelInfo.insurance.repairCostIndex}</td></tr>
-                    )}
-                    {car.modelInfo.insurance.theftRisk && (
-                      <tr><th>도난 위험도</th><td>{car.modelInfo.insurance.theftRisk}</td></tr>
-                    )}
-                    {car.modelInfo.insurance.accidentRate && (
-                      <tr><th>사고율</th><td>{car.modelInfo.insurance.accidentRate}</td></tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            )}
-
-            {/* 시승/테스트 정보 - 차량 특정 */}
-            {car.modelInfo.testDrive && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>시승 및 테스트 ({car.year}년형 {car.variant})</h3>
-                {car.modelInfo.testDrive.professionalReviews && car.modelInfo.testDrive.professionalReviews.length > 0 && (
-                  <div className={styles.professionalReviews}>
-                    <h4 className={styles.techGroupTitle}>전문가 리뷰</h4>
-                    <div className={styles.reviewList}>
-                      {car.modelInfo.testDrive.professionalReviews.map((review, index) => (
-                        <div key={index} className={styles.reviewItem}>
-                          <div className={styles.reviewHeader}>
-                            <span className={styles.reviewSource}>{review.source}</span>
-                            {review.rating && (
-                              <span className={styles.reviewRating}>{review.rating.toFixed(1)}/5.0</span>
-                            )}
-                            {review.date && <span className={styles.reviewDate}>{review.date}</span>}
-                          </div>
-                          <p className={styles.reviewSummary}>{review.summary}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {car.modelInfo.testDrive.testResults && car.modelInfo.testDrive.testResults.length > 0 && (
-                  <div className={styles.testResults}>
-                    <h4 className={styles.techGroupTitle}>테스트 결과</h4>
-                    <table className={styles.testTable}>
-                      <tbody>
-                        {car.modelInfo.testDrive.testResults.map((test, index) => (
-                          <tr key={index}>
-                            <th>{test.testName}</th>
-                            <td>
-                              {test.result}
-                              {test.conditions && <span className={styles.testConditions}> ({test.conditions})</span>}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 구매 정보 - 차량 특정 */}
-            {car.modelInfo.purchase && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>구매 정보</h3>
-                {car.modelInfo.purchase.deliveryTime && (
-                  <p className={styles.deliveryTime}>
-                    <strong>예상 출고 기간:</strong> {car.modelInfo.purchase.deliveryTime}
-                  </p>
-                )}
-                {car.modelInfo.purchase.availableAt && car.modelInfo.purchase.availableAt.length > 0 && (
-                  <div className={styles.purchaseChannels}>
-                    <strong>구매 채널:</strong>
-                    <ul className={styles.channelList}>
-                      {car.modelInfo.purchase.availableAt.map((channel, i) => (
-                        <li key={i}>{channel}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {car.modelInfo.purchase.incentives && car.modelInfo.purchase.incentives.length > 0 && (
-                  <div className={styles.incentives}>
-                    <h4 className={styles.techGroupTitle}>프로모션/혜택</h4>
-                    <ul className={styles.incentiveList}>
-                      {car.modelInfo.purchase.incentives.map((incentive, i) => (
-                        <li key={i}>{incentive}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {car.modelInfo.purchase.financingOptions && car.modelInfo.purchase.financingOptions.length > 0 && (
-                  <div className={styles.financingOptions}>
-                    <h4 className={styles.techGroupTitle}>금융 상품</h4>
-                    <div className={styles.financeList}>
-                      {car.modelInfo.purchase.financingOptions.map((option, index) => (
-                        <div key={index} className={styles.financeItem}>
-                          <span className={styles.financeType}>{option.type}</span>
-                          {option.rate && <span className={styles.financeRate}>{option.rate}</span>}
-                          {option.terms && <span className={styles.financeTerms}>{option.terms}</span>}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {car.modelInfo.purchase.tradeInBonus && (
-                  <p className={styles.tradeInBonus}>
-                    <strong>보상판매:</strong> {car.modelInfo.purchase.tradeInBonus}
-                  </p>
-                )}
-              </div>
-            )}
           </section>
         </div>
       </div>

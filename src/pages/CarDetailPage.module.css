@@ -262,6 +262,21 @@
   border-bottom: 1px solid #222;
 }
 
+/* 모델 소개글 */
+.introductionText {
+  font-size: 14px;
+  line-height: 2;
+  color: #bbb;
+}
+
+.introductionText p {
+  margin: 0 0 20px 0;
+}
+
+.introductionText p:last-child {
+  margin-bottom: 0;
+}
+
 /* 주요 특징 */
 .highlightList {
   list-style: none;
