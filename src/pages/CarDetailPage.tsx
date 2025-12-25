@@ -21,8 +21,8 @@ export default function CarDetailPage() {
       <div className={styles.notFound}>
         <h2>차량을 찾을 수 없습니다</h2>
         <p>요청하신 차량 정보가 존재하지 않습니다.</p>
-        <Link to="/search" className={styles.backLink}>
-          검색으로 돌아가기
+        <Link to="/" className={styles.backLink}>
+          홈으로 돌아가기
         </Link>
       </div>
     );
@@ -48,7 +48,7 @@ export default function CarDetailPage() {
     <div className={styles.detailPage}>
       <div className={styles.header}>
         <div className={styles.container}>
-          <button className={styles.backBtn} onClick={() => navigate(-1)}>
+          <button className={styles.backBtn} type="button" onClick={() => navigate(-1)}>
             ← 뒤로
           </button>
         </div>
@@ -61,17 +61,16 @@ export default function CarDetailPage() {
               <span className={styles.category}>{car.category}</span>
               <span className={styles.manufacturer}>{car.manufacturer}</span>
               <h1 className={styles.model}>{car.model}</h1>
-              <p className={styles.year}>{car.year}년형</p>
+              <p className={styles.year}>{car.year}</p>
             </div>
-            <div className={styles.priceSection}>
-              <span className={styles.priceLabel}>가격</span>
-              <span className={styles.price}>{car.price}</span>
+            <div className={styles.actionSection}>
               <button
+                type="button"
                 className={`${styles.compareBtn} ${inCompare ? styles.inCompare : ''}`}
                 onClick={handleCompareClick}
                 disabled={!inCompare && compareCars.length >= 3}
               >
-                {inCompare ? '비교 목록에서 제거' : '비교 목록에 추가'}
+                {inCompare ? '비교에서 제거' : '비교에 추가'}
               </button>
             </div>
           </div>
