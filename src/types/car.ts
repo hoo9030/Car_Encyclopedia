@@ -425,12 +425,10 @@ export interface CarModelInfo {
 
 export interface Car {
   id: string;
-  seriesId: string;                 // 모델 시리즈 참조 (예: "grandeur")
   manufacturer: string;
   model: string;
   year: number;
   variant?: string;                 // 트림/파워트레인 (예: "2.5 가솔린", "하이브리드")
-  generationCode?: string;          // 세대 코드명 (예: "GN7")
   category: string;
   specs: CarSpecs;
   modelInfo: CarModelInfo;          // 해당 차량 특정 정보

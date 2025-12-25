@@ -1,12 +1,10 @@
 [
   {
     "id": "hyundai-grandeur-2025-25",
-    "seriesId": "grandeur",
     "manufacturer": "현대",
     "model": "그랜저",
     "year": 2025,
     "variant": "2.5 가솔린",
-    "generationCode": "GN7",
     "category": "세단",
     "specs": {
       "engine": "스마트스트림 가솔린 2.5",

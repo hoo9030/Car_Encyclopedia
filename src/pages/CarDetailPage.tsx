@@ -2,12 +2,10 @@ import { useParams, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { useCompare } from '../context/CompareContext';
 import carsData from '../data/cars.json';
-import modelSeriesData from '../data/modelSeries.json';
-import { Car, ModelSeries } from '../types/car';
+import { Car } from '../types/car';
 import styles from './CarDetailPage.module.css';
 
 const cars: Car[] = carsData as Car[];
-const modelSeriesList: ModelSeries[] = modelSeriesData as ModelSeries[];
 
 export default function CarDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -16,12 +14,6 @@ export default function CarDetailPage() {
   const car = useMemo(() => {
     return cars.find(c => c.id === id);
   }, [id]);
-
-  // 시리즈 정보 가져오기
-  const series = useMemo(() => {
-    if (!car) return null;
-    return modelSeriesList.find(s => s.id === car.seriesId) || null;
-  }, [car]);
 
   // 같은 모델의 연식별 라인업
   const modelLineup = useMemo(() => {
@@ -63,9 +55,6 @@ export default function CarDetailPage() {
           <div className={styles.headerTitle}>
             <span className={styles.headerManufacturer}>{car.manufacturer}</span>
             <h1 className={styles.headerModel}>{car.model}</h1>
-            {car.generationCode && (
-              <span className={styles.generationCode}>{car.generationCode}</span>
-            )}
           </div>
           <button
             type="button"
@@ -458,89 +447,6 @@ export default function CarDetailPage() {
               </div>
             )}
 
-            {/* 역사 - 시리즈 공통 */}
-            {series && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>모델 역사</h3>
-                <p className={styles.descText}>{series.history}</p>
-              </div>
-            )}
-
-            {/* 디자인 철학 - 시리즈 공통 */}
-            {series?.designPhilosophy && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>디자인 철학</h3>
-                <p className={styles.descText}>{series.designPhilosophy}</p>
-              </div>
-            )}
-
-            {/* 타겟 고객층 - 시리즈 공통 */}
-            {series?.targetAudience && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>타겟 고객</h3>
-                <p className={styles.descText}>{series.targetAudience}</p>
-              </div>
-            )}
-
-            {/* 수상 이력 - 시리즈 공통 */}
-            {series?.awards && series.awards.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>수상 이력</h3>
-                <ul className={styles.awardsList}>
-                  {series.awards.map((award, index) => (
-                    <li key={index} className={styles.awardItem}>{award}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* 알고 계셨나요? - 시리즈 공통 */}
-            {series?.trivia && series.trivia.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>알고 계셨나요?</h3>
-                <ul className={styles.triviaList}>
-                  {series.trivia.map((item, index) => (
-                    <li key={index} className={styles.triviaItem}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* 세대별 역사 - 시리즈 공통 */}
-            {series?.generations && series.generations.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>세대별 역사</h3>
-                <div className={styles.generationList}>
-                  {series.generations.map((gen, index) => (
-                    <div
-                      key={index}
-                      className={`${styles.generationItem} ${car.generationCode === gen.codeName ? styles.currentGeneration : ''}`}
-                    >
-                      <div className={styles.genHeader}>
-                        <span className={styles.genNumber}>{gen.generation}세대</span>
-                        <span className={styles.genCode}>{gen.codeName}</span>
-                        <span className={styles.genYears}>{gen.productionYears}</span>
-                        {car.generationCode === gen.codeName && (
-                          <span className={styles.currentBadge}>현재 모델</span>
-                        )}
-                      </div>
-                      <p className={styles.genDesc}>{gen.description}</p>
-                      {gen.keyChanges && gen.keyChanges.length > 0 && (
-                        <ul className={styles.genChanges}>
-                          {gen.keyChanges.map((change, idx) => (
-                            <li key={idx}>{change}</li>
-                          ))}
-                        </ul>
-                      )}
-                      {gen.salesVolume && (
-                        <span className={styles.genSales}>판매량: {gen.salesVolume}</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {/* 트림 라인업 - 차량 특정 */}
             {car.modelInfo.trims && car.modelInfo.trims.length > 0 && (
               <div className={styles.descSection}>
@@ -713,62 +619,6 @@ export default function CarDetailPage() {
                     </table>
                   </div>
                 )}
-              </div>
-            )}
-
-            {/* 글로벌 정보 - 시리즈 공통 */}
-            {series?.global && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>글로벌 정보</h3>
-                {series.global.exportName && (
-                  <p className={styles.globalInfo}>
-                    <strong>수출명:</strong> {series.global.exportName}
-                  </p>
-                )}
-                {series.global.productionPlant && (
-                  <p className={styles.globalInfo}>
-                    <strong>생산 공장:</strong> {series.global.productionPlant}
-                  </p>
-                )}
-                {series.global.salesCountries && (
-                  <div className={styles.globalCountries}>
-                    <strong>판매 국가:</strong>
-                    <div className={styles.countryTags}>
-                      {series.global.salesCountries.map((country, i) => (
-                        <span key={i} className={styles.countryTag}>{country}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 미디어 등장 - 시리즈 공통 */}
-            {series?.media && series.media.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>미디어 등장</h3>
-                <div className={styles.mediaList}>
-                  {series.media.map((item, index) => (
-                    <div key={index} className={`${styles.mediaItem} ${item.notable ? styles.notableMedia : ''}`}>
-                      <div className={styles.mediaHeader}>
-                        <span className={styles.mediaType}>
-                          {item.type === 'drama' && '드라마'}
-                          {item.type === 'movie' && '영화'}
-                          {item.type === 'advertisement' && '광고'}
-                          {item.type === 'musicVideo' && 'MV'}
-                          {item.type === 'game' && '게임'}
-                          {item.type === 'other' && '기타'}
-                        </span>
-                        <span className={styles.mediaTitle}>{item.title}</span>
-                        {item.year && <span className={styles.mediaYear}>({item.year})</span>}
-                        {item.notable && <span className={styles.notableBadge}>주목</span>}
-                      </div>
-                      {item.description && (
-                        <p className={styles.mediaDesc}>{item.description}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
               </div>
             )}
 
@@ -1094,113 +944,6 @@ export default function CarDetailPage() {
                     )}
                   </tbody>
                 </table>
-              </div>
-            )}
-
-            {/* 튜닝/애프터마켓 - 시리즈 공통 */}
-            {series?.aftermarket && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>튜닝/애프터마켓</h3>
-                {series.aftermarket.communitySize && (
-                  <p className={styles.communityInfo}>
-                    동호회 규모: <strong>{series.aftermarket.communitySize}</strong>
-                  </p>
-                )}
-                {series.aftermarket.modFriendly !== undefined && (
-                  <p className={styles.modFriendly}>
-                    튜닝 용이성: {series.aftermarket.modFriendly ? '높음' : '보통'}
-                  </p>
-                )}
-                {series.aftermarket.popularMods && series.aftermarket.popularMods.length > 0 && (
-                  <div className={styles.popularMods}>
-                    <h4 className={styles.techGroupTitle}>인기 튜닝</h4>
-                    {series.aftermarket.popularMods.map((mod, index) => (
-                      <div key={index} className={styles.modCategory}>
-                        <span className={styles.modCategoryName}>{mod.category}</span>
-                        <div className={styles.modItems}>
-                          {mod.items.map((item, i) => (
-                            <span key={i} className={styles.modItem}>{item}</span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {series.aftermarket.tuningBrands && series.aftermarket.tuningBrands.length > 0 && (
-                  <div className={styles.tuningBrands}>
-                    <h4 className={styles.techGroupTitle}>관련 브랜드</h4>
-                    <div className={styles.brandTags}>
-                      {series.aftermarket.tuningBrands.map((brand, i) => (
-                        <span key={i} className={styles.brandTag}>{brand}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 경쟁 모델 비교 - 시리즈 공통 */}
-            {series?.comparison && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>경쟁 모델 비교</h3>
-                {series.comparison.marketPosition && (
-                  <p className={styles.marketPosition}>
-                    <strong>시장 포지션:</strong> {series.comparison.marketPosition}
-                  </p>
-                )}
-                {series.comparison.uniqueSellingPoints && series.comparison.uniqueSellingPoints.length > 0 && (
-                  <div className={styles.uspSection}>
-                    <h4 className={styles.techGroupTitle}>차별화 포인트</h4>
-                    <ul className={styles.uspList}>
-                      {series.comparison.uniqueSellingPoints.map((usp, i) => (
-                        <li key={i}>{usp}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {series.comparison.mainCompetitors && series.comparison.mainCompetitors.length > 0 && (
-                  <div className={styles.competitorComparison}>
-                    <h4 className={styles.techGroupTitle}>경쟁 모델 분석</h4>
-                    <div className={styles.competitorList}>
-                      {series.comparison.mainCompetitors.map((comp, index) => (
-                        <div key={index} className={styles.competitorItem}>
-                          <span className={styles.competitorName}>{comp.model}</span>
-                          <div className={styles.competitorAnalysis}>
-                            <p className={styles.advantage}>장점: {comp.advantage}</p>
-                            <p className={styles.disadvantage}>단점: {comp.disadvantage}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 특별판/한정판 - 시리즈 공통 */}
-            {series?.specialEditions && series.specialEditions.length > 0 && (
-              <div className={styles.descSection}>
-                <h3 className={styles.descSubtitle}>특별판/한정판</h3>
-                <div className={styles.specialEditionList}>
-                  {series.specialEditions.map((edition, index) => (
-                    <div key={index} className={`${styles.editionItem} ${edition.available ? styles.editionAvailable : ''}`}>
-                      <div className={styles.editionHeader}>
-                        <span className={styles.editionName}>{edition.name}</span>
-                        <span className={styles.editionYear}>{edition.year}</span>
-                        {edition.limitedUnits && (
-                          <span className={styles.limitedBadge}>한정 {edition.limitedUnits.toLocaleString()}대</span>
-                        )}
-                        {edition.available && <span className={styles.availableBadge}>구매 가능</span>}
-                      </div>
-                      {edition.price && <span className={styles.editionPrice}>{edition.price}</span>}
-                      <ul className={styles.editionFeatures}>
-                        {edition.specialFeatures.map((feature, i) => (
-                          <li key={i}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
               </div>
             )}
 
